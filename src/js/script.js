@@ -319,20 +319,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // ==================================================
 
         "2014-progression": `
-                <div class="credits">
-                    <div>
-                        A collaborative creation by David, Johanna, Robin and Wesley.
-                    </div>
+            <div class="credits">
+                <div>
+                    A collaborative creation by David, Johanna, Robin and Wesley.
                 </div>
-            `,
+            </div>
+        `,
 
         "2014-player-rules": `
-                <div class="credits">
-                    <div>
-                        
-                    </div>
+            <div class="credits">
+                <div>
+                    
                 </div>
-            `,
+            </div>
+        `,
+
+        "2014-gm-rules": `
+            <div class="credits">
+                <div>
+                    
+                </div>
+            </div>
+        `,
 
 
         // ==================================================
@@ -340,20 +348,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // ==================================================
 
         "2024-progression": `
-                <div class="credits">
-                    <div>
-                        
-                    </div>
+            <div class="credits">
+                <div>
+                    
                 </div>
-            `,
+            </div>
+        `,
 
         "2024-player-rules": `
-                <div class="credits">
-                    <div>
-                        
-                    </div>
+            <div class="credits">
+                <div>
+                    
                 </div>
-            `,
+            </div>
+        `,
+
+        "2024-gm-rules": `
+            <div class="credits">
+                <div>
+                    
+                </div>
+            </div>
+        `,
 
 
         // ==================================================
