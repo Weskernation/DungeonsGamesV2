@@ -1,0 +1,63 @@
+DUNGEONSGAMES - KLEINE WIJZIGING PUBLICEREN
+
+1. Wijzig de code/tekst in VS Code.
+
+2. Controleer wat gewijzigd is:
+git status
+git diff
+
+3. Voeg het gewijzigde bestand toe:
+git add BESTANDSNAAM
+
+Voorbeeld:
+git add src/index.html
+
+git add . betekent:
+Voeg alle gewijzigde en nieuwe bestanden in de huidige map en onderliggende mappen toe aan de staging area.
+
+3a. 
+git status
+
+Je kunt eventueel ook specifiek controleren hoeveel bestanden staged zijn met:
+git diff --cached --stat 
+
+4. Maak een commit:
+git commit -m "Korte beschrijving van de wijziging"
+
+Voorbeeld:
+git commit -m "Update welcome text"
+
+5. Stuur de commit naar GitHub:
+git push origin main
+
+6. Vercel pakt de nieuwe GitHub-versie automatisch op
+en maakt een nieuwe deployment.
+
+----------------------------------------
+
+BETEKENIS:
+
+git status
+= Wat heb ik gewijzigd?
+
+git add
+= Welke wijziging wil ik meenemen?
+
+git commit
+= Sla deze wijziging op als een versie.
+
+git push
+= Stuur die versie naar GitHub.
+
+----------------------------------------
+
+BELANGRIJK:
+
+Niet gebruiken:
+git push --force
+
+Voor een kleine wijziging zijn meestal deze drie voldoende:
+
+git add BESTANDSNAAM
+git commit -m "Beschrijving"
+git push origin main

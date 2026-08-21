@@ -1,0 +1,334 @@
+/* ==================================================
+   DUNGEONS & GAMES - TOEGANGSPAGINA'S
+   ================================================== */
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+html {
+    overflow-x: hidden;
+}
+
+
+body.access-page {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding:
+        clamp(80px, 10vh, 120px)
+        20px
+        clamp(30px, 6vh, 60px);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(45, 45, 45, 0.96) 0%,
+            rgba(20, 20, 20, 0.98) 55%,
+            rgba(10, 10, 10, 1) 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   KAART
+   ================================================== */
+
+.access-card {
+
+    width:
+        min(100%, 520px);
+
+    box-sizing: border-box;
+
+    padding:
+        clamp(28px, 5vw, 48px);
+
+    background:
+        rgba(20, 20, 20, 0.96);
+
+    border:
+        1px solid rgba(255, 215, 0, 0.35);
+
+    border-radius:
+        clamp(12px, 2vw, 18px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.55);
+
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ==================================================
+   ICOON
+   ================================================== */
+
+.access-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin:
+        0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid #ffd700;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    color:
+        #ffd700;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1px;
+
+    box-shadow:
+        0 0 18px rgba(255, 215, 0, 0.15);
+}
+
+
+.access-icon-warning {
+
+    font-size:
+        1.6rem;
+}
+
+
+/* ==================================================
+   TITEL
+   ================================================== */
+
+.access-card h1 {
+
+    margin:
+        0 0 18px;
+
+    color:
+        #ffd700;
+
+    font-size:
+        clamp(1.8rem, 5vw, 2.5rem);
+
+    line-height:
+        1.15;
+}
+
+
+/* ==================================================
+   TEKST
+   ================================================== */
+
+.access-intro {
+
+    margin:
+        0 auto 14px;
+
+    max-width:
+        440px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(1rem, 2vw, 1.1rem);
+
+    line-height:
+        1.55;
+}
+
+
+.access-explanation {
+
+    margin:
+        0 auto 28px;
+
+    max-width:
+        420px;
+
+    color:
+        #cfcfcf;
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.5;
+}
+
+
+/* ==================================================
+   DISCORD LOGIN KNOP
+   ================================================== */
+
+.access-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        220px;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        11px 20px;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.7);
+
+    border-radius:
+        7px;
+
+    background:
+        rgba(255, 215, 0, 0.12);
+
+    color:
+        #ffd700;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        bold;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.access-button:hover {
+
+    background:
+        rgba(255, 215, 0, 0.22);
+
+    color:
+        #ffffff;
+
+    border-color:
+        #ffd700;
+
+    box-shadow:
+        0 0 16px rgba(255, 215, 0, 0.15);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==================================================
+   TERUG-LINK
+   ================================================== */
+
+.access-back {
+
+    display:
+        inline-block;
+
+    margin-top:
+        22px;
+
+    color:
+        #bbbbbb;
+
+    text-decoration:
+        none;
+
+    font-size:
+        0.9rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.access-back:hover {
+
+    color:
+        #ffd700;
+}
+
+
+/* ==================================================
+   MOBIEL
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    body.access-page {
+
+        align-items:
+            flex-start;
+
+        padding:
+            90px 12px 30px;
+
+    }
+
+
+    .access-card {
+
+        padding:
+            28px 20px;
+
+    }
+
+
+    .access-button {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+
+    }
+
+}

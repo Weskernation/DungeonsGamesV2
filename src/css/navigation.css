@@ -1,0 +1,320 @@
+/* ==================================================
+   GLOBALE NAVIGATIE
+   ================================================== */
+
+#main-navigation {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 900;
+
+    background: rgba(20, 20, 20, 0.92);
+
+    border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* ==================================================
+   NAVIGATIE BINNENKANT
+   ================================================== */
+
+.navigation-inner {
+
+    width: min(1200px, 92%);
+
+    min-height: 60px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* ==================================================
+   LOGO
+   ================================================== */
+
+.navigation-logo {
+
+    color: #ffd700;
+
+    text-decoration: none;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   NAVIGATIE LINKS
+   ================================================== */
+
+.navigation-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* ==================================================
+   NORMALE NAVIGATIE ITEMS
+   ================================================== */
+
+.navigation-links > a,
+.navigation-dropdown-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffd700;
+
+    font-family: inherit;
+
+    font-size: inherit;
+
+    font-weight: bold;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* ==================================================
+   HOVER
+   ================================================== */
+
+.navigation-links > a:hover,
+.navigation-dropdown-button:hover {
+
+    background:
+        rgba(255, 215, 0, 0.12);
+
+    color:
+        #ffffff;
+}
+
+
+/* ==================================================
+   DROPDOWN
+   ================================================== */
+
+.navigation-dropdown {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.navigation-dropdown::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+}
+
+
+.navigation-dropdown.open {
+
+    z-index: 100;
+}
+
+
+.navigation-dropdown-content {
+
+    position: absolute;
+
+    top: calc(100% + 4px);
+
+    left: 0;
+
+    display: none;
+
+    min-width: 220px;
+
+    padding: 6px;
+
+    background: rgba(20, 20, 20, 1);
+
+    border: 1px solid rgba(255, 215, 0, 0.35);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.45);
+
+    z-index: 1000;
+
+    /* backdrop-filter: blur(8px); */
+}
+
+
+/* ==================================================
+   DROPDOWN OPEN
+   ================================================== */
+
+.navigation-dropdown.open
+.navigation-dropdown-content {
+
+    display: block;
+}
+
+
+/* ==================================================
+   DROPDOWN LINKS
+   ================================================== */
+
+.navigation-dropdown-content a {
+
+    display: block;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.navigation-dropdown-content a:hover {
+
+    background:
+        rgba(255, 215, 0, 0.12);
+
+    color:
+        #ffd700;
+}
+
+
+/* ==================================================
+   MOBIEL
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .navigation-inner {
+
+        width:
+            calc(
+                100% -
+                clamp(120px, 34vw, 170px)
+            );
+
+        margin-left: 10px;
+
+        margin-right: 0;
+
+        gap: 4px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .navigation-logo {
+
+        font-size: 1rem;
+
+        flex-shrink: 0;
+
+    }
+
+
+.navigation-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    flex-wrap: wrap;
+
+    flex-basis: 100%;
+
+}
+
+
+    .navigation-links > a,
+    .navigation-dropdown-button {
+
+        padding: 7px 8px;
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .navigation-dropdown-content {
+
+        min-width: 200px;
+
+    }
+
+}
+
+
+/* ==================================================
+   DESKTOP - RUIMTE VOOR ONLINE WIDGET
+   ================================================== */
+
+@media (min-width: 701px) {
+
+    .navigation-inner {
+
+        width:
+            calc(
+                100% -
+                clamp(180px, 22vw, 280px)
+            );
+
+        margin-left: 0;
+        margin-right: 0;
+
+        padding-left:
+            clamp(30px, 4vw, 60px);
+
+    }
+
+}

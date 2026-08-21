@@ -1,0 +1,378 @@
+/* ==================================================
+   DUNGEONS & GAMES - DISCORD / ONLINE WIDGET
+   ================================================== */
+
+
+/* ==================================================
+   BASIS WIDGET
+   ================================================== */
+
+#online-widget {
+
+    position: fixed;
+
+    top:
+        calc(
+            env(safe-area-inset-top)
+            + clamp(8px, 2vh, 20px)
+        );
+
+    right:
+        calc(
+            env(safe-area-inset-right)
+            + clamp(8px, 2vw, 20px)
+        );
+
+
+    /* ----------------------------------------------
+       Afmetingen
+       ---------------------------------------------- */
+
+    width: fit-content;
+
+    min-width: 110px;
+
+    max-width: 90vw;
+
+
+    /* ----------------------------------------------
+       Uiterlijk
+       ---------------------------------------------- */
+
+    background:
+        rgba(20, 20, 20, 0.88);
+
+    color: #ffffff;
+
+    border:
+        1px solid rgba(255, 215, 0, 0.35);
+
+    border-radius:
+        clamp(8px, 1vw, 12px);
+
+
+    /* ----------------------------------------------
+       Lettertype
+       ---------------------------------------------- */
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+
+    /* ----------------------------------------------
+       Effecten
+       ---------------------------------------------- */
+
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter:
+        blur(8px);
+
+
+    /* ----------------------------------------------
+       Gedrag
+       ---------------------------------------------- */
+
+    overflow: hidden;
+
+    z-index: 1000;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* ==================================================
+   DESKTOP - WIDGET BOVEN NAVIGATIE
+   ================================================== */
+
+@media (min-width: 701px) {
+
+    #online-widget {
+        z-index: 1200;
+    }
+
+}
+
+
+/* ==================================================
+   HOVER - DESKTOP
+   ================================================== */
+
+@media (hover: hover) {
+
+    #online-widget:hover {
+
+        background:
+            rgba(20, 20, 20, 0.96);
+
+        border-color:
+            rgba(255, 215, 0, 0.55);
+
+        box-shadow:
+            0 6px 20px rgba(0, 0, 0, 0.55);
+
+    }
+
+}
+
+
+/* ==================================================
+   UITGEKLAPTE TOESTAND
+   ================================================== */
+
+#online-widget.open {
+
+    background:
+        rgba(20, 20, 20, 0.96);
+
+    border-color:
+        rgba(255, 215, 0, 0.55);
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+
+/* ==================================================
+   ONLINE HEADER
+   ================================================== */
+
+#online-header {
+
+    padding:
+        clamp(7px, 1vh, 9px)
+        clamp(10px, 1vw, 14px);
+
+
+    /* ----------------------------------------------
+       Tekst
+       ---------------------------------------------- */
+
+    color: #ffffff;
+
+    font-size:
+        clamp(12px, 1.5vw, 16px);
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+
+    /* ----------------------------------------------
+       Gedrag
+       ---------------------------------------------- */
+
+    cursor: pointer;
+
+    user-select: none;
+
+    opacity: 0.85;
+
+    transition:
+        opacity 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Header actief */
+
+#online-widget:hover #online-header,
+#online-widget.open #online-header {
+
+    opacity: 1;
+
+    color: #ffd700;
+}
+
+
+/* ==================================================
+   ONLINE LIJST
+   ================================================== */
+
+#online-list {
+
+    display: none;
+
+
+    /* ----------------------------------------------
+       Afmetingen en scrollen
+       ---------------------------------------------- */
+
+    max-height: 50vh;
+
+    overflow-y: auto;
+
+
+    /* ----------------------------------------------
+       Ruimte
+       ---------------------------------------------- */
+
+    padding:
+        clamp(6px, 1vh, 10px)
+        clamp(10px, 1vw, 14px);
+
+
+    /* ----------------------------------------------
+       Scheidingslijn
+       ---------------------------------------------- */
+
+    border-top:
+        1px solid rgba(255, 215, 0, 0.2);
+}
+
+
+/* Lijst zichtbaar wanneer widget open is */
+
+#online-widget.open #online-list {
+
+    display: block;
+}
+
+
+/* ==================================================
+   GEBRUIKERS IN DE LIJST
+   ================================================== */
+
+#online-list p {
+
+    margin:
+        clamp(5px, 0.8vh, 8px)
+        0;
+
+
+    color: #eeeeee;
+
+    font-size:
+        clamp(10px, 1vw, 13px);
+
+    line-height: 1.3;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Discord username */
+
+#online-list small {
+
+    color: #bbbbbb;
+
+    opacity: 0.8;
+
+    font-size: 0.85em;
+}
+
+
+/* ==================================================
+   INLOGGEN / UITLOGGEN
+   ================================================== */
+
+#logout-button {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+
+    /* ----------------------------------------------
+       Ruimte
+       ---------------------------------------------- */
+
+    padding:
+        clamp(7px, 1vh, 9px)
+        clamp(10px, 1vw, 14px);
+
+
+    /* ----------------------------------------------
+       Scheidingslijn
+       ---------------------------------------------- */
+
+    border-top:
+        1px solid rgba(255, 215, 0, 0.2);
+
+
+    /* ----------------------------------------------
+       Tekst
+       ---------------------------------------------- */
+
+    color: #ffd700;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size:
+        clamp(11px, 1vw, 13px);
+
+    font-weight: bold;
+
+
+    /* ----------------------------------------------
+       Gedrag
+       ---------------------------------------------- */
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Inloggen / uitloggen hover */
+
+#logout-button:hover {
+
+    background:
+        rgba(255, 215, 0, 0.12);
+
+    color:
+        #ffffff;
+}
+
+
+/* ==================================================
+   MOBIEL - COMPACTE ONLINE WIDGET
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    #online-widget {
+
+        min-width: 0;
+
+        max-width: clamp(125px, 35vw, 170px);
+
+    }
+
+
+    #online-header {
+
+        font-size: 11px;
+
+        padding:
+            5px 8px;
+
+    }
+
+
+    #logout-button {
+
+        font-size: 10px;
+
+        padding:
+            6px 8px;
+
+    }
+
+}
