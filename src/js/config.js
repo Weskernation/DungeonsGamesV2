@@ -30,16 +30,16 @@ const SITE_CONFIG = {
 
             progression: true,
 
-            gmRules: false
+            gmRules: true
 
         },
 
 
         dnd2024: {
 
-            playerRules: false,
+            playerRules: true,
 
-            progression: true,
+            progression: false,
 
             gmRules: true
 

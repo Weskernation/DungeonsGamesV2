@@ -1,0 +1,353 @@
+/* ==================================================
+   DUNGEONS & GAMES - PLAYER RULES
+   ================================================== */
+
+
+/* ==================================================
+   PAGINA
+   ================================================== */
+
+.player-rules-page {
+
+    width: min(97%, 1500px);
+
+    margin:
+        40px auto 80px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+}
+
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.player-rules-header {
+
+    margin-bottom:
+        45px;
+
+    padding:
+        35px 30px;
+
+    text-align:
+        center;
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
+    border:
+        1px solid rgba(255, 215, 0, 0.28);
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.35);
+
+}
+
+
+.player-rules-header h1 {
+
+    margin:
+        0;
+
+    color:
+        #ffd700;
+
+    font-size:
+        clamp(2rem, 5vw, 3rem);
+
+    line-height:
+        1.15;
+
+}
+
+
+.player-rules-subtitle {
+
+    margin:
+        10px 0 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size:
+        clamp(1.05rem, 2.5vw, 1.35rem);
+
+}
+
+
+.player-rules-intro {
+
+    max-width:
+        700px;
+
+    margin:
+        20px auto 0;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    line-height:
+        1.6;
+
+}
+
+
+/* ==================================================
+   HOOFDSECTIES
+   ================================================== */
+
+.player-rules-section {
+
+    margin:
+        0 0 32px;
+
+    padding:
+        28px 30px;
+
+    background:
+        rgba(0, 0, 0, 0.38);
+
+    border:
+        1px solid rgba(255, 215, 0, 0.16);
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.22);
+
+}
+
+
+/* ==================================================
+   SECTIETITELS
+   ================================================== */
+
+.player-rules-section h2 {
+
+    margin:
+        0 0 20px;
+
+    padding-bottom:
+        10px;
+
+    color:
+        #ffd700;
+
+    font-size:
+        clamp(1.45rem, 3vw, 2rem);
+
+    line-height:
+        1.25;
+
+    border-bottom:
+        1px solid rgba(255, 215, 0, 0.22);
+
+}
+
+
+.player-rules-section h3 {
+
+    margin:
+        26px 0 12px;
+
+    color:
+        rgba(255, 215, 0, 0.9);
+
+    font-size:
+        1.15rem;
+
+}
+
+
+/* ==================================================
+   TEKST
+   ================================================== */
+
+.player-rules-section p {
+
+    margin:
+        10px 0;
+
+    line-height:
+        1.65;
+
+}
+
+
+.player-rules-section p + p {
+
+    margin-top:
+        14px;
+
+}
+
+
+/* ==================================================
+   LIJSTEN
+   ================================================== */
+
+.player-rules-section ul {
+
+    margin:
+        12px 0 18px;
+
+    padding-left:
+        24px;
+
+}
+
+
+.player-rules-section li {
+
+    margin:
+        7px 0;
+
+    line-height:
+        1.55;
+
+}
+
+
+.player-rules-section li::marker {
+
+    color:
+        #ffd700;
+
+}
+
+
+/* ==================================================
+   SUBSECTIES
+   ================================================== */
+
+.player-rules-subsection {
+
+    margin:
+        22px 0 0;
+
+    padding:
+        18px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border-left:
+        3px solid rgba(255, 215, 0, 0.45);
+
+    border-radius:
+        0 8px 8px 0;
+
+}
+
+
+/* ==================================================
+   BELANGRIJKE TEKSTEN / LINKS
+   ================================================== */
+
+.player-rules-section strong {
+
+    color:
+        rgba(255, 215, 0, 0.92);
+
+}
+
+
+.player-rules-section a {
+
+    color:
+        #ffd700;
+
+    text-decoration:
+        none;
+
+}
+
+
+.player-rules-section a:hover {
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* ==================================================
+   EINDSSECTIE
+   ================================================== */
+
+.player-rules-ending {
+
+    margin-top:
+        45px;
+
+    text-align:
+        center;
+
+    background:
+        rgba(0, 0, 0, 0.48);
+
+}
+
+
+/* ==================================================
+   MOBIEL
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .player-rules-page {
+
+        width:
+            calc(100% - 20px);
+
+        margin:
+            20px auto 50px;
+
+    }
+
+
+    .player-rules-header {
+
+        padding:
+            26px 18px;
+
+        margin-bottom:
+            25px;
+
+    }
+
+
+    .player-rules-section {
+
+        padding:
+            22px 18px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .player-rules-section h2 {
+
+        font-size:
+            1.45rem;
+
+    }
+
+
+    .player-rules-subsection {
+
+        padding:
+            15px;
+
+    }
+
+}

@@ -1,68 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="nl">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>2014 Player Rules</title>
+<title>Player Rules 2014</title>
 
-    <!-- ==================================================
-         ALGEMENE WEBSITE STYLING
-         ================================================== -->
 
-    <link rel="stylesheet" href="/css/style.css">
+<!-- ==================================================
+     ALGEMENE WEBSITE STYLING
+     ================================================== -->
 
-    <!-- ==================================================
-         GLOBALE NAVIGATIE
-         ================================================== -->
+<link rel="stylesheet" href="/css/style.css">
 
-    <link rel="stylesheet" href="/css/navigation.css">
 
-    <!-- ==================================================
-         DISCORD / ONLINE WIDGET
-         ================================================== -->
+<!-- ==================================================
+     GLOBALE NAVIGATIE
+     ================================================== -->
 
-    <link rel="stylesheet" href="/discord-widget/discord-widget.css">
+<link rel="stylesheet" href="/css/navigation.css">
+
+
+<!-- ==================================================
+     PLAYER RULES STYLING
+     ================================================== -->
+
+<link rel="stylesheet" href="/css/player-rules.css">
+
+
+<!-- ==================================================
+     DISCORD / ONLINE WIDGET
+     ================================================== -->
+
+<link rel="stylesheet" href="/discord-widget/discord-widget.css">
+```
 
 </head>
 
-
 <body data-user="">
 
+```
 <div id="main-navigation"></div>
-<div class="credits-container" data-credits="2014-player-rules"></div>    
 
-    <main>
 
-        <h1>Player Rules 2014</h1>
+<div
+    class="credits-container"
+    data-credits="2014-player-rules"
+></div>
 
-        <p>
-            Als je deze pagina ziet, werkt de betreffende knop en URL.
+
+<main class="player-rules-page">
+
+
+    <!-- ==================================================
+         1. TITEL
+         ================================================== -->
+
+    <header class="player-rules-header">
+
+        <h1>
+            Frequent Freewheelers
+        </h1>
+
+        <p class="player-rules-subtitle">
+            Player Rules 2014
         </p>
 
-    </main>
+        <p class="player-rules-intro">
+            Een overzicht van de belangrijkste regels,
+            afspraken en praktische informatie voor spelers.
+        </p>
+
+    </header>
 
 
     <!-- ==================================================
-         ALGEMENE WEBSITE SCRIPTS
+         2. WELKOM
          ================================================== -->
 
-    <script src="/js/config.js"></script>
-    <script src="/js/script.js"></script>
+    <section
+        class="player-rules-section"
+        id="welkom"
+    >
+
+        <h2>
+            Welkom
+        </h2>
+
+        <p>
+            Welkom bij Frequent Freewheelers.
+            Hier vind je de belangrijkste informatie die je
+            nodig hebt om mee te spelen en je weg te vinden
+            binnen de campagne.
+        </p>
+
+        <p>
+            Deze Player Rules zijn bedoeld als praktisch
+            overzicht. Niet iedere situatie kan vooraf worden
+            beschreven; bij twijfel gelden de afspraken van
+            de betreffende sessie en de beslissing van de GM.
+        </p>
+
+    </section>
 
 
     <!-- ==================================================
-         DISCORD / ONLINE WIDGET
+         3. VOORDELEN
          ================================================== -->
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/discord-widget/discord-widget-auto.js"></script>
+    <section
+        class="player-rules-section"
+        id="voordelen"
+    >
+
+        <h2>
+            Voordelen
+        </h2>
+
+
+        <div class="player-rules-subsection">
+
+            <h3>
+                Voor spelers
+            </h3>
+
+            <ul>
+                <li>
+                    [Voordeel voor spelers]
+                </li>
+
+                <li>
+                    [Voordeel voor spelers]
+                </li>
+
+                <li>
+                    [Voordeel voor spelers]
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="player-rules-subsection">
+
+            <h3>
+                Voor Game Masters
+            </h3>
+
+            <ul>
+                <li>
+                    [Voordeel voor Game Masters]
+                </li>
+
+                <li>
+                    [Voordeel voor Game Masters]
+                </li>
+
+                <li>
+                    [Voordeel voor Game Masters]
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         4. SESSIE BASICS
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="sessie-basics"
+    >
+
+        <h2>
+            Sessie Basics
+        </h2>
+
+        <p>
+            [Hoe verloopt een sessie?]
+        </p>
+
+        <p>
+            [Waar begint de sessie?]
+        </p>
+
+        <p>
+            [Hoe wordt bepaald welke quests beschikbaar zijn?]
+        </p>
+
+        <p>
+            [Welke afspraken gelden tijdens een sessie?]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         5. HET MAKEN VAN EEN KARAKTER EN REGELS
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="karakter-en-regels"
+    >
+
+        <h2>
+            Het maken van een karakter en Regels
+        </h2>
+
+
+        <h3>
+            Karakter maken
+        </h3>
+
+        <p>
+            [Welke regels gelden bij het maken van een karakter?]
+        </p>
+
+        <ul>
+
+            <li>
+                [Character creation regel]
+            </li>
+
+            <li>
+                [Stats / point buy / HP regel]
+            </li>
+
+            <li>
+                [Toegestane bronnen en opties]
+            </li>
+
+            <li>
+                [Overige character creation regel]
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Algemene regels
+        </h3>
+
+        <p>
+            [Belangrijkste algemene regels en afspraken.]
+        </p>
+
+        <ul>
+
+            <li>
+                [Algemene regel]
+            </li>
+
+            <li>
+                [Algemene regel]
+            </li>
+
+            <li>
+                [Algemene regel]
+            </li>
+
+        </ul>
+
+
+        <h3>
+            GM-regels en beslissingen
+        </h3>
+
+        <p>
+            [Uitleg over de rol van de GM en hoe rulings
+            tijdens een sessie worden afgehandeld.]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         6. HOE WERKT HET?
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="hoe-werkt-het"
+    >
+
+        <h2>
+            Hoe werkt het?
+        </h2>
+
+        <p>
+            [Hoe meld je je aan voor een sessie?]
+        </p>
+
+        <p>
+            [Welke kanalen, rollen of systemen moet je gebruiken?]
+        </p>
+
+        <p>
+            [Hoe kies of gebruik je een karakter?]
+        </p>
+
+        <p>
+            [Wat moet je doen voordat een sessie begint?]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         7. FIRST COME, FIRST SERVE
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="first-come-first-serve"
+    >
+
+        <h2>
+            First Come, First Serve
+        </h2>
+
+        <p>
+            [Uitleg van het aanmeldingssysteem.]
+        </p>
+
+        <p>
+            [Hoeveel plaatsen zijn er?]
+        </p>
+
+        <p>
+            [Wat gebeurt er als een sessie vol is?]
+        </p>
+
+        <p>
+            [Wanneer mag een GM afwijken van de volgorde?]
+        </p>
+
+        <p>
+            [Hoe werkt een eventuele reservelijst?]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         8. MEEDOEN BIJ EEN TIER WAAR JE GEEN KARAKTER HEBT
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="andere-tier"
+    >
+
+        <h2>
+            Meedoen bij een tier waar je geen karakter hebt
+        </h2>
+
+        <p>
+            [Uitleg van het systeem voor het meespelen
+            bij een tier waar je zelf geen karakter hebt.]
+        </p>
+
+        <p>
+            [Uitleg van een eventueel leen-karakter.]
+        </p>
+
+        <p>
+            [Hoe worden beloningen, progressie of stempels
+            in deze situatie behandeld?]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         9. DOOD VAN EEN KARAKTER
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="dood-van-een-karakter"
+    >
+
+        <h2>
+            Dood van een karakter
+        </h2>
+
+        <p>
+            [Wat gebeurt er wanneer een karakter sterft?]
+        </p>
+
+        <p>
+            [Welke gevolgen heeft dit voor het karakter?]
+        </p>
+
+        <p>
+            [Welke gevolgen zijn er voor de speler?]
+        </p>
+
+        <p>
+            [Zijn er verschillen per tier of level?]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         10. LORE VAN DE METROPOLIS
+         ================================================== -->
+
+    <section
+        class="player-rules-section"
+        id="lore-van-de-metropolis"
+    >
+
+        <h2>
+            Lore van de Metropolis
+        </h2>
+
+        <p>
+            [Introductie van de wereld en de Metropolis.]
+        </p>
+
+        <p>
+            [Belangrijkste achtergrondinformatie.]
+        </p>
+
+        <p>
+            [Belangrijke plaatsen, facties en gebeurtenissen.]
+        </p>
+
+        <p>
+            [Verwijzingen naar uitgebreidere lore.]
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         11. EINDWOORD
+         ================================================== -->
+
+    <section
+        class="player-rules-section player-rules-ending"
+        id="eindwoord"
+    >
+
+        <h2>
+            Eindwoord
+        </h2>
+
+        <p>
+            [Afsluitende tekst voor spelers.]
+        </p>
+
+        <p>
+            [Eventuele laatste praktische mededelingen.]
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<!-- ==================================================
+     ALGEMENE WEBSITE SCRIPTS
+     ================================================== -->
+
+<script src="/js/config.js"></script>
+<script src="/js/script.js"></script>
+
+
+<!-- ==================================================
+     DISCORD / ONLINE WIDGET
+     ================================================== -->
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/discord-widget/discord-widget-auto.js"></script>
+```
 
 </body>
 
