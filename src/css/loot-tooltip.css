@@ -28,8 +28,12 @@
     position: absolute;
 
     width: clamp(240px, 18vw, 360px);
-    max-width: none;
-    min-height: 20vh;
+    max-width: calc(100vw - 40px);
+
+    min-height: 0;
+    height: auto;
+
+    box-sizing: border-box;
 
     background-color: rgb(17, 17, 17);
     color: rgba(255, 255, 255, 1);
@@ -39,7 +43,7 @@
     border: 2px ridge rgba(255, 215, 0, 1);
     border-radius: 10px;
 
-    padding: clamp(15px, 1.5vw, 30px);
+    padding: clamp(10px, 1vw, 18px);
 
     left: 100%;
     top: 0;
@@ -179,26 +183,32 @@
 /* Dit is de Knop om tooltips ON/OFF END*/
 
 
-@media (max-width:900px), (max-height:500px) and (orientation: landscape){
+@media (max-width:900px), (max-height:500px) and (orientation: landscape) {
 
-.item-description.mobile-open{
+    .item-description.mobile-open {
 
-    opacity: 1;
-    visibility: visible;
-    position:fixed;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
 
-    top: max(20px, env(safe-area-inset-top));
-    right: max(20px, env(safe-area-inset-right));
-    bottom: max(20px, env(safe-area-inset-bottom));
-    left: max(20px, env(safe-area-inset-left));
+        top: 50%;
+        left: 50%;
 
-    width:auto;
-    max-width:none;
-    max-height:none;
+        width: calc(100vw - 40px);
+        max-width: 500px;
 
-    overflow:auto;
+        height: auto;
+        max-height: calc(100dvh - 40px);
 
-    z-index:5000;
+        margin: 0;
+
+        overflow-y: auto;
+
+        transform: translate(-50%, -50%);
+
+        z-index: 5000;
+    }
+
 }
 
 .tooltip-overlay{
@@ -209,6 +219,4 @@
     background:rgba(0,0,0,.65);
 
     z-index:4999;
-}
-
 }

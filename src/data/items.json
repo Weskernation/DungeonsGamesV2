@@ -3376,405 +3376,332 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dragon's Wrath Weapon (ascendant)": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage rolls made using the weapon.",
+            "Extra 3d6 damage",
+            "On a attack roll of 20 creatures withing 5 feet take 5 damage"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Energy wave (DC 18)",
+                "action": "Action",
+                "effect": "12d6 in a 60 feet cone",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dragon's Wrath Weapon (stirring)": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage rolls made using the weapon.",
+            "Extra 1d6 damage",
+            "On a attack roll of 20 creatures withing 5 feet take 5 damage"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dragon's Wrath Weapon (wakened)": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+2 bonus to attack and damage rolls made using the weapon.",
+            "Extra 2d6 damage",
+            "On a attack roll of 20 creatures withing 5 feet take 5 damage"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Energy wave (DC 16)",
+                "action": "Action",
+                "effect": "8d6 in a 60 feet cone",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dragonlance": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage",
+            "3d6 extra force damage to dragons"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
         "variants": [
-            ""
+            "Dragonlance Lance",
+            "Dragonlance Pike"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dragontooth Dagger": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (dagger)",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage",
+            "On a hit extra 1d6 acid damage."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dread Helm": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This fearsome steel helm makes your eyes glow red while you wear it."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Driftglobe": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "(Day)light",
+                "action": "Action",
+                "effect": "Cast Light or Daylight",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Duskcrusher": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (warhammer)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "When emitting light, +2 bonus to attack and damage",
+            "When emitting light, extra 1d8 to undead"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Emit light",
+                "action": "Bonus action",
+                "effect": "Emits bright light in a 15-foot radius and dim light for an additional 15 feet.",
                 "recharge": ""
+            },
+            {
+                "name": "Sunbeam (DC 15)",
+                "action": "Action",
+                "effect": "Cast sunbeam",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dwarven Plate": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor (Plate)",
+        "rarity": "Very Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "2 bonus to AC"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Reduce movement",
+                "action": "Reaction",
+                "effect": "Reduce the distance you are moved against your will by up to 10 feet.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dwarven Thrower": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (warhammer)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a dwarf"
         },
 
         "description": [
-            ""
+            "The weapon flies back to your hand immediately after a ranged attack"
         ],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage",
+            "When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8"
+
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Dyrrn's Tentacle Whip": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (whip)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+2 bonus to attack and damage",
+            "creatures hit by this weapon take extra 1d6 damage.",
+            "When you roll a 20 on the to hit roll with this weapon, the target is stunned until the end of its next turn.",
+            "attacks againt abberations have disadvantage"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Sheath",
+                "action": "Bonus action",
+                "effect": "Sheathe the whip by causing it to retract into your arm, or draw the whip out of your arm again.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eagle Whistle": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Whistle (3 uses)",
+                "action": "While you blow an eagle whistle continuously",
+                "effect": "You can fly twice as fast as your walking speed.",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ear Horn of Hearing": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "While held up to your ear, this horn suppresses the effects of the deafened condition on you, allowing you to hear normally."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -3786,305 +3713,256 @@
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Message (5 charges)",
+                "action": "Action",
+                "effect": "Cast the message spell",
+                "recharge": "1d4+1 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Efreeti Chain": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor (Chain mail)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+3 bonus to AC",
+            "Immunity to fire damage",
+            "Understand and speak Primordial",
+            "Stand on and walk across molten rock as if it were solid ground."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eldritch Claw Tattoo": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage rolls with unarmed strikes."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Eldritch Maul",
+                "action": "Bonus action",
+                "effect": "For 1 minute. can reach a target up to 15 feet away from you and melee attacks deal an extra 1d6 force damage on a hit",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eldritch Staff": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (quarterstaff)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn."
         ],
 
         "effects": [
-            ""
+            "When you melee hit using the staff, expend up to 3 charges. For each charge deal an extra 1d8 lightning damage."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Escape",
+                "action": "Reaction",
+                "effect": "expend 3 turn invisible until the start of your next turn, and teleport up to 60 feet",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Elven Thrower": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (spear)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by an elf"
         },
 
         "description": [
-            ""
+            "The weapon flies back to your hand immediately after a ranged attack"
         ],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage",
+            "When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8"
+
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Elvenchain": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor (Chain shirt)",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "You are considered proficient with this armor even if you lack proficiency with medium armor."
         ],
 
         "effects": [
-            ""
+            "+1 bonus to AC"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Enduring Spellbook": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This spellbook, along with anything written on its pages, can't be damaged by fire or immersion in water. In addition, the spellbook doesn't deteriorate with age."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ephixis, Bow of Nylea": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (shortbow)",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "1 minor beneficial property",
+            "1 major beneficial property",
+            "1 Major detrimental property (if you are not a worshipper"
         ],
 
         "effects": [
-            ""
+            "You gain a +3 bonus to attack and damage",
+            "no disadvantage on long ranged attacks",
+            "critical hit on a 19 or 20"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Spring arrmor (DC 18)",
+                "action": "Action",
+                "effect": "targeting a beast or a plant it gains the benefits of the awaken spell for 8 hours.",
+                "recharge": "Next Dusk"
+            },
+            {
+                "name": "Summer arrow (DC 18)",
+                "action": "Action",
+                "effect": "A Nyxborn lynx is summoned (use stat block of a tiger with the Nyxborn traits",
+                "recharge": "Next Dusk"
+            },
+            {
+                "name": "Autumn arrow (DC 18)",
+                "action": "Action",
+                "effect": "Cast wall of thorns",
+                "recharge": "Next Dusk"
+            },
+            {
+                "name": "Winter arrow (DC 18)",
+                "action": "Action",
+                "effect": "Cast ice storm",
+                "recharge": "Next Dusk"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ersatz Eye": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This artificial eye replaces a real one that was lost or removed. While the ersatz eye is embedded in your eye socket, it can't be removed by anyone other than you, and you can see through the tiny orb as though it were a normal eye."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Everbright Lantern": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "An everbright lantern sheds light in a 120-foot cone like continual flame spell; the closest 60 feet is bright light, and the farthest 60 feet is dim light."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
