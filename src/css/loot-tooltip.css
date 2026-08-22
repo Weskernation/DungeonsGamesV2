@@ -75,7 +75,7 @@
     position: absolute;
     inset: -20px;
 
-    background-image: url("images/parchment.webp");
+    background-image: url("/images/parchment.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
