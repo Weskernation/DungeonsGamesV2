@@ -1,246 +1,502 @@
+/* ==================================================
+   DUNGEONS & GAMES - GENERAL STYLING
+   ================================================== */
+
+
+/* ==================================================
+   1. ALGEMENE PAGINA
+   ================================================== */
+
 :root {
     --floating-menu-height: 100px;
 }
+
 
 html {
     overflow-x: hidden;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
 
-    background-image: url("/images/frequent-freewheelers_banner.webp");
+    font-family:
+        Arial, sans-serif;
 
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 100% auto;
-    background-color: #1a1a1a;
-    padding-bottom: var(--floating-menu-height);
-    overflow-x: hidden;
-    flex: auto;
-    flex-direction: column;
+    background-image:
+        url("/images/frequent-freewheelers_banner.webp");
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        center center;
+
+    background-attachment:
+        fixed;
+
+    background-size:
+        100% auto;
+
+    background-color:
+        #1a1a1a;
+
+    padding-bottom:
+        var(--floating-menu-height);
+
+    overflow-x:
+        hidden;
+
+    flex:
+        auto;
+
+    flex-direction:
+        column;
 }
+
+
+/* ==================================================
+   2. ALGEMENE COMPONENTEN
+   ================================================== */
+
+
+/* --------------------------------------------------
+   Section titles
+   -------------------------------------------------- */
 
 .section-title {
-    width: 100%;
-    padding: 15px 0;
-    border: 2px solid black;
-    background-color: rgba(0,0,0,0.75);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+
+    width:
+        100%;
+
+    padding:
+        15px 0;
+
+    border:
+        2px solid black;
+
+    background-color:
+        rgba(0, 0, 0, 0.75);
+
+    color:
+        white;
+
+    font-size:
+        2em;
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
 }
+
+
+/* --------------------------------------------------
+   Credits
+   -------------------------------------------------- */
 
 .credits {
-    margin-top: 20px;
-    padding: 10px;
 
-    border: 2px solid black;
-    border-radius: 15px;
+    margin-top:
+        20px;
 
-    text-align: center;
+    padding:
+        10px;
 
-    background-color: rgba(0, 0, 0, 0.35);
-    color: white;
+    border:
+        2px solid black;
 
-    font-size: 0.9em;
+    border-radius:
+        15px;
+
+    text-align:
+        center;
+
+    background-color:
+        rgba(0, 0, 0, 0.35);
+
+    color:
+        white;
+
+    font-size:
+        0.9em;
 }
+
 
 .credits-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
 
-    width: 25%;
-    max-width: 400px;
+    position:
+        fixed;
 
-    text-align: right;
+    bottom:
+        20px;
 
-    z-index: 500;
+    right:
+        20px;
 
-    padding: 8px 12px;
+    width:
+        25%;
 
-    background-color: rgba(0,0,0,0);
-    color: white;
+    max-width:
+        400px;
 
-    font-size: 1.0em;
+    text-align:
+        right;
 
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    z-index:
+        500;
+
+    padding:
+        8px 12px;
+
+    background-color:
+        rgba(0, 0, 0, 0);
+
+    color:
+        white;
+
+    font-size:
+        1em;
+
+    white-space:
+        normal;
+
+    overflow-wrap:
+        break-word;
+
+    word-break:
+        break-word;
 }
 
 
-/* IMAGES USED HOVER GEDEELTE */
+/* --------------------------------------------------
+   Website update notice
+   -------------------------------------------------- */
+
+.update-notice {
+
+    font-size:
+        0.65em;
+}
+
+
+/* ==================================================
+   3. ALGEMENE HOVER-TOOLTIPS
+   ================================================== */
+
 .tooltip {
-    position: relative;
-    cursor: help;
-    text-decoration: underline dotted;
+
+    position:
+        relative;
+
+    cursor:
+        help;
+
+    text-decoration:
+        underline dotted;
 }
+
 
 .tooltip-text {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: 120%;
-    border: 5px double rgba(255, 215, 0, 1);
-    border: 10px ridge rgba(201, 162, 39, 1);
-    left: 50%;
-    line-height: 1.4;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: 300px;
-    padding: 10px;
-    background-color: rgba(247,247,247,0.95);
-    color: rgb(0, 0, 0);
-    border-radius: 8px;
-    text-align: center;
-    font-size: 0.9em;
-    white-space: normal;
-    word-wrap: break-word;
-    transition: opacity 0.2s;
-    z-index: 2000;
+
+    visibility:
+        hidden;
+
+    opacity:
+        0;
+
+    position:
+        absolute;
+
+    bottom:
+        120%;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        max-content;
+
+    max-width:
+        300px;
+
+    padding:
+        10px;
+
+    border:
+        10px ridge rgba(201, 162, 39, 1);
+
+    background-color:
+        rgba(247, 247, 247, 0.95);
+
+    color:
+        rgb(0, 0, 0);
+
+    border-radius:
+        8px;
+
+    text-align:
+        center;
+
+    font-size:
+        0.9em;
+
+    line-height:
+        1.4;
+
+    white-space:
+        normal;
+
+    word-wrap:
+        break-word;
+
+    transition:
+        opacity 0.2s;
+
+    z-index:
+        2000;
 }
 
-/* Pijltje onder tooltip */
+
+/* Tooltip arrow */
+
 .tooltip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        100%;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-width:
+        6px;
+
+    border-style:
+        solid;
+
+    border-color:
+        rgba(0, 0, 0, 0.85)
+        transparent
+        transparent
+        transparent;
 }
+
 
 .tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
+
+    visibility:
+        visible;
+
+    opacity:
+        1;
 }
-/* IMAGES USED HOVER GEDEELTE END*/
 
 
-
+/* ==================================================
+   4. FLOATING MENU
+   ================================================== */
 
 .floating-menu {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row;
-    gap: clamp(5px, 2vw, 50px);
-    z-index: 500;
-    max-width: calc(100% - 140px);
-    flex-wrap: wrap;
+
+    position:
+        fixed;
+
+    bottom:
+        20px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        row;
+
+    gap:
+        clamp(5px, 2vw, 50px);
+
+    z-index:
+        500;
+
+    max-width:
+        calc(100% - 140px);
+
+    flex-wrap:
+        wrap;
 }
+
 
 .floating-menu button {
-    width: clamp(45px, 5vw, 80px);
-    height: clamp(45px, 5vw, 80px);
-    border-radius: 50%;
-    border: 2px solid black;
-    background-color: rgba(0,0,0,0.7);
-    /* -webkit-text-stroke: 1px black; */
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+    width:
+        clamp(45px, 5vw, 80px);
+
+    height:
+        clamp(45px, 5vw, 80px);
+
+    border:
+        2px solid black;
+
+    border-radius:
+        50%;
+
+    background-color:
+        rgba(0, 0, 0, 0.7);
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
 }
 
 
+/* --------------------------------------------------
+   Floating menu buttons with image
+   -------------------------------------------------- */
 
-
-/* Alleen knoppen met afbeelding */
 .floating-menu button.has-image {
 
-    border: none;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    border:
+        none;
 
-    background-color: transparent;
+    background-size:
+        contain;
 
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
+
+    background-color:
+        transparent;
 }
+
 
 .floating-menu button:hover {
 
-    background-color: rgba(255,127,0,0.7);
-    color: black;
+    background-color:
+        rgba(255, 127, 0, 0.7);
+
+    color:
+        black;
+
     text-shadow:
         2px 0 white,
-       -2px 0 white,
+        -2px 0 white,
         0 2px white,
         0 -2px white,
         2px 2px white,
-       -2px -2px white,
+        -2px -2px white,
         2px -2px white,
-       -2px 2px white;
+        -2px 2px white;
 }
 
 
-
+/* ==================================================
+   5. PROGRESSION - HOOFDSTRUCTUUR
+   ================================================== */
 
 .progression {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
 
-.loot-item.progression-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
 
-    /* font-weight: 100; */
-    font-size: clamp(0.50rem, 0.65vw, 0.90rem);
-    line-height: 1.1;
+    width:
+        100%;
+
+    align-items:
+        stretch;
 }
 
 
 .tiers {
-    flex: 5;
-    min-width: 0;
 
-    display: flex;
-    flex-direction: column;
-}
+    flex:
+        5;
 
-.tier-d {
-    background-color: rgba(226, 239, 218, 0.95);
-}
+    min-width:
+        0;
 
+    display:
+        flex;
 
-.tier-c {
-    background-color: rgba(201, 218, 248, 0.95);
-}
-
-
-.tier-b {
-    background-color: rgba(255, 242, 204, 0.95);
+    flex-direction:
+        column;
 }
 
 
-.tier-a {
-    background-color: rgba(244, 204, 204, 0.95);
+.progression-info-panel {
+
+    flex:
+        3;
+
+    flex-shrink:
+        0;
+
+    padding-left:
+        15px;
+
+    background-color:
+        rgba(247, 247, 247, 0.95);
+
+    align-self:
+        flex-start;
+
+    box-sizing:
+        border-box;
+
+    font-size:
+        0.85em;
 }
 
 
-.tier-s {
-    background-color: rgba(217, 217, 217, 0.95);
-}
+/* ==================================================
+   6. PROGRESSION - GRID
+   ================================================== */
 
 .progression-grid {
-    display: grid;
+
+    display:
+        grid;
 
     grid-template-columns:
         50px
@@ -255,12 +511,15 @@ body {
         auto
         repeat(8, minmax(40px, auto));
 
-    grid-auto-flow: row;
+    grid-auto-flow:
+        row;
 }
+
 
 @media (max-width: 1400px) {
 
     .progression-grid {
+
         grid-template-columns:
             50px
             50px
@@ -270,847 +529,1800 @@ body {
             60px
             minmax(160px, 1fr);
 
-    grid-template-rows:
-        auto
-        repeat(8, minmax(40px, auto));
+        grid-template-rows:
+            auto
+            repeat(8, minmax(40px, auto));
 
-    grid-auto-flow: row;
+        grid-auto-flow:
+            row;
     }
 
 }
 
+
+/* --------------------------------------------------
+   Tier-specific row counts
+   -------------------------------------------------- */
+
 .tier-c .progression-grid {
+
     grid-template-rows:
         auto
         repeat(13, minmax(40px, auto));
 }
 
+
 .tier-b .progression-grid {
+
     grid-template-rows:
         auto
         repeat(16, minmax(40px, auto));
 }
+
 
 .tier-a .progression-grid {
+
     grid-template-rows:
         auto
         repeat(16, minmax(40px, auto));
 }
 
+
 .tier-s .progression-grid {
+
     grid-template-rows:
         auto
         repeat(17, minmax(40px, auto));
 }
 
-.progression-info-panel {
-    flex: 3;
-    flex-shrink: 0;
-    padding-left: 15px;
-    background-color: rgba(247,247,247,0.95);
-    align-self: flex-start;
-    box-sizing: border-box;
 
-    font-size: 0.85em;
-}
+/* ==================================================
+   7. PROGRESSION - CELLEN EN TEKST
+   ================================================== */
 
 .cell {
-    border: 1px solid black;
-    padding: 5px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    overflow-wrap: normal;
-    word-break: normal;
+
+    border:
+        1px solid black;
+
+    padding:
+        5px;
+
+    justify-content:
+        center;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    min-width:
+        0;
+
+    overflow-wrap:
+        normal;
+
+    word-break:
+        normal;
 }
 
+
 .info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 1px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    text-align:
+        left;
+
+    padding:
+        1px;
 }
 
 
 .info h3 {
-    display: block;
-    text-align: center;
-    margin-bottom: 1px;
+
+    display:
+        block;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        1px;
 }
+
 
 .info p {
-    text-align: center;
-    max-width: 95%;
-    margin: 5px auto;
+
+    text-align:
+        center;
+
+    max-width:
+        95%;
+
+    margin:
+        5px auto;
 }
+
 
 .header {
-    min-height: 40px;
-    
-    font-weight: bold;
-    text-align: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height:
+        40px;
 
-    overflow-wrap: break-word;
-    min-width: 0;
-    word-break: normal;
+    font-weight:
+        bold;
 
-    background-color: black;
-    color: white;
+    text-align:
+        center;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow-wrap:
+        break-word;
+
+    min-width:
+        0;
+
+    word-break:
+        normal;
+
+    background-color:
+        black;
+
+    color:
+        white;
 }
+
+
+.loot-item.progression-item {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        clamp(0.50rem, 0.65vw, 0.90rem);
+
+    line-height:
+        1.1;
+}
+
+
+/* ==================================================
+   8. TIER-KLEUREN
+   ================================================== */
+
+.tier-d {
+
+    background-color:
+        rgba(226, 239, 218, 0.95);
+}
+
+
+.tier-c {
+
+    background-color:
+        rgba(201, 218, 248, 0.95);
+}
+
+
+.tier-b {
+
+    background-color:
+        rgba(255, 242, 204, 0.95);
+}
+
+
+.tier-a {
+
+    background-color:
+        rgba(244, 204, 204, 0.95);
+}
+
+
+.tier-s {
+
+    background-color:
+        rgba(217, 217, 217, 0.95);
+}
+
+
+/* ==================================================
+   9. PROGRESSION - STAMPS & UNLOCKS
+   ================================================== */
+
+
+/* --------------------------------------------------
+   General stamp positioning
+   -------------------------------------------------- */
 
 .stamp {
-    grid-column: 1;
-    grid-row: auto;
+
+    grid-column:
+        1;
+
+    grid-row:
+        auto;
 }
+
+
+/* --------------------------------------------------
+   Tier D
+   -------------------------------------------------- */
+
 .tier-d .stamp-0,
 .tier-d .unlock-0 {
-    grid-row: 2;
+
+    grid-row:
+        2;
 }
+
+
 .tier-d .stamp-1,
 .tier-d .unlock-1 {
-    grid-row: 3;
+
+    grid-row:
+        3;
 }
+
+
 .tier-d .stamp-2,
 .tier-d .unlock-2 {
-    grid-row: 4;
+
+    grid-row:
+        4;
 }
+
+
 .tier-d .stamp-3,
 .tier-d .unlock-3 {
-    grid-row: 5;
+
+    grid-row:
+        5;
 }
+
+
 .tier-d .stamp-4,
 .tier-d .unlock-4 {
-    grid-row: 6;
+
+    grid-row:
+        6;
 }
+
+
 .tier-d .stamp-5,
 .tier-d .unlock-5 {
-    grid-row: 7;
+
+    grid-row:
+        7;
 }
+
+
 .tier-d .stamp-6,
 .tier-d .unlock-6 {
-    grid-row: 8;
+
+    grid-row:
+        8;
 }
+
+
 .tier-d .stamp-7,
 .tier-d .unlock-7 {
-    grid-row: 9;
+
+    grid-row:
+        9;
 }
+
+
+/* --------------------------------------------------
+   Tier C
+   -------------------------------------------------- */
+
 .tier-c .stamp-8,
 .tier-c .unlock-8 {
-    grid-row: 2;
+
+    grid-row:
+        2;
 }
+
+
 .tier-c .stamp-9,
 .tier-c .unlock-9 {
-    grid-row: 3;
+
+    grid-row:
+        3;
 }
+
+
 .tier-c .stamp-10,
 .tier-c .unlock-10 {
-    grid-row: 4;
+
+    grid-row:
+        4;
 }
+
+
 .tier-c .stamp-11,
 .tier-c .unlock-11 {
-    grid-row: 5;
+
+    grid-row:
+        5;
 }
+
+
 .tier-c .stamp-12,
 .tier-c .unlock-12 {
-    grid-row: 6;
+
+    grid-row:
+        6;
 }
+
+
 .tier-c .stamp-13,
 .tier-c .unlock-13 {
-    grid-row: 7;
+
+    grid-row:
+        7;
 }
+
+
 .tier-c .stamp-14,
 .tier-c .unlock-14 {
-    grid-row: 8;
+
+    grid-row:
+        8;
 }
+
+
 .tier-c .stamp-15,
 .tier-c .unlock-15 {
-    grid-row: 9;
+
+    grid-row:
+        9;
 }
+
+
 .tier-c .stamp-16,
 .tier-c .unlock-16 {
-    grid-row: 10;
+
+    grid-row:
+        10;
 }
+
+
 .tier-c .stamp-17,
 .tier-c .unlock-17 {
-    grid-row: 11;
+
+    grid-row:
+        11;
 }
+
+
 .tier-c .stamp-18,
 .tier-c .unlock-18 {
-    grid-row: 12;
+
+    grid-row:
+        12;
 }
+
+
 .tier-c .stamp-19,
 .tier-c .unlock-19 {
-    grid-row: 13;
+
+    grid-row:
+        13;
 }
+
+
 .tier-c .stamp-20,
 .tier-c .unlock-20 {
-    grid-row: 14;
+
+    grid-row:
+        14;
 }
+
+
+/* --------------------------------------------------
+   Tier B
+   -------------------------------------------------- */
+
 .tier-b .stamp-21,
 .tier-b .unlock-21 {
-    grid-row: 2;
+
+    grid-row:
+        2;
 }
+
+
 .tier-b .stamp-22,
 .tier-b .unlock-22 {
-    grid-row: 3;
+
+    grid-row:
+        3;
 }
+
+
 .tier-b .stamp-23,
 .tier-b .unlock-23 {
-    grid-row: 4;
+
+    grid-row:
+        4;
 }
+
+
 .tier-b .stamp-24,
 .tier-b .unlock-24 {
-    grid-row: 5;
+
+    grid-row:
+        5;
 }
+
+
 .tier-b .stamp-25,
 .tier-b .unlock-25 {
-    grid-row: 6;
+
+    grid-row:
+        6;
 }
+
+
 .tier-b .stamp-26,
 .tier-b .unlock-26 {
-    grid-row: 7;
+
+    grid-row:
+        7;
 }
+
+
 .tier-b .stamp-27,
 .tier-b .unlock-27 {
-    grid-row: 8;
+
+    grid-row:
+        8;
 }
+
+
 .tier-b .stamp-28,
 .tier-b .unlock-28 {
-    grid-row: 9;
+
+    grid-row:
+        9;
 }
+
+
 .tier-b .stamp-29,
 .tier-b .unlock-29 {
-    grid-row: 10;
+
+    grid-row:
+        10;
 }
+
+
 .tier-b .stamp-30,
 .tier-b .unlock-30 {
-    grid-row: 11;
+
+    grid-row:
+        11;
 }
+
+
 .tier-b .stamp-31,
 .tier-b .unlock-31 {
-    grid-row: 12;
+
+    grid-row:
+        12;
 }
+
+
 .tier-b .stamp-32,
 .tier-b .unlock-32 {
-    grid-row: 13;
+
+    grid-row:
+        13;
 }
+
+
 .tier-b .stamp-33,
 .tier-b .unlock-33 {
-    grid-row: 14;
+
+    grid-row:
+        14;
 }
+
+
 .tier-b .stamp-34,
 .tier-b .unlock-34 {
-    grid-row: 15;
+
+    grid-row:
+        15;
 }
+
+
 .tier-b .stamp-35,
 .tier-b .unlock-35 {
-    grid-row: 16;
+
+    grid-row:
+        16;
 }
+
+
 .tier-b .stamp-36,
 .tier-b .unlock-36 {
-    grid-row: 17;
+
+    grid-row:
+        17;
 }
+
+
+/* These existing overlaps are intentionally preserved. */
+
 .tier-b .stamp-37,
-.tier-b .unlock-37 {
-    grid-row: 16;
-}
+.tier-b .unlock-37,
 .tier-b .stamp-38,
-.tier-b .unlock-38 {
-    grid-row: 16;
-}
+.tier-b .unlock-38,
 .tier-b .stamp-39,
-.tier-b .unlock-39 {
-    grid-row: 16;
-}
+.tier-b .unlock-39,
 .tier-b .stamp-40,
-.tier-b .unlock-40 {
-    grid-row: 16;
-}
+.tier-b .unlock-40,
 .tier-b .stamp-41,
-.tier-b .unlock-41 {
-    grid-row: 16;
-}
+.tier-b .unlock-41,
 .tier-b .stamp-42,
-.tier-b .unlock-42 {
-    grid-row: 16;
-}
+.tier-b .unlock-42,
 .tier-b .stamp-43,
-.tier-b .unlock-43 {
-    grid-row: 16;
-}
+.tier-b .unlock-43,
 .tier-b .stamp-44,
-.tier-b .unlock-44 {
-    grid-row: 16;
-}
+.tier-b .unlock-44,
 .tier-b .stamp-45,
-.tier-b .unlock-45 {
-    grid-row: 16;
-}
+.tier-b .unlock-45,
 .tier-b .stamp-46,
-.tier-b .unlock-46 {
-    grid-row: 16;
-}
+.tier-b .unlock-46,
 .tier-b .stamp-47,
-.tier-b .unlock-47 {
-    grid-row: 16;
-}
+.tier-b .unlock-47,
 .tier-b .stamp-48,
-.tier-b .unlock-48 {
-    grid-row: 16;
-}
+.tier-b .unlock-48,
 .tier-b .stamp-49,
-.tier-b .unlock-49 {
-    grid-row: 16;
-}
+.tier-b .unlock-49,
 .tier-b .stamp-50,
-.tier-b .unlock-50 {
-    grid-row: 16;
-}
+.tier-b .unlock-50,
 .tier-b .stamp-51,
-.tier-b .unlock-51 {
-    grid-row: 16;
-}
+.tier-b .unlock-51,
 .tier-b .stamp-52,
 .tier-b .unlock-52 {
-    grid-row: 16;
+
+    grid-row:
+        16;
 }
+
+
+/* --------------------------------------------------
+   Tier S
+   -------------------------------------------------- */
+
 .tier-s .stamp-53,
 .tier-s .unlock-53 {
-    grid-row: 2;
-    flex-direction: column;
+
+    grid-row:
+        2;
+
+    flex-direction:
+        column;
 }
+
 
 .tier-s .stamp-54,
 .tier-s .unlock-54 {
-    grid-row: 3;
+
+    grid-row:
+        3;
 }
+
 
 .tier-s .stamp-55,
 .tier-s .unlock-55 {
-    grid-row: 4;
+
+    grid-row:
+        4;
 }
+
 
 .tier-s .stamp-56,
 .tier-s .unlock-56 {
-    grid-row: 5;
+
+    grid-row:
+        5;
 }
+
 
 .tier-s .stamp-57,
 .tier-s .unlock-57 {
-    grid-row: 6;
+
+    grid-row:
+        6;
 }
+
 
 .tier-s .stamp-58,
 .tier-s .unlock-58 {
-    grid-row: 7;
+
+    grid-row:
+        7;
 }
+
 
 .tier-s .stamp-59,
 .tier-s .unlock-59 {
-    grid-row: 8;
+
+    grid-row:
+        8;
 }
+
 
 .tier-s .stamp-60,
 .tier-s .unlock-60 {
-    grid-row: 9;
+
+    grid-row:
+        9;
 }
+
 
 .tier-s .stamp-61,
 .tier-s .unlock-61 {
-    grid-row: 10;
+
+    grid-row:
+        10;
 }
+
 
 .tier-s .stamp-62,
 .tier-s .unlock-62 {
-    grid-row: 11;
+
+    grid-row:
+        11;
 }
+
 
 .tier-s .stamp-63,
 .tier-s .unlock-63 {
-    grid-row: 12;
+
+    grid-row:
+        12;
 }
+
 
 .tier-s .stamp-64,
 .tier-s .unlock-64 {
-    grid-row: 13;
+
+    grid-row:
+        13;
 }
+
 
 .tier-s .stamp-65,
 .tier-s .unlock-65 {
-    grid-row: 14;
+
+    grid-row:
+        14;
 }
+
 
 .tier-s .stamp-66,
 .tier-s .unlock-66 {
-    grid-row: 15;
+
+    grid-row:
+        15;
 }
+
 
 .tier-s .stamp-68,
 .tier-s .unlock-68 {
-    grid-row: 16;
+
+    grid-row:
+        16;
 }
+
 
 .tier-s .stamp-72,
 .tier-s .unlock-72 {
-    grid-row: 17;
+
+    grid-row:
+        17;
 }
+
 
 .tier-s .stamp-76+,
 .tier-s .unlock-76+ {
-    grid-row: 18;
+
+    grid-row:
+        18;
 }
 
+
+/* ==================================================
+   10. PROGRESSION - LEVELS
+   ================================================== */
 
 .level {
-    grid-column: 2;
 
-    justify-content: center;
-    text-align: center;
+    grid-column:
+        2;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
 }
+
+
+/* --------------------------------------------------
+   Tier D
+   -------------------------------------------------- */
+
 .tier-d .level-1 {
-    grid-row: 2 / span 1;
+
+    grid-row:
+        2 / span 1;
 }
+
+
 .tier-d .level-2 {
-    grid-row: 3 / span 2;
+
+    grid-row:
+        3 / span 2;
 }
+
+
 .tier-d .level-3 {
-    grid-row: 5 / span 2;
+
+    grid-row:
+        5 / span 2;
 }
+
+
 .tier-d .level-4 {
-    grid-row: 7 / span 4;
+
+    grid-row:
+        7 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Tier C
+   -------------------------------------------------- */
+
 .tier-c .level-5 {
-    grid-column: 2;
-    grid-row: 2 / span 3;
+
+    grid-column:
+        2;
+
+    grid-row:
+        2 / span 3;
 }
+
+
 .tier-c .level-6 {
-    grid-column: 2;
-    grid-row: 5 / span 3;
+
+    grid-column:
+        2;
+
+    grid-row:
+        5 / span 3;
 }
+
+
 .tier-c .level-7 {
-    grid-column: 2;
-    grid-row: 8 / span 3;
+
+    grid-column:
+        2;
+
+    grid-row:
+        8 / span 3;
 }
+
+
 .tier-c .level-8 {
-    grid-column: 2;
-    grid-row: 11 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        11 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Tier B
+   -------------------------------------------------- */
+
 .tier-b .level-9 {
-    grid-column: 2;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-b .level-10 {
-    grid-column: 2;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-b .level-11 {
-    grid-column: 2;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        10 / span 4;
 }
+
+
 .tier-b .level-12 {
-    grid-column: 2;
-    grid-row: 14 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        14 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Tier A
+   -------------------------------------------------- */
+
 .tier-a .level-13 {
-    grid-column: 2;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-a .level-14 {
-    grid-column: 2;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-a .level-15 {
-    grid-column: 2;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        10 / span 4;
 }
+
+
 .tier-a .level-16 {
-    grid-column: 2;
-    grid-row: 14 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        14 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Tier S
+   -------------------------------------------------- */
+
 .tier-s .level-17 {
-    grid-column: 2;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-s .level-18 {
-    grid-column: 2;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-s .level-19 {
-    grid-column: 2;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        2;
+
+    grid-row:
+        10 / span 4;
 }
+
 
 .tier-s .level-20 {
-    grid-column: 2;
-    grid-row: 14 / span 5;
+
+    grid-column:
+        2;
+
+    grid-row:
+        14 / span 5;
 }
 
 
-
-
+/* ==================================================
+   11. PROGRESSION - HEALING
+   ================================================== */
 
 .healing {
-    grid-column: 3;
-    grid-row: 2 / span 8;
 
-    display: flex;
-    flex-direction: column;
+    grid-column:
+        3;
 
-    justify-content: center;
-    align-items: center;
+    grid-row:
+        2 / span 8;
 
-    text-align: center;
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
 }
+
 
 .tier-c .healing {
-    grid-row: 2 / span 13;
+
+    grid-row:
+        2 / span 13;
 }
+
 
 .tier-b-healing-1 {
-    grid-row: 2 / span 8;
+
+    grid-row:
+        2 / span 8;
 }
+
 
 .tier-b-healing-2 {
-    grid-row: 10 / span 8;
+
+    grid-row:
+        10 / span 8;
 }
+
 
 .tier-a-healing-1 {
-    grid-row: 2 / span 8;
+
+    grid-row:
+        2 / span 8;
 }
+
 
 .tier-a-healing-2 {
-    grid-row: 10 / span 8;
+
+    grid-row:
+        10 / span 8;
 }
+
 
 .tier-s .healing {
-    grid-row: 2 / span 17;
+
+    grid-row:
+        2 / span 17;
 }
+
 
 .healing-item {
-    width: 100%;
+
+    width:
+        100%;
 }
 
 
-
-
+/* ==================================================
+   12. PROGRESSION - ARMOR
+   ================================================== */
 
 .armor-starting {
-    grid-column: 4;
-    grid-row: 2;
-    
-    justify-content: center;
-    text-align: center;
-    font-weight: bold;
+
+    grid-column:
+        4;
+
+    grid-row:
+        2;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    font-weight:
+        bold;
 }
+
 
 .armor {
-    grid-column: 4;
-    grid-row: 3 / span 8;
 
-    justify-content: center;
-    align-items: center;
+    grid-column:
+        4;
 
-    flex-direction: column;
+    grid-row:
+        3 / span 8;
 
-    text-align: center;
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
 }
+
 
 .armor-category {
-    display: flex;
-    flex-direction: column;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
 }
+
 
 .tier-c .armor {
-    grid-column: 4;
-    grid-row: 2 / span 13;
+
+    grid-column:
+        4;
+
+    grid-row:
+        2 / span 13;
 }
+
 
 .tier-b .armor {
-    grid-column: 4;
-    grid-row: 2 / span 16;
+
+    grid-column:
+        4;
+
+    grid-row:
+        2 / span 16;
 }
+
 
 .tier-a .armor {
-    grid-column: 4;
-    grid-row: 2 / span 16;
+
+    grid-column:
+        4;
+
+    grid-row:
+        2 / span 16;
 }
+
 
 .tier-s .armor {
-    grid-column: 4;
-    grid-row: 2 / span 17;
+
+    grid-column:
+        4;
+
+    grid-row:
+        2 / span 17;
 }
 
 
-
-
+/* ==================================================
+   13. PROGRESSION - MOUNTS
+   ================================================== */
 
 .mount {
-    grid-column: 5;
-    grid-row: 7 / span 3;
 
-    justify-content: center;
-    align-items: center;
+    grid-column:
+        5;
 
-    flex-direction: column;
+    grid-row:
+        7 / span 3;
 
-    text-align: center;
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
 }
+
 
 .tier-c .mount {
-    grid-column: 5;
-    grid-row: 2 / span 13;
+
+    grid-column:
+        5;
+
+    grid-row:
+        2 / span 13;
 }
+
 
 .tier-b .mount {
-    grid-column: 5;
-    grid-row: 2 / span 16;
+
+    grid-column:
+        5;
+
+    grid-row:
+        2 / span 16;
 }
+
 
 .tier-a .mount-1 {
-    grid-column: 5;
-    grid-row: 2 / span 12;
+
+    grid-column:
+        5;
+
+    grid-row:
+        2 / span 12;
 }
+
 
 .tier-a .mount-2 {
-    grid-column: 5;
-    grid-row: 14 / span 4;
+
+    grid-column:
+        5;
+
+    grid-row:
+        14 / span 4;
 }
+
 
 .tier-s .mount-1 {
-    grid-column: 5;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        5;
+
+    grid-row:
+        2 / span 4;
 }
 
+
 .tier-s .mount-2 {
-    grid-column: 5;
-    grid-row: 6 / span 13;
+
+    grid-column:
+        5;
+
+    grid-row:
+        6 / span 13;
 }
 
 
 .mount-category {
-    display: flex;
-    flex-direction: column;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
 }
 
 
 .mount-none {
-    grid-column: 5;
-    grid-row: 2 / span 5;
 
-    justify-content: center;
-    text-align: center;
+    grid-column:
+        5;
+
+    grid-row:
+        2 / span 5;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
 }
 
 
-
-
+/* ==================================================
+   14. PROGRESSION - WEAVE
+   ================================================== */
 
 .weave {
-    grid-column: 6;
-    grid-row: 2 / span 8;
 
-    justify-content: center;
-    text-align: center;
+    grid-column:
+        6;
+
+    grid-row:
+        2 / span 8;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
 }
-.weave-value strong{
-    font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+
+.weave-value strong {
+
+    font-size:
+        1em;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
 }
+
+
+/* --------------------------------------------------
+   Weave - Tier C
+   -------------------------------------------------- */
+
 .tier-c .tier-c-weave-1 {
-    grid-column: 6;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-c .tier-c-weave-2 {
-    grid-column: 6;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-c .tier-c-weave-3 {
-    grid-column: 6;
-    grid-row: 10 / span 5;
+
+    grid-column:
+        6;
+
+    grid-row:
+        10 / span 5;
 }
+
+
+/* --------------------------------------------------
+   Weave - Tier B
+   -------------------------------------------------- */
+
 .tier-b .tier-b-weave-1 {
-    grid-column: 6;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-b .tier-b-weave-2 {
-    grid-column: 6;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-b .tier-b-weave-3 {
-    grid-column: 6;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        10 / span 4;
 }
+
+
 .tier-b .tier-b-weave-4 {
-    grid-column: 6;
-    grid-row: 14 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        14 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Weave - Tier A
+   -------------------------------------------------- */
+
 .tier-a .tier-a-weave-1 {
-    grid-column: 6;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-a .tier-a-weave-2 {
-    grid-column: 6;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-a .tier-a-weave-3 {
-    grid-column: 6;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        10 / span 4;
 }
+
+
 .tier-a .tier-a-weave-4 {
-    grid-column: 6;
-    grid-row: 14 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        14 / span 4;
 }
+
+
+/* --------------------------------------------------
+   Weave - Tier S
+   -------------------------------------------------- */
+
 .tier-s .tier-s-weave-1 {
-    grid-column: 6;
-    grid-row: 2 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        2 / span 4;
 }
+
+
 .tier-s .tier-s-weave-2 {
-    grid-column: 6;
-    grid-row: 6 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        6 / span 4;
 }
+
+
 .tier-s .tier-s-weave-3 {
-    grid-column: 6;
-    grid-row: 10 / span 4;
+
+    grid-column:
+        6;
+
+    grid-row:
+        10 / span 4;
 }
+
+
 .tier-s .tier-s-weave-4 {
-    grid-column: 6;
-    grid-row: 14 / span 5;
+
+    grid-column:
+        6;
+
+    grid-row:
+        14 / span 5;
 }
 
 
-
+/* ==================================================
+   15. PROGRESSION - UNLOCKS
+   ================================================== */
 
 .unlock {
-    grid-column: 7;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    }
-.unlock-choice-cell {
-    padding: 0;
-    border: 2px solid red;
+    grid-column:
+        7;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
 }
+
+
+.unlock-choice-cell {
+
+    padding:
+        0;
+
+    border:
+        2px solid red;
+}
+
 
 .unlock-group {
-    flex: 1;
-    min-width: 0;
-    border-left: 2px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    border-left:
+        2px solid red;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    height:
+        100%;
 }
+
 
 .unlock-group:first-child {
-    border-left: none;
+
+    border-left:
+        none;
 }
+
 
 .unlock-subchoice {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+    flex:
+        1;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
 }
+
 
 .unlock-subchoice + .unlock-subchoice {
-    border-top: 2px solid red;
+
+    border-top:
+        2px solid red;
 }
 
-/* Epic Boons */
+
+/* ==================================================
+   16. EPIC BOONS
+   ================================================== */
+
 #boon-table {
-margin-top: 40px;
+
+    margin-top:
+        40px;
 }
 
-.boon-dashboard {    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 5px;    
+
+.boon-dashboard {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(350px, 1fr));
+
+    gap:
+        5px;
 }
+
 
 .boon-card {
-    background-color: rgba(251, 188, 4, 0.95);
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 15px;
 
-    text-align: center;
+    padding:
+        15px;
+
+    background-color:
+        rgba(251, 188, 4, 0.95);
+
+    border:
+        2px solid black;
+
+    border-radius:
+        10px;
+
+    text-align:
+        center;
 }
+
 
 .boon-card h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.1em;
-    color: rgba(153, 0, 51, 1);
+
+    margin:
+        0 0 10px 0;
+
+    font-size:
+        1.1em;
+
+    color:
+        rgba(153, 0, 51, 1);
 }
+
 
 .boon-card p {
-    margin: 0;
-    line-height: 1.3;
-}
-/* Epic Boons end */
 
-@media (max-width: 768px), (max-height: 500px) and (orientation: landscape) {
+    margin:
+        0;
+
+    line-height:
+        1.3;
+}
+
+
+/* ==================================================
+   17. RESPONSIVE - TABLET / MOBIEL
+   ================================================== */
+
+@media (max-width: 768px),
+       (max-height: 500px) and (orientation: landscape) {
+
+
+    /* --------------------------------------------------
+       Progression
+       -------------------------------------------------- */
 
     .progression {
-        flex-direction: column;
+
+        flex-direction:
+            column;
     }
+
 
     .tiers {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+
+        overflow-x:
+            auto;
+
+        -webkit-overflow-scrolling:
+            touch;
     }
+
 
     .progression-info-panel {
-        width: 100%;
-        flex: none;
-        padding: 15px;
+
+        width:
+            100%;
+
+        flex:
+            none;
+
+        padding:
+            15px;
     }
+
+
+    /* --------------------------------------------------
+       Floating menu
+       -------------------------------------------------- */
 
     .floating-menu {
-        flex-wrap: nowrap;
-        gap: clamp(3px, 1.2vw, 10px);
-        max-width: calc(100% - 20px - 40px);
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
 
+        flex-wrap:
+            nowrap;
+
+        gap:
+            clamp(3px, 1.2vw, 10px);
+
+        max-width:
+            calc(100% - 20px - 40px);
+
+        overflow-x:
+            auto;
+
+        -webkit-overflow-scrolling:
+            touch;
     }
+
 
     .floating-menu button {
-        width: clamp(34px, 9vw, 55px);
-        height: clamp(34px, 9vw, 55px);
-        font-size: clamp(0.45rem, 2vw, 0.65rem);
-        line-height: 1.05;
-        padding: 2px;
-        flex-shrink: 0;
-        top: max(20px, env(safe-area-inset-top));
-        right: max(20px, env(safe-area-inset-right));
-        bottom: max(20px, env(safe-area-inset-bottom));
-        left: max(20px, env(safe-area-inset-left));
+
+        width:
+            clamp(34px, 9vw, 55px);
+
+        height:
+            clamp(34px, 9vw, 55px);
+
+        font-size:
+            clamp(0.45rem, 2vw, 0.65rem);
+
+        line-height:
+            1.05;
+
+        padding:
+            2px;
+
+        flex-shrink:
+            0;
+
+        top:
+            max(20px, env(safe-area-inset-top));
+
+        right:
+            max(20px, env(safe-area-inset-right));
+
+        bottom:
+            max(20px, env(safe-area-inset-bottom));
+
+        left:
+            max(20px, env(safe-area-inset-left));
     }
+
+
+    /* --------------------------------------------------
+       Body
+       -------------------------------------------------- */
 
     body {
-        padding-bottom: calc(20px + clamp(34px, 9vw, 55px) + 20px);
+
+        padding-bottom:
+            calc(
+                20px +
+                clamp(34px, 9vw, 55px) +
+                20px
+            );
     }
+
+
+    /* --------------------------------------------------
+       Credits
+       -------------------------------------------------- */
 
     .credits-container {
-        position: fixed;
-        visibility: hidden;
-        
+
+        position:
+            fixed;
+
+        visibility:
+            hidden;
     }
 
+
+    /* --------------------------------------------------
+       Tier width
+       -------------------------------------------------- */
+
     .tier {
-    width: 800px;
+
+        min-width:
+            800px;
     }
+
+}
+
+
+/* ==================================================
+   18. RESPONSIVE - PROGRESSION PORTRAIT
+   ================================================== */
+
+@media (max-width: 1200px) and (orientation: portrait) {
+
+    .progression {
+
+        flex-direction:
+            column;
+    }
+
+
+    .tiers {
+
+        overflow-x:
+            auto;
+
+        -webkit-overflow-scrolling:
+            touch;
+    }
+
+
+    .progression-info-panel {
+
+        width:
+            100%;
+
+        flex:
+            none;
+
+        padding:
+            15px;
+    }
+
+
+    .progression-grid {
+
+        grid-template-columns:
+            50px
+            50px
+            80px
+            90px
+            90px
+            60px
+            minmax(360px, 1fr);
+    }    
+
 }

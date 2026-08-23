@@ -4,6 +4,9 @@ const ENABLE_ITEM_TOOLTIPS =
 const GUEST_TOOLTIPS_ALLOWED =
     SITE_CONFIG.tooltips.guestAllowed;
 
+const ENABLE_PARCHMENT_TOOLTIPS =
+    SITE_CONFIG.tooltips.parchment;
+
 const MOBILE_WIDTH = 900;
 const MOBILE_LANDSCAPE_HEIGHT = 500;
 
@@ -114,7 +117,7 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                                 ? `<br>Requires Attunement${item.attunement.who ? " " + item.attunement.who : ""}`
                                 : ""}
 
-                        </div>
+                        </div><hr>
 
 
                         ${item.description?.length ? `
@@ -168,7 +171,7 @@ if (TOOLTIP_ACCESS_ALLOWED) {
 
                                 ${
                                     ability.action
-                                        ? "Use: " +
+                                        ? "<strong>Use:</strong> " +
                                           ability.action +
                                           "<br>"
                                         : ""
@@ -180,7 +183,7 @@ if (TOOLTIP_ACCESS_ALLOWED) {
 
                                 ${
                                     ability.recharge
-                                        ? "Recharge: " +
+                                        ? "<strong>Recharge:</strong> " +
                                           ability.recharge
                                         : ""
                                 }
@@ -357,7 +360,10 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                             }
 
 
-                            // Reset eerst eventuele eerdere correcties
+                            // ==========================================
+                            // TOOLTIP POSITIONERING RESETTEN
+                            // ==========================================
+
                             tooltip.style.left = "";
                             tooltip.style.right = "";
                             tooltip.style.top = "";
@@ -374,86 +380,209 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                                 "block";
 
 
+                            // ==========================================
+                            // TOOLTIP METEN
+                            // ==========================================
+
                             const tooltipRect =
+                                tooltip.getBoundingClientRect();
+
+                            const cellRect =
+                                cell.getBoundingClientRect();
+
+
+                            const tooltipWidth =
+                                tooltipRect.width;
+
+                            const tooltipHeight =
+                                tooltipRect.height;
+
+
+                            const spaceLeft =
+                                cellRect.left;
+
+                            const spaceRight =
+                                window.innerWidth -
+                                cellRect.right;
+
+
+                            // ==========================================
+                            // HORIZONTALE TOOLTIP-POSITIE
+                            // ==========================================
+
+                            /*
+                            * Eerst bepalen we welke kant de voorkeur heeft.
+                            *
+                            * Rechts heeft prioriteit wanneer de volledige
+                            * tooltip daar past.
+                            *
+                            * Anders proberen we links.
+                            *
+                            * Als hij aan geen van beide kanten volledig past,
+                            * kiezen we de kant met de meeste beschikbare ruimte.
+                            */
+
+                            if (
+                                spaceRight >= tooltipWidth + 10
+                            ) {
+
+                                tooltip.style.left =
+                                    "100%";
+
+                                tooltip.style.right =
+                                    "auto";
+
+                                tooltip.style.marginLeft =
+                                    "10px";
+
+                                tooltip.style.marginRight =
+                                    "0";
+
+                            }
+
+                            else if (
+                                spaceLeft >= tooltipWidth + 10
+                            ) {
+
+                                tooltip.style.left =
+                                    "auto";
+
+                                tooltip.style.right =
+                                    "100%";
+
+                                tooltip.style.marginLeft =
+                                    "0";
+
+                                tooltip.style.marginRight =
+                                    "10px";
+
+                            }
+
+                            else if (
+                                spaceRight >= spaceLeft
+                            ) {
+
+                                tooltip.style.left =
+                                    "100%";
+
+                                tooltip.style.right =
+                                    "auto";
+
+                                tooltip.style.marginLeft =
+                                    "10px";
+
+                                tooltip.style.marginRight =
+                                    "0";
+
+                            }
+
+                            else {
+
+                                tooltip.style.left =
+                                    "auto";
+
+                                tooltip.style.right =
+                                    "100%";
+
+                                tooltip.style.marginLeft =
+                                    "0";
+
+                                tooltip.style.marginRight =
+                                    "10px";
+
+                            }
+
+
+                            // ==========================================
+                            // TOOLTIP OPNIEUW METEN
+                            // ==========================================
+
+                            const positionedTooltipRect =
                                 tooltip.getBoundingClientRect();
 
 
                             // ==========================================
-                            // TOOLTIP BINNEN HET VENSTER HOUDEN
+                            // HORIZONTALE CORRECTIE
                             // ==========================================
 
-                            // Rechts buiten het scherm
-                            if (
-                                tooltipRect.right >
-                                window.innerWidth
-                            ) {
-
-                                tooltip.style.left =
-                                    "auto";
-
-                                tooltip.style.right =
-                                    "100%";
-
-                                tooltip.style.marginLeft =
-                                    "0";
-
-                                tooltip.style.marginRight =
-                                    "10px";
-
-                            }
+                            let correctionX = 0;
 
 
                             // Links buiten het scherm
                             if (
-                                tooltipRect.left < 0
+                                positionedTooltipRect.left < 10
                             ) {
 
-                                tooltip.style.left =
-                                    "100%";
-
-                                tooltip.style.right =
-                                    "auto";
-
-                                tooltip.style.marginLeft =
-                                    "10px";
-
-                                tooltip.style.marginRight =
-                                    "0";
+                                correctionX =
+                                    10 -
+                                    positionedTooltipRect.left;
 
                             }
 
 
-                            // Boven het scherm
-                            if (
-                                tooltipRect.top < 0
+                            // Rechts buiten het scherm
+                            else if (
+                                positionedTooltipRect.right >
+                                window.innerWidth - 10
                             ) {
 
-                                const correction =
-                                    -tooltipRect.top;
+                                correctionX =
+                                    (window.innerWidth - 10) -
+                                    positionedTooltipRect.right;
+
+                            }
 
 
-                                tooltip.style.transform =
-                                    `translateY(${correction}px)`;
+                            // ==========================================
+                            // VERTICALE CORRECTIE
+                            // ==========================================
+
+                            let correctionY = 0;
+
+
+                            // Boven het scherm
+                            if (
+                                positionedTooltipRect.top < 10
+                            ) {
+
+                                correctionY =
+                                    10 -
+                                    positionedTooltipRect.top;
 
                             }
 
 
                             // Onder het scherm
-                            if (
-                                tooltipRect.bottom >
-                                window.innerHeight
+                            else if (
+                                positionedTooltipRect.bottom >
+                                window.innerHeight - 10
                             ) {
 
-                                const correction =
-                                    window.innerHeight -
-                                    tooltipRect.bottom;
-
-
-                                tooltip.style.transform =
-                                    `translateY(${correction}px)`;
+                                correctionY =
+                                    (window.innerHeight - 10) -
+                                    positionedTooltipRect.bottom;
 
                             }
 
+
+                            // ==========================================
+                            // CORRECTIE TOEPASSEN
+                            // ==========================================
+
+                            if (
+                                correctionX !== 0 ||
+                                correctionY !== 0
+                            ) {
+
+                                tooltip.style.transform =
+                                    `translate(${correctionX}px, ${correctionY}px)`;
+
+                            }
+
+
+                            // ==========================================
+                            // TOOLTIP ZICHTBAAR MAKEN
+                            // ==========================================
 
                             tooltip.style.visibility =
                                 "";
@@ -508,17 +637,53 @@ if (TOOLTIP_ACCESS_ALLOWED) {
             "click",
             () => {
 
-                tooltipMode++;
+
+                // ==========================================
+                // MODUS WISSELEN
+                // ==========================================
+
+                if (
+                    ENABLE_PARCHMENT_TOOLTIPS
+                ) {
+
+                    // 0 = OFF
+                    // 1 = ON + parchment
+                    // 2 = ON normaal
+
+                    tooltipMode++;
 
 
-                if (tooltipMode > 2) {
+                    if (
+                        tooltipMode > 2
+                    ) {
 
-                    tooltipMode = 0;
+                        tooltipMode = 0;
+
+                    }
+
+                } else {
+
+                    // 0 = OFF
+                    // 1 = ON normaal
+
+                    tooltipMode++;
+
+
+                    if (
+                        tooltipMode > 1
+                    ) {
+
+                        tooltipMode = 0;
+
+                    }
 
                 }
 
 
-                // Alles eerst resetten
+                // ==========================================
+                // ALLES EERST RESETTEN
+                // ==========================================
+
                 document.body.classList.remove(
                     "item-tooltips-enabled",
                     "item-tooltips-disabled"
@@ -540,11 +705,19 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                     );
 
 
-                // ======================================
-                // 0 = OFF
-                // ======================================
+                tooltipButton.classList.remove(
+                    "parchment-mode",
+                    "tooltip-on-mode"
+                );
 
-                if (tooltipMode === 0) {
+
+                // ==========================================
+                // OFF
+                // ==========================================
+
+                if (
+                    tooltipMode === 0
+                ) {
 
                     document.body.classList.add(
                         "item-tooltips-disabled"
@@ -557,11 +730,14 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                 }
 
 
-                // ======================================
-                // 1 = ON + parchment
-                // ======================================
+                // ==========================================
+                // ON + PARCHMENT
+                // ==========================================
 
-                if (tooltipMode === 1) {
+                if (
+                    tooltipMode === 1 &&
+                    ENABLE_PARCHMENT_TOOLTIPS
+                ) {
 
                     document.body.classList.add(
                         "item-tooltips-enabled"
@@ -594,11 +770,14 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                 }
 
 
-                // ======================================
-                // 2 = ON standaard
-                // ======================================
+                // ==========================================
+                // ON NORMAAL
+                // ==========================================
 
-                if (tooltipMode === 2) {
+                if (
+                    tooltipMode === 1 &&
+                    !ENABLE_PARCHMENT_TOOLTIPS
+                ) {
 
                     document.body.classList.add(
                         "item-tooltips-enabled"
@@ -609,8 +788,33 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                         "Loot Tooltips: ON";
 
 
-                    tooltipButton.classList.remove(
-                        "parchment-mode"
+                    tooltipButton.classList.add(
+                        "tooltip-on-mode"
+                    );
+
+                }
+
+
+                // ==========================================
+                // ON NORMAAL NA PARCHMENT
+                // ==========================================
+
+                if (
+                    tooltipMode === 2 &&
+                    ENABLE_PARCHMENT_TOOLTIPS
+                ) {
+
+                    document.body.classList.add(
+                        "item-tooltips-enabled"
+                    );
+
+
+                    tooltipButton.textContent =
+                        "Loot Tooltips: ON";
+
+
+                    tooltipButton.classList.add(
+                        "tooltip-on-mode"
                     );
 
                 }

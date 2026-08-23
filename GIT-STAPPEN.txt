@@ -28,7 +28,8 @@ Voorbeeld:
 git commit -m "Update welcome text"
 
 5. Stuur de commit naar GitHub:
-git push origin main
+git push origin main (Was voor V1)
+git push origin master (Is voor V2)
 
 6. Vercel pakt de nieuwe GitHub-versie automatisch op
 en maakt een nieuwe deployment.
@@ -61,3 +62,5 @@ Voor een kleine wijziging zijn meestal deze drie voldoende:
 git add BESTANDSNAAM
 git commit -m "Beschrijving"
 git push origin main
+
+

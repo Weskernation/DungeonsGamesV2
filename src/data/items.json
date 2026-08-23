@@ -432,11 +432,11 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Anstruth Harp": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Bard"
         },
 
         "description": [
@@ -468,7 +468,7 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Armblade": {
-        "type": "Generic Melee Weapon",
+        "type": "Weapon (melee)",
         "rarity": "Common",
         "attunement": {
             "required": true,
@@ -1116,7 +1116,9 @@
             "who": ""
         },
 
-        "description": [],
+        "description": [
+            "The belt has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+        ],
 
         "effects": [
             "Your Strength score changes to 23"
@@ -1136,7 +1138,9 @@
             "who": ""
         },
 
-        "description": [],
+        "description": [
+            "The belt has no effect on you if your Strength without the belt is equal to or greater than the belt's score."
+        ],
 
         "effects": [
             "Your Strength score changes to 29"
@@ -3967,445 +3971,386 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eversmoking Bottle": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Smoke",
+                "action": "Action",
+                "effect": "Release or stop the heavily obscuring smoke from the bottle in a 60-foot radius, the smoke increases every minute by 10 ft up to a maximum of 120 feet",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eye of Vecna": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "1 minor beneficial property",
+            "1 major beneficial property",
+            "1 minor detrimental property"
         ],
 
         "effects": [
-            ""
+            "You have truesight",
+            "The eye has 8 charges, and it regains 1d3 expended charges daily at dawn.",
+            "Each time you cast a spell from the eye, there is a 5 percent chance that Vecna tears your soul from your body, devours it, and then takes control of the body like a puppet."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "X-ray vision",
+                "action": "Action",
+                "effect": "see as if you were wearing a ring of X-ray vision.",
                 "recharge": ""
+            },
+            {
+                "name": "Cast a Spell (DC 18)",
+                "action": "Action",
+                "effect": ["<br>Clairvoyance: 2 charges",                
+                        "<br>Crown of madness: 1 charge",
+                        "<br>Disintegrate: 4 charges",
+                        "<br>Dominate monster: 5 charges",
+                        "<br>Eyebite: 4 charges"],
+                "recharge": "1d4+4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Eyes of the Eagle": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "You have advantage on Perception checks that rely on sight.",
+            "You can make out extremely distant details."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Feather Token": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "When you fall at least 20 feet and take no damage from falling."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Feywild Shard": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item, Spellcasting Focus",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Sorcerer"
         },
 
         "description": [
-            ""
+            "When you use a Metamagic option on a spell you can roll on the Wild Magic Surge table",
+            "If the result is a spell, it is too wild to be affected by your Metamagic, and if it normally requires concentration, it doesn't"
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Bronze Griffon": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a griffon up to 6 hours",
+                "recharge": "5 days"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Ebony Fly": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a giant fly up to 12 hours",
+                "recharge": "2 days"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Gold Canary": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a giant canary up to 8 hours",
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Figurine becomes a living creature.",
+                "action": "Action While you are missing half or more of your hit points",
+                "effect": "The figurine becomes an adult gold dragon up to 1 hour",
+                "recharge": "1 year"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Obisidian Steed": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a nightmare fly up to 24 hours",
+                "recharge": "5 days"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Onyx Dog": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a mastiff fly up to 6 hours",
+                "recharge": "7 days"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Figurine of Wondrous Power, Serpentine Owl": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Figurine becomes a living creature.",
+                "action": "Action",
+                "effect": "The figurine becomes a giant owl up to 8 hours",
+                "recharge": "2 days"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Finder's Goggles": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Add 1d4 to your insight checks"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Examine and locate (DC 13 + days old)",
+                "action": "Action",
+                "effect": "Examine an object and locate creature",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Flail of Tiamat": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (flail)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage",
+            "deal 5d4 extra damage, choose from acid, cold, fire, lightning or poison"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Breath (DC 18)",
+                "action": "Action",
+                "effect": "Breathe multicolored flames in a 90-foot cone for 14d6 damage",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Flame Tongue": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "While the sword is ablaze deal an extra 2d6 fire damage"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Erupt flames",
+                "action": "Bonus action",
+                "effect": "Flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. ",
                 "recharge": ""
             }
         ],
 
         "variants": [
-            ""
+            "Flame Tongue Double-Bladed Scimitar",
+            "Flame Tongue Greatsword",
+            "Flame Tongue Longsword",
+            "Flame Tongue Rapier",
+            "Flame Tongue Scimitar",
+            "Flame Tongue Shortsword"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Fochlucan Bandore": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Bard"
         },
 
         "description": [
@@ -4413,455 +4358,411 @@
         ],
 
         "effects": [
-            ""
+            "Targets suffer disadvantage on saving throws against spells that inflict the charmed condition.",
+            "This effect applies only if the spell has a somatic or a material component."
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "One Cast per spell",
                 "action": "",
-                "effect": "",
-                "recharge": ""
+                "effect": ["Fly",
+                        "Invisibility",
+                        "Levitate",
+                        "Protection from evil and good",
+                        "Entangle",
+                        "Faerie fire",
+                        "Shillelagh",
+                        "Speak with animals"],
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Frost Brand": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "Deal an extra 1d6 damage",
+            "You have resistance to fire damage",
+            "the blade sheds bright light in a 10-foot radius and dim light for an additional 10 feet."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
+                "name": "Extinguish nonmagical flames",
                 "action": "",
-                "effect": "",
-                "recharge": ""
+                "effect": "Extinguish all nonmagical flames within 30 feet of you",
+                "recharge": "Once per hour"
             }
         ],
 
         "variants": [
-            ""
+            "Frost Brand Double-Bladed Scimitar",
+            "Frost Brand Greatsword",
+            "Frost Brand Longsword",
+            "Frost Brand Rapier",
+            "Frost Brand Scimitar",
+            "Frost Brand Shortsword"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gauntlets of Ogre Power": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The gauntlets have no effect on you if your Strength is already 19 or higher without them."
         ],
 
         "effects": [
-            ""
+            "Your Strength score is 19."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gem of Seeing": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "This gem has 3 charges."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Truesight",
+                "action": "1 charge + Action",
+                "effect": "For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem.",
+                "recharge": "1d3 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ghost Step Tattoo": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The tattoo has 3 charges"
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Incorporeal",
+                "action": "1 charge + Bonus action",
+                "effect": [
+                            "You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
+                            "<br>You can't be grappled or restrained.",
+                            "<br>You can move through creatures and solid objects as if they were difficult terrain."
+                        ],
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Giant Slayer": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (melee)",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage",
+            "Giants take an extra 2d6 damage and must succeed on a DC 15 Strength saving throw or fall prone."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
         "variants": [
-            ""
+            "Giant Slayer Battleaxe",
+            "Giant Slayer Double-Bladed Scimitar",
+            "Giant Slayer Greataxe",
+            "Giant Slayer Greatsword",
+            "Giant Slayer Handaxe",
+            "Giant Slayer Longsword",
+            "Giant Slayer Rapier",
+            "Giant Slayer Scimitar",
+            "Giant Slayer Shortsword"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Glamerweave (common)": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "Glamerweave is clothing imbued with harmless illusory magic. While wearing the common version of these clothes, you can use a bonus action to create a moving illusory pattern within the cloth."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Glamerweave (uncommon)": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "Glamerweave is clothing imbued with harmless illusory magic. While wearing these clothes, you can use a bonus action to create a moving illusory pattern within the cloth. Alternatively, you can have the pattern rise from the cloth. For example, a glamerweave gown might be wreathed in harmless, illusory flames, while a glamerweave hat might have illusory butterflies fluttering around it."
         ],
 
         "effects": [
-            ""
+            "add 1d4 when you make performance or persuasion checks"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Glamoured Studded Leather": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor (Light)",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to AC"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Appearance",
+                "action": "Bonus action",
+                "effect": "Assume the appearance of a normal set of clothing or some other kind of armor.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gloves of Missile Snaring": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Reduce ranged damage",
+                "action": "Reaction",
+                "effect": "Eeduce the damage by 1d10 + Dex modifier",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gloves of Soul Catching": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The gloves has no effect on you if your Constitution is already 20 or higher."
         ],
 
         "effects": [
-            ""
+            "Your Constitution score is 20",
+            "You unarmed strikes deal an extra 2d10"
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "Regain hit points or advantage",
                 "action": "",
-                "effect": "",
+                "effect": "Regain a number of hit points equal to the force damage dealt. Alternatively, instead of regaining hit points in this way, you can choose to gain advantage on one attack roll, ability check, or saving throw you make before the end of your next turn.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gloves of Thievery": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "You gain a +5 bonus to Sleight of Hand and Dexterity checks made to pick locks."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Glowrune Pigment": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This set has 2 small paint pots contains pigments mixed from crushed luminescent gemstones."
         ],
 
         "effects": [
-            ""
+            "Creatures with a rune gain magical benefits"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Journey rune",
+                "action": "10 minutes",
+                "effect": "Difficult terrain doesn't cost extra movement.",
+                "recharge": ""
+            },
+            {
+                "name": "Life rune",
+                "action": "10 minutes",
+                "effect": "Gain 10 temporary hit points and advantage on death saving throws",
+                "recharge": ""
+            },
+            {
+                "name": "Light rune",
+                "action": "10 minutes",
+                "effect": "Gain or increase darkvision range by 30 feet",
+                "recharge": ""
+            },
+            {
+                "name": "Mountain rune",
+                "action": "10 minutes",
+                "effect": "Immune to prone and advantage on Strength and Constitution saving throws.",
+                "recharge": ""
+            },
+            {
+                "name": "Shield rune",
+                "action": "10 minutes",
+                "effect": "Advantage on Dexterity saving throws against effects that deal damage.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Goggles of Night": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "Gain or increase darkvision by 60 feet."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Gold": {
-        "type": "",
-        "rarity": "",
+        "type": "Currency",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "Gold: Can be used for e.g. bribing, gambling in a tavern etc."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -4904,337 +4805,309 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Grimoire Infinitus (Exalted)": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Wizard"
         },
 
         "description": [
-            ""
+            "It contains the following spells: <strong>alarm, antimagic field, bigby's hand, blight, charm person, confusion, control weather, create undead, detect thoughts, enlarge/reduce, fear, foresight, gaseous form, glyph of warding, legend lore, leomund's tiny hut, mass suggestion, mislead, misty step, mordenkainen's faithful hound, prismatic spray, ray of enfeeblement, silent image, teleport and thunderwave</strong>"
         ],
 
         "effects": [
-            ""
+            "Your prepared spells increase by 3",
+            "Advantage on saving throws against spells and magical effects.",
+            "You can use your Arcane Recovery feature twice, rather than once."
+
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Guardian Emblem": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Cleric or Paladin"
         },
 
         "description": [
-            ""
+            "The emblem has 3 charges."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Nullify critical hit",
+                "action": "1 charge + Reaction",
+                "effect": "When you or a creature you can see within 30 feet suffers a critical hit, turn the critical hit into a normal hit instead.",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Hand of Vecna": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "1 minor beneficial property",
+            "1 major beneficial property",
+            "1 minor detrimental property"
         ],
 
         "effects": [
-            ""
+            "Your Strength score becomes 20, unless it is already 20 or higher.",
+            "The eye has 8 charges, and it regains 1d3 expended charges daily at dawn.",
+            "Any melee (spell) attacks you make with the hand deals an extra 2d8 cold damage on a hit.",
+            "Each time you cast a spell from the hand, it casts the suggestion spell on you (save DC 18), demanding that you commit an evil act."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Cast a Spells (DC 18)",
+                "action": "Action",
+                "effect": ["<br>Finger of death: 5 charges",                
+                        "<br>Sleep: 1 charge",
+                        "<br>Slow: 2 charges",
+                        "<br>Teleport: 3 charges",
+                        "<br>Eyebite: 4 charges"],
+                "recharge": "1d4+4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Handy Haversack": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This backpack has a central pouch and two side pouches, each of which is an extradimensional space. Each side pouch can hold up to 20 pounds of material, not exceeding a volume of 2 cubic feet. The large central pouch can hold up to 8 cubic feet or 80 pounds of material. The backpack always weighs 5 pounds, regardless of its contents."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Harp of Gilded Plenty":{
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "you can treat a Charisma check roll of 9 or lower on the die as a 10."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Feast",
+                "action": "10 minutes",
+                "effect": "cast heroes' feast spell",
+                "recharge": "1d10 + 10 days"
+            },
+            {
+                "name": "Calm emotions (DC 19) 5x",
+                "action": "Action",
+                "effect": "cast calm emotion spell 1 hour",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Hat of Disguise": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Disguise",
+                "action": "Action",
+                "effect": "cast the disguise self spell",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Hat of Vermin": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This hat has 3 charges."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "summon",
+                "action": "1 charge + Action",
+                "effect": "summons your choice of a bat, a frog, or a rat. it is neither friendly nor hostile",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Hat of Wizardry": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Wizard"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You can use the hat as a spellcasting focus for your wizard spells."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Unknown cantrip",
+                "action": "Arcana check DC 10",
+                "effect": "cast a cantrip from the warlock spell list",
+                "recharge": "Long rest"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Headband Of Intellect": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The headband has no effect on you if your Intelligence is already 19 or higher without them."
         ],
 
         "effects": [
-            ""
+            "Your Intelligence score is 19."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Helm of Comprehending Languages": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Languages",
+                "action": "Action",
+                "effect": "cast the comprehend languages spell",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Helm of Perfect Potential": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "2 minor beneficial properties",
+            "1 major beneficial property",
+            "1 minor detrimental property"
         ],
 
         "effects": [
-            ""
+            "advantage on Deception and Insight checks.",
+            "The helm has 6 charges"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Elemental energy (DC 20)",
+                "action": "Bonus action",
+                "effect": "Launch a bolt of energy toward a creature you can see within 90 feet to deal 4d6 damage",
+                "recharge": "1d6 charges at dawn"
+            },
+            {
+                "name": "Cast a Spell (DC 20)",
+                "action": "Action",
+                "effect": ["<br>Elemental weapon: 1 charge",                
+                        "<br>Call lightning: 2 charges",
+                        "<br>Wall of fire: 3 charges",
+                        "<br>Conjure elemental: 4 charges",
+                        "<br>Tsunami: 5 charges"],
+                "recharge": "1d6 charges at dawn"
             }
         ],
 
@@ -5245,249 +5118,220 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Helm of Teleportation": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "This helm has 3 charges."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Teleport",
+                "action": "1 charge + Action",
+                "effect": "cast the teleport spell",
+                "recharge": "1d3 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Heward's Handy Spice Pouch": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This belt pouch appears empty and has 10 charges. "
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Produce the chosen spice",
+                "action": "Action",
+                "effect": ["<br>Salt",                
+                        "<br>Pepper",
+                        "<br>Saffron",
+                        "<br>Cilantro,<br>"],
+                "recharge": "1d6 + 4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Holy Avenger": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Paladin"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You gain a +3 bonus to attack and damage",
+            "When you hit a fiend or an undead with it, that creature takes an extra 2d10 radiant damage.",
+            "While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
         "variants": [
-            ""
+            "Holy Avenger Double-Bladed Scimitar",
+            "Holy Avenger Greatsword",
+            "Holy Avenger Longsword",
+            "Holy Avenger Rapier",
+            "Holy Avenger Scimitar",
+            "Holy Avenger Shortsword"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Horn of Blasting": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Blow the horn",
+                "action": "Action",
+                "effect": "Each creature in the cone takes 5d6 thunder damage and is deafened for 1 minute.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Horn of Silent Alarm": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "This horn has 4 charges. "
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Blow the horn",
+                "action": "1 charge + Action",
+                "effect": "One creature of your choice can hear the horn's blare, provided the creature is within 600 feet of the horn and not deafened.",
+                "recharge": "1d4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Illuminator's Tattoo": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "You can write with your fingertip as if it were an ink pen that never runs out of ink."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Scribing",
+                "action": "Action",
+                "effect": "Touch a piece of writing up to one page in length and speak a creature's name. The writing becomes invisible to everyone other than you and the named creature for the next 24 hours.",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Illusionist's Bracers": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a spellcaster"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Second cantrip",
+                "action": "Bonus action",
+                "effect": "Whenever you cast a cantrip, you cast that cantrip a second time.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Imbued Wood Focus": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item, Spellcasting Focus",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to one damage roll of the spell, provided the damage is of the type associated with the item's wood."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
         "variants": [
-            ""
+            "Fernian Ash: Fire",
+            "Irian Rosewood: Radiant",
+            "Kythrian Manchineel: Acid or poison",
+            "Lamannian Oak: Lightning or thunder",
+            "Mabaran Ebony: Necrotic",
+            "Risian Pine: Cold",
+            "Shavarran Birch: Force",
+            "Xorian Wenge: Psychic"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
@@ -6352,33 +6196,34 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Moonblade": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by an elf or half-elf"
         },
 
         "description": [
-            ""
+            "Pick 4 of the following options",
+            "Increase the bonus to attack and damage rolls by 1, to a maximum of +3. Reroll if the moonblade already has a +3 bonus.",
+            "The moonblade gains the finesse property.",
+            "The moonblade gains the thrown property (range 20/60 feet).",
+            "The moon blade scores a critical hit on a roll of 19 or 20.",
+            "When you hit with an attack using the moon blade, the attack deals an extra 1d6 slashing damage.",
+            "When you hit a creature of a specific type (such as dragon, fiend, or undead) with the moonblade, the target takes an extra 1d6 damage of one of these types: acid, cold, fire, lightning, or thunder.",
+            "You can use a bonus action to cause the moonblade to flash brightly. Each creature that can see you and is within 30 feet of you must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until you take a short rest while attuned to the weapon.",
+            "The moonblade functions as a ring of spell storing.",
+            "You can use an action to call forth an elfshadow, provided that you don't already have one serving you. The elfshadow appears in an unoccupied space within 120 feet of you. It uses the statistics for a shadow, except it is neutral, immune to effects that turn undead, and doesn't create new shadows. You control this creature, deciding how it acts and moves. It remains until it drops to 0 hit points or you dismiss it as an action."
+                        
         ],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -10420,33 +10265,46 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Sword of Zariel": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            
+            "2 minor beneficial property"
+
         ],
 
         "effects": [
-            ""
+            "Extra 2d8 (or 3d10 when 2-handed)",
+            "You can speak, read, and write Celestial.",
+            "You have resistance to necrotic and radiant damage.",
+            "Your Charisma score becomes 20, unless it is already 20 or higher.",
+            "Flying speed (hover) of 90 feet",
+            "Truesight 60 feet",
+            "advantage on all Insight checks.",
+            "The sword sheds bright light in a 5-foot radius and dim light for an additional 5 feet. Fiends attack you with disadvantage within the bright light radius of the sword"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Blinded (DC 17",
+                "action": "Hit evil creatures",
+                "effect": "Creature is blinded until the end of its next turn",
+                "recharge": ""
+            },
+            {
+                "name": "Intensify light",
+                "action": "Bonus action",
+                "effect": "Shed bright light in a 15-foot radius and dim light for an additional 15 feet",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -11729,7 +11587,7 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Zephyr Armor": {
-        "type": "Generic Variant",
+        "type": "Armor (Light)",
         "rarity": "Rare",
         "attunement": {
             "required": true,

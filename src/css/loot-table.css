@@ -1,256 +1,647 @@
-/* =====================
-   Loot Table
-===================== */
+/* ==================================================
+   DUNGEONS & GAMES - LOOT TABLE
+   ================================================== */
+
+
+/* ==================================================
+   LOOT TABLE - TITEL
+   ================================================== */
 
 #loot-table .loot-title {
+
     width: 100%;
+
     padding: 15px 0;
     margin-top: 20px;
+
     border: 2px solid black;
-    background-color: rgba(0,0,0,0.75);
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
 
-.loot-roll {
-    text-align: center;
-    background-color: rgba(0,0,0,0.12);
-}
+    background-color:
+        rgba(0, 0, 0, 0.75);
 
-.tier-name {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: center;
-}
+    color:
+        white;
 
-.loot-info-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    width: 100%;
-    
-}
+    font-size:
+        2em;
 
-.loot-info-header > div {
-    border: 1px solid black;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    font-weight:
+        bold;
 
-.loot-info-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    color: white;
-    background-color: rgba(0,0,0,1);
-    color: white;
-}
+    text-align:
+        center;
 
-.loot-info-footer > div {
-    border: 1px solid black;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0,0,0,1);
-    color: white;
-}
+    letter-spacing:
+        3px;
 
-.loot-info-footer.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(0,0,0,1);
-    color: white;
-}
-
-.loot-info-header div:last-child {
-    border-right: none;
-}
-
-.loot-description {
-    font-size: 1.5em;
-    padding: 10px;
-    border: 1px solid black;
-    background-color: rgba(226,239,218,0.9);
-    text-align: center;
-}
-
-.loot-description-small {
-    font-size: 0.7em;
-    font-weight: normal;
+    text-transform:
+        uppercase;
 }
 
 
-.loot-grid .cell {
-    border: 1px solid black;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/* ==================================================
+   LOOT TIER - ALGEMENE LAYOUT
+   ================================================== */
 
 .loot-tier {
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    align-items: flex-start;
-    
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    width:
+        100%;
+
+    align-items:
+        flex-start;
 }
+
 
 .loot-tier-content {
-    flex: 1;
-    min-width: 0;
+
+    flex:
+        1;
+
+    min-width:
+        0;
 }
+
 
 .loot-layout {
-    display: flex;
-    gap: 15px;
-    align-items: stretch;
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    align-items:
+        stretch;
 }
 
 
+/* ==================================================
+   LOOT GRID
+   ================================================== */
+
 .loot-grid {
-    flex: 1;
-    min-width: 0;
-    display: grid;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    display:
+        grid;
+
     grid-template-columns:
         80px
         repeat(8, minmax(0, 1fr));
 }
 
-.loot-info-panel {
-    width: 15%;
-    min-width: 250px;
-    flex-shrink: 0;
 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow: visible;
-}
-.loot-tier-info:empty {
-    visibility: hidden;
-}
+.loot-grid .cell {
 
-.loot-tier-info {
-    flex: 1;
-    border: 2px solid black;
-    padding: 15px;
-    text-align: center;
-    overflow: visible;
-}
+    display:
+        flex;
 
-.loot-tier-info h3 {
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        8px;
+
+    border:
+        1px solid black;
+
+    text-align:
+        center;
 }
 
-.loot-tier-info li {
-    font-size: clamp(0.75rem, 1vw, 1rem);
+
+/* ==================================================
+   ROLL-NUMMERS
+   ================================================== */
+
+.loot-roll {
+
+    text-align:
+        center;
+
+    background-color:
+        rgba(0, 0, 0, 0.12);
 }
 
-.loot-tier-info ul {
-    padding: 0;
-    list-style: none;
-}
+
+/* ==================================================
+   LOOT ITEMS
+   ================================================== */
 
 .loot-item {
-    font-weight: 600;
-    font-size: clamp(0.50rem, 0.65vw, 0.90rem);
-    line-height: 1.1;
+
+    font-weight:
+        600;
+
+    font-size:
+        clamp(0.50rem, 0.65vw, 0.90rem);
+
+    line-height:
+        1.1;
 }
 
-.tier-d .loot-tier-info {
-    background-color: rgba(158, 191, 135, 0.5);
+
+/* ==================================================
+   LOOT INFO HEADER
+   ================================================== */
+
+.loot-info-header {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 2fr;
+
+    width:
+        100%;
 }
-.tier-c .loot-tier-info {
-    background-color: rgba(149, 186, 255, 0.5);
+
+
+.loot-info-header > div {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        10px;
+
+    border:
+        1px solid black;
+
+    text-align:
+        center;
 }
-.tier-b .loot-tier-info {
-    background-color: rgba(249, 218, 128, 0.5);
+
+
+.loot-info-header div:last-child {
+
+    border-right:
+        none;
 }
-.tier-a .loot-tier-info {
-    background-color: rgba(205, 140, 140, 0.5);
-}
-.tier-s .loot-tier-info {
-    background-color: rgba(171, 171, 171, 0.5);
+
+
+.tier-name {
+
+    font-size:
+        1.1rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+    text-align:
+        center;
 }
 
 
 .attunement {
-    font-style: italic;
-    font-weight: 300;
+
+    font-style:
+        italic;
+
+    font-weight:
+        300;
 }
+
+
+/* ==================================================
+   LOOT INFO PANEL
+   ================================================== */
+
+.loot-info-panel {
+
+    width:
+        15%;
+
+    min-width:
+        250px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    overflow:
+        visible;
+}
+
+
+.loot-tier-info {
+
+    flex:
+        1;
+
+    padding:
+        15px;
+
+    border:
+        2px solid black;
+
+    text-align:
+        center;
+
+    overflow:
+        visible;
+}
+
+
+.loot-tier-info:empty {
+
+    visibility:
+        hidden;
+}
+
+
+.loot-tier-info h3 {
+
+    font-size:
+        clamp(0.9rem, 1.2vw, 1.2rem);
+}
+
+
+.loot-tier-info li {
+
+    font-size:
+        clamp(0.75rem, 1vw, 1rem);
+}
+
+
+.loot-tier-info ul {
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+/* ==================================================
+   LOOT INFO FOOTER
+   ================================================== */
+
+.loot-info-footer {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    width:
+        100%;
+
+    background-color:
+        rgba(0, 0, 0, 1);
+
+    color:
+        white;
+}
+
+
+.loot-info-footer > div {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        10px;
+
+    border:
+        1px solid black;
+
+    background-color:
+        rgba(0, 0, 0, 1);
+
+    color:
+        white;
+
+    text-align:
+        center;
+}
+
+
+.loot-info-footer.centered {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+}
+
+
+/* ==================================================
+   LOOT DESCRIPTION
+   ================================================== */
+
+.loot-description {
+
+    padding:
+        10px;
+
+    border:
+        1px solid black;
+
+    background-color:
+        rgba(226, 239, 218, 0.9);
+
+    font-size:
+        1.5em;
+
+    text-align:
+        center;
+}
+
+
+.loot-description-small {
+
+    font-size:
+        0.7em;
+
+    font-weight:
+        normal;
+}
+
+
+/* ==================================================
+   TIER-KLEUREN
+   ================================================== */
+
+.tier-d .loot-tier-info {
+
+    background-color:
+        rgba(158, 191, 135, 0.5);
+}
+
+
+.tier-c .loot-tier-info {
+
+    background-color:
+        rgba(149, 186, 255, 0.5);
+}
+
+
+.tier-b .loot-tier-info {
+
+    background-color:
+        rgba(249, 218, 128, 0.5);
+}
+
+
+.tier-a .loot-tier-info {
+
+    background-color:
+        rgba(205, 140, 140, 0.5);
+}
+
+
+.tier-s .loot-tier-info {
+
+    background-color:
+        rgba(171, 171, 171, 0.5);
+}
+
+
+/* ==================================================
+   ATTUNEMENT - TIER KLEUREN
+   ================================================== */
 
 .tier-d .attunement {
-    background-color: rgba(158, 191, 135, 0.5);
+
+    background-color:
+        rgba(158, 191, 135, 0.5);
 }
+
 
 .tier-c .attunement {
-    background-color: rgba(149, 186, 255, 0.5);
+
+    background-color:
+        rgba(149, 186, 255, 0.5);
 }
+
 
 .tier-b .attunement {
-    background-color: rgba(249, 218, 128, 0.5);
+
+    background-color:
+        rgba(249, 218, 128, 0.5);
 }
+
 
 .tier-a .attunement {
-    background-color: rgba(205, 140, 140, 0.5);
+
+    background-color:
+        rgba(205, 140, 140, 0.5);
 }
+
 
 .tier-s .attunement {
-    background-color: rgba(171, 171, 171, 0.5);
+
+    background-color:
+        rgba(171, 171, 171, 0.5);
 }
+
+
+/* ==================================================
+   UITGESLOTEN ITEMS
+   ================================================== */
 
 .excluded::after {
-    content: "\26D2";
-    margin-left: 6px;
+
+    content:
+        "\26D2";
+
+    margin-left:
+        6px;
 }
 
-.excluded::after, .excluded-symbol {
-    color: red;
-    margin: 2px;
-    font-weight: 100;
+
+.excluded::after,
+.excluded-symbol {
+
+    margin:
+        2px;
+
+    color:
+        red;
+
+    font-weight:
+        100;
 }
 
-/* =====================
-   Loot Table — Mobile
-===================== */
-@media (max-width: 768px) {
 
-    .loot-layout {
-        flex-direction: column;
-    }
+/* ==================================================
+   MOBIEL - ALGEMEEN
+   ================================================== */
 
-    .loot-grid {
-        grid-template-columns: 1fr;
-    }
+/*
+   Landscape blijft bewust dicht bij de desktop-layout.
+   Alleen de beschikbare ruimte wordt iets efficiënter gebruikt.
+*/
+
+@media (max-height: 500px) and (orientation: landscape) {
 
     .loot-info-panel {
-        width: 100%;
-        min-width: 0;
+
+        width:
+            13%;
+
+        min-width:
+            210px;
     }
+
+
+    .loot-layout {
+
+        gap:
+            10px;
+    }
+
+
+    .loot-grid .cell {
+
+        padding:
+            6px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBIEL - PORTRAIT
+   ================================================== */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+    /* ------------------------------------------
+       Algemene layout
+       ------------------------------------------ */
+
+    .loot-layout {
+
+        flex-direction:
+            column;
+    }
+
+
+    .loot-grid {
+
+        width:
+            100%;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* ------------------------------------------
+       Roll-nummers
+       ------------------------------------------ */
+
+    .loot-grid .loot-roll {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    /* ------------------------------------------
+       Items
+       ------------------------------------------ */
+
+    .loot-grid .loot-item {
+
+        min-width:
+            0;
+
+        padding:
+            8px 5px;
+    }
+
+
+    /* ------------------------------------------
+       Info-panel
+       ------------------------------------------ */
+
+    .loot-info-panel {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+    }
+
+
+    /* ------------------------------------------
+       Header
+       ------------------------------------------ */
 
     .loot-info-header {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
+
 
     .loot-info-header div:last-child {
-        border-right: 1px solid black; /* was weggehaald voor de laatste kolom, nu weer een volwaardige rij */
+
+        border-right:
+            1px solid black;
     }
 
+
+    /* ------------------------------------------
+       Footer
+       ------------------------------------------ */
+
     .loot-info-footer {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
 }

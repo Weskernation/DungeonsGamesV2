@@ -56,7 +56,9 @@ const SITE_CONFIG = {
 
         enabled: true,
 
-        guestAllowed: false
+        guestAllowed: false,
+
+        parchment: false
 
     }
 
