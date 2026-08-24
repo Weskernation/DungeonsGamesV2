@@ -3276,21 +3276,21 @@
                 "name": "Upcast",
                 "action": "",
                 "effect": "When you cast a spell of 1st level or higher while holding this focus, you can treat the spell as if it were cast using a 9th-level spell slot. Once this property is used, it can't be used again until the next dawn.",
-                "recharge": "Next Dawn.<br>"
+                "recharge": "Next Dawn."
             },
             {
                 "name": "Chromatic spells",
                 "action": "",
                 "effect": ["Hold monster",                
                         "<br>Rime's binding ice"],
-                "recharge": "Next Dawn.<br>"
+                "recharge": "Next Dawn."
             },
             {
                 "name": "Gem spells",
                 "action": "",
                 "effect": ["Rary's Telepathic Bond",                
                         "<br>Raulothim's Psychic Lance"],
-                "recharge": "Next Dawn.<br>"
+                "recharge": "Next Dawn."
             },
             {
                 "name": "Metallic spells",
@@ -3353,14 +3353,14 @@
                 "action": "",
                 "effect": ["Hold monster",                
                         "<br>Rime's binding ice"],
-                "recharge": "Next Dawn.<br>"
+                "recharge": "Next Dawn."
             },
             {
                 "name": "Gem spells",
                 "action": "",
                 "effect": ["Rary's Telepathic Bond",                
                         "<br>Raulothim's Psychic Lance"],
-                "recharge": "Next Dawn.<br>"
+                "recharge": "Next Dawn."
             },
             {
                 "name": "Metallic spells",
@@ -5337,343 +5337,297 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Immovable rod": {
-        "type": "",
-        "rarity": "",
+        "type": "Rod",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Fix in place (DC 30)",
+                "action": "Action",
+                "effect": "Press the button, the rod becomes magically fixed in place. Until the is pressed button again, the rod doesn't move.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Infernal Tack (evil aligned)": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by an evil creature"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Bind a Nightmare",
+                "action": "Action",
+                "effect": "call a Nightmare, It acts as your ally and takes its turn on your initiative count.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Infiltrator's Key (Exalted)": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The key can be used as thieves' tools"
         ],
 
         "effects": [
-            ""
+            "You have advantage on ability checks made to open locks.",
+            "Your steps are muffled, giving you advantage on Stealth checks",
+            "+1 bonus to attack and damage (in dagger form)",
+            "You can cast a spell from the key, each spell can be cast once"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Transform into a Dagger",
+                "action": "Bonus action",
+                "effect": "You can transform the key into a magic dagger or back into a key.",
                 "recharge": ""
+            },
+            {
+                "name": "Cast a Spell",
+                "action": "Action",
+                "effect": ["<br>Alter self",                
+                        "<br>Invisibility",
+                        "<br>Knock",
+                        "<br>Pass without a trace",
+                        "<br>Dimension door",
+                        "<br>Gaseous form",
+                        "<br>Mislead"],
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Magical opening",
+                "action": "Bonus action",
+                "effect": " You can touch the key to a floor, wall, or ceiling to create an opening up to 10 feet length and width and pass through it",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Insignia of Claws": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Unarmed strikes +1 bonus to the attack rolls and the damage"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Instrument of Illusions": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "While you are playing this musical instrument, you can create harmless, illusory visual effects within a 5-foot-radius sphere centered on the instrument. If you are a bard, the radius increases to 15 feet."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Instrument of Scribing": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Write a message",
+                "action": "1 charge + Action",
+                "effect": "Rrite a magical message on a nonmagical object or surface that you can see within 30 feet of you.",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ioun Stone of Awareness": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You can't be surprised while this dark blue rhomboid orbits your head."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ioun Stone of Protection": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You gain a +1 bonus to AC while this dusty rose prism orbits your head."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Iron Flask": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "You can trap a creature that you can see within 60 feet of you. If the target is native to a plane of existence other than the one you're on (DC 17)"
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Javelin of Lightning": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (javelin)",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "The javeling deal an extra 4d6 lightning damage on a ranged attack"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Bolt of ligthning",
+                "action": "Ranged attack",
+                "effect": "Enemies between you and your target save against 4d6 damage",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Khrusor, Spear of Heliod": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (spear)",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "1 minor beneficial property",
+            "1 minor beneficial property",
+            "1 major beneficial property",
+            "2 Major detrimental property (if you are not a worshipper"
         ],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage",
+            "You gain 15 temporary hit points each dawn.",
+            "The spear sheds bright light in a 30-foot radius and dim light for an additional 30 feet. The light is sunlight.",
+            "The spear has 10 charges"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Retaliate",
+                "action": "Reaction",
+                "effect": "When a creature damages you, make a melee attack with the spear against that creature. On a hit the creature is blinded",
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Cast a Spell (DC 18)",
+                "action": "Action",
+                "effect": ["<br>Guiding bolt: 1 charge",                
+                        "<br>Daylight (tip of the spear): 3 charges",
+                        "<br>Sunbeam: 6 charges"],
+                "recharge": "1d6+4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -5700,228 +5654,221 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Lantern of Revealing": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "Invisible creatures and objects are visible as long as they are in the lantern's bright light."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Lash of Immolation": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (whip)",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage",
+            "The whip deals an extra 1d6 fire damage.",
+            "On a critical hit the target is restrained"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Invoke the rune",
+                "action": "Reaction",
+                "effect": "On a hit increases the extra fire damage dealt by the whip to 2d6.",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Lifewell Tattoo": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You have resistance to necrotic damage.",
+            "Once per day when you would be reduced to 0 hit points, you drop to 1 hit point instead."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Living Gloves": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "You gain proficiency in one of the following skills",
+            "Sleight of hand",
+            "Thieves' tools",
+            "One Artisan's tools",
+            "One Musical instrument"
         ],
 
         "effects": [
-            ""
+            "When you make an ability check using the chosen proficiency, you add double your proficiency bonus to the check"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Longbow of the Healing Hearth": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (longbow)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The bow has 8 charges"
         ],
 
         "effects": [
-            ""
+            "+3 bonus to attack and damage"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Curative Arrow (once per turn)",
+                "action": "Attack action + 1 charge",
+                "effect": "One creature you can see within 150 feet of you can immediately spend and roll one of its unspent Hit Dice and regain a number of hit points + your Wisdom modifier",
                 "recharge": ""
+            },
+            {
+                "name": "Cast a Spell (DC 18)",
+                "action": "Action",
+                "effect": ["<br>Create food and water: 1 charge",                
+                        "<br>Warding bond: 2 charges",
+                        "<br>Guardian of faith: 3 charges"],
+                "recharge": "1d6+4 charges at dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Luba's Tarokka of Souls": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Artifact",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "2 minor beneficial properties",
+            "2 minor detrimental properties"            
         ],
 
         "effects": [
-            ""
+            "Automatically succeed on Constitution saving throws made to maintain your concentration on divination spells."
         ],
 
-        "abilities": [
+        "abilities": [            
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "One Cast per spell",
+                "action": "Action",
+                "effect": ["Comprehend languages",
+                        "Detect evil and good",
+                        "Detect magic",
+                        "Detect poison and disease",
+                        "Locate object",
+                        "Scrying"],
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Draw a card and choose (twice per day)",
+                "action": "Action",
+                "effect": ["Weal: The creature withing 15 feet has advantage on attack rolls, ability checks, and saving throws for the next hour.",
+                           "<br>Woe: The creature withing 15 feet has disadvantage on attack rolls, ability checks, and saving throws for the next hour." ],
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Lucent Destroyer": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (pistol or musket)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage",
+            "It requires no ammunition, its damage is radiant instead of piercing",
+            "It doesn't have the loading property."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Dancing light",
+                "action": "Action",
+                "effect": "Cast dancing lights from the weapon at will.",
                 "recharge": ""
+            },
+            {
+                "name": "Sunbeam (DC 17)",
+                "action": "Action",
+                "effect": "Cast the sunbeam spell",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Mac-Fuirmidh Cittern": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Bard"
         },
 
         "description": [
@@ -5929,108 +5876,94 @@
         ],
 
         "effects": [
-            ""
+            "Targets suffer disadvantage on saving throws against spells that inflict the charmed condition.",
+            "This effect applies only if the spell has a somatic or a material component."
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "One Cast per spell",
                 "action": "",
-                "effect": "",
-                "recharge": ""
+                "effect": ["Fly",
+                        "Invisibility",
+                        "Levitate",
+                        "Protection from evil and good",
+                        "Barkskin",
+                        "Cure wound",
+                        "Fogcloud"],
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Mantle of Spell Resistance": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You have advantage on saving throws against spells while you wear this cloak."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Mariner's Armor": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor",
+        "rarity": "Uncommon",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You have a swimming speed equal to your walking speed.",
+            "Whenever you start your turn underwater with 0 hit points, the armor causes you to rise 60 feet toward the surface."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Masquerade Tattoo": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Fluid ink",
+                "action": "Bonus action",
+                "effect": "You can shape the tattoo into any color or pattern and move it to any area of your skin.",
                 "recharge": ""
+            },
+            {
+                "name": "Disguise self (DC 13)",
+                "action": "Action",
+                "effect": "Cast the disguise self spell",
+                "recharge": "Next Dawn."
             }
         ],
 
@@ -10464,33 +10397,31 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Thunderbuss": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (pistol or musket)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to attack and damage",
+            "It requires no ammunition, its damage is thunder instead of piercing",
+            "It doesn't have the loading property."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Ball of energy (DC 14)",
+                "action": "Bonus action",
+                "effect": "Detonates into a 10-foot-radius all creatures takes 3d6 thunder damage, and can't take reactions",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },

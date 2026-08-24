@@ -185,7 +185,7 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                                     ability.recharge
                                         ? "<strong>Recharge:</strong> " +
                                           ability.recharge
-                                        : ""
+                                        : "" 
                                 }
 
                                 <br>
@@ -193,7 +193,7 @@ if (TOOLTIP_ACCESS_ALLOWED) {
                             </div>
 
                         `)
-                            .join("")}
+                            .join("<br>")}
 
                         ` : ""}
 
