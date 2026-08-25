@@ -30,11 +30,11 @@ const SITE_CONFIG = {
 
             playerRules: false,
 
-            characterCreation: true,
+            characterCreation: false,
 
             progression: true,
 
-            gmRules: true
+            gmRules: false
 
         },
 

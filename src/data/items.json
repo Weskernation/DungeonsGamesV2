@@ -270,7 +270,7 @@
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
-    "All-Purpose-Tool +2": {
+    "All-Purpose-Tool": {
         "type": "Spellcasting focus",
         "rarity": "Rare",
         "attunement": {
@@ -283,7 +283,7 @@
         ],
 
         "effects": [
-            "+2 bonus to the spell attack rolls and the saving throw DCs of your artificer spells."
+            "+X bonus to the spell attack rolls and the saving throw DCs of your artificer spells."
         ],
 
         "abilities": [
@@ -360,7 +360,7 @@
         "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
-    },
+    },    
     "Ammunition": {
         "type": "Ammunition",
         "rarity": "varies",
@@ -374,6 +374,27 @@
         ],
 
         "effects": [],
+
+        "abilities": [],
+
+        "variants": [],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
+    "Amulet of the Devout": {
+        "type": "Wondrous Item",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Cleric or Paladin"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to spell attack rolls and the saving throw DCs of your spells.",
+            "While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature's uses. Once this property is used, it can't be used again until the next dawn."
+        ],
 
         "abilities": [],
 
@@ -460,6 +481,33 @@
                         "Cure Wounds 5th level",
                         "Wall of Thorns"],
                 "recharge": "Next Dawn."
+            }
+        ],
+
+        "variants": [],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
+    "Arcane Grimoire": {
+        "type": "Wondrous Item, Spellcasting Focus",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Wizard"
+        },
+
+        "description": [
+            "+2 bonus to spell attack rolls and to the saving throw DCs of your wizard spells."
+        ],
+
+        "effects": [],
+
+        "abilities": [
+            {
+                "name": "Arcane Recovery",
+                "action": "When you use Arcane Recovery",
+                "effect": "You can increase the number of spell slot levels you regain by 1.",
+                "recharge": ""
             }
         ],
 
@@ -1353,7 +1401,7 @@
         "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
-    },
+    }, 
     "Bloodshed Blade": {
         "type": "Weapon (sword)",
         "rarity": "Very Rare",
@@ -1385,6 +1433,33 @@
             "Bloodshed Scimitar",
             "Bloodshed Shortsword"
         ],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
+    "Bloodwell Vial": {
+        "type": "Wondrous Item, Spellcasting Focus",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Sorcerer"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to spell attack rolls and to the saving throw DCs of your sorcerer spells."
+        ],
+
+        "abilities": [
+            {
+                "name": "Sorcery regain",
+                "action": "When rolling Hit Dice",
+                "effect": "You can regain 5 sorcery points.",
+                "recharge": "Next Dawn."
+            }
+        ],
+
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -3452,6 +3527,33 @@
                 "action": "Action",
                 "effect": "8d6 in a 60 feet cone",
                 "recharge": "Next Dawn."
+            }
+        ],
+
+        "variants": [],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    }, 
+    "Dragonhide Belt": {
+        "type": "Wondrous Item",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Monk"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to the saving throw DCs of your ki features."
+        ],
+
+        "abilities": [
+            {
+                "name": "Ki regain",
+                "action": "Action",
+                "effect": "Regain ki points equal to a roll of your Martial Arts die.",
+                "recharge": "At Dawn"
             }
         ],
 
@@ -6097,6 +6199,27 @@
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
+    "Moon Sickle": {
+        "type": "Weapon (sickle)",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Druid or Ranger"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to attack and damage rolls made with it, and you gain a +2 bonus to spell attack rolls and the saving throw DCs of your druid and ranger spells. In addition, you can use the sickle as a spellcasting focus for your druid and ranger spells.",
+            "When you cast a spell that restores hit points, you can roll a d4 and add the number rolled to the amount of hit points restored"
+        ],
+
+        "abilities": [],
+
+        "variants": [],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
     "Moon-Touched Weapon": {
         "type": "",
         "rarity": "",
@@ -7500,6 +7623,33 @@
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
+    "Rhythm-Maker's Drum": {
+        "type": "Instrument",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Bard"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to spell attack rolls and to the saving throw DCs of your bard spells."
+        ],
+
+        "abilities": [
+            {
+                "name": "Bardic regain",
+                "action": "Action",
+                "effect": "Regain one use of your Bardic Inspiration feature.",
+                "recharge": "Next Dawn."
+            }
+        ],
+
+        "variants": [],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
     "Ring of Air Elemental Command": {
         "type": "",
         "rarity": "",
@@ -8427,6 +8577,33 @@
         "variants": [
             ""
         ],
+
+        "notes": "Compact summary only. Refer to the official source for the complete item description."
+    },
+    "Rod of the Pact Keeper": {
+        "type": "Wondrous Item, Spellcasting Focus",
+        "rarity": "Rare",
+        "attunement": {
+            "required": true,
+            "who": "by a Warlock"
+        },
+
+        "description": [],
+
+        "effects": [
+            "+X bonus to spell attack rolls and to the saving throw DCs of your warlock spells."
+        ],
+
+        "abilities": [
+            {
+                "name": "Pact slot regain",
+                "action": "Action",
+                "effect": "Regain one warlock spell slot",
+                "recharge": "At Dawn"
+            }
+        ],
+
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
