@@ -13,7 +13,9 @@ const SITE_CONFIG = {
 
         dnd2014: true,
 
-        dnd2024: true
+        dnd2024: true,
+
+        dnd2034: false
 
     },
 
@@ -28,6 +30,8 @@ const SITE_CONFIG = {
 
             playerRules: false,
 
+            characterCreation: true,
+
             progression: true,
 
             gmRules: true
@@ -38,6 +42,8 @@ const SITE_CONFIG = {
         dnd2024: {
 
             playerRules: true,
+
+            characterCreation: true,
 
             progression: false,
 
@@ -58,7 +64,13 @@ const SITE_CONFIG = {
 
         guestAllowed: false,
 
-        parchment: false
+        parchment: false,
+
+        dnd2014: true,
+
+        dnd2024: false,
+
+        dnd2034: false
 
     }
 

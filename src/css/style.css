@@ -490,6 +490,29 @@ body {
 
 
 /* ==================================================
+   5A. LOOT TABLE - VOLLEDIGE BREEDTE ONDER PROGRESSION
+   ================================================== */
+
+#loot-table-container {
+
+    width:
+        100%;
+
+    max-width:
+        100%;
+
+    display:
+        block;
+
+    box-sizing:
+        border-box;
+
+    clear:
+        both;
+}
+
+
+/* ==================================================
    6. PROGRESSION - GRID
    ================================================== */
 
@@ -509,7 +532,10 @@ body {
 
     grid-template-rows:
         auto
-        repeat(8, minmax(40px, auto));
+        repeat(
+            var(--progression-rows, 8),
+            minmax(40px, auto)
+        );
 
     grid-auto-flow:
         row;
@@ -529,50 +555,10 @@ body {
             60px
             minmax(160px, 1fr);
 
-        grid-template-rows:
-            auto
-            repeat(8, minmax(40px, auto));
-
         grid-auto-flow:
             row;
     }
 
-}
-
-
-/* --------------------------------------------------
-   Tier-specific row counts
-   -------------------------------------------------- */
-
-.tier-c .progression-grid {
-
-    grid-template-rows:
-        auto
-        repeat(13, minmax(40px, auto));
-}
-
-
-.tier-b .progression-grid {
-
-    grid-template-rows:
-        auto
-        repeat(16, minmax(40px, auto));
-}
-
-
-.tier-a .progression-grid {
-
-    grid-template-rows:
-        auto
-        repeat(16, minmax(40px, auto));
-}
-
-
-.tier-s .progression-grid {
-
-    grid-template-rows:
-        auto
-        repeat(17, minmax(40px, auto));
 }
 
 
@@ -713,794 +699,161 @@ body {
    8. TIER-KLEUREN
    ================================================== */
 
-.tier-d {
+
+/* --------------------------------------------------
+   2014
+   -------------------------------------------------- */
+
+body[data-version="dnd2014"] .tier-d {
 
     background-color:
         rgba(226, 239, 218, 0.95);
 }
 
 
-.tier-c {
+body[data-version="dnd2014"] .tier-c {
 
     background-color:
         rgba(201, 218, 248, 0.95);
 }
 
 
-.tier-b {
+body[data-version="dnd2014"] .tier-b {
 
     background-color:
         rgba(255, 242, 204, 0.95);
 }
 
 
-.tier-a {
+body[data-version="dnd2014"] .tier-a {
 
     background-color:
         rgba(244, 204, 204, 0.95);
 }
 
 
-.tier-s {
+body[data-version="dnd2014"] .tier-s {
 
     background-color:
         rgba(217, 217, 217, 0.95);
 }
 
 
-/* ==================================================
-   9. PROGRESSION - STAMPS & UNLOCKS
-   ================================================== */
+/* --------------------------------------------------
+   2024
+   -------------------------------------------------- */
+
+body[data-version="dnd2024"] .tier-d {
+
+    background-color:
+        rgba(222, 211, 184, 0.95);
+}
+
+
+body[data-version="dnd2024"] .tier-c {
+
+    background-color:
+        rgba(183, 214, 207, 0.95);
+}
+
+
+body[data-version="dnd2024"] .tier-b {
+
+    background-color:
+        rgba(210, 196, 226, 0.95);
+}
+
+
+body[data-version="dnd2024"] .tier-a {
+
+    background-color:
+        rgba(231, 190, 166, 0.95);
+}
+
+
+body[data-version="dnd2024"] .tier-s {
+
+    background-color:
+        rgba(232, 207, 145, 0.95);
+}
 
 
 /* --------------------------------------------------
-   General stamp positioning
+   LOOT TABLE KLEUREN
    -------------------------------------------------- */
+
+
+/* 2014 */
+
+body[data-version="dnd2014"] {
+
+    --tier-d-loot-color:
+        rgba(158, 191, 135, 0.5);
+
+    --tier-c-loot-color:
+        rgba(149, 186, 255, 0.5);
+
+    --tier-b-loot-color:
+        rgba(249, 218, 128, 0.5);
+
+    --tier-a-loot-color:
+        rgba(205, 140, 140, 0.5);
+
+    --tier-s-loot-color:
+        rgba(171, 171, 171, 0.5);
+}
+
+
+/* 2024 */
+
+body[data-version="dnd2024"] {
+
+    --tier-d-loot-color:
+        rgba(190, 175, 140, 0.5);
+
+    --tier-c-loot-color:
+        rgba(145, 180, 170, 0.5);
+
+    --tier-b-loot-color:
+        rgba(175, 155, 195, 0.5);
+
+    --tier-a-loot-color:
+        rgba(195, 150, 125, 0.5);
+
+    --tier-s-loot-color:
+        rgba(195, 170, 105, 0.5);
+}
+
+
+/* --------------------------------------------------
+   LOOT DESCRIPTION
+   -------------------------------------------------- */
+
+
+/* 2014 */
+
+body[data-version="dnd2014"] .loot-description {
+
+    background-color:
+        rgba(158, 191, 135, 0.5);
+}
+
+
+/* 2024 */
+
+body[data-version="dnd2024"] .loot-description {
+
+    background-color:
+        rgba(190, 175, 140, 0.5);
+}
+
+
+/* ==================================================
+   9. PROGRESSION - STAMPS
+   ================================================== */
 
 .stamp {
 
-    grid-column:
-        1;
-
-    grid-row:
-        auto;
-}
-
-
-/* --------------------------------------------------
-   Tier D
-   -------------------------------------------------- */
-
-.tier-d .stamp-0,
-.tier-d .unlock-0 {
-
-    grid-row:
-        2;
-}
-
-
-.tier-d .stamp-1,
-.tier-d .unlock-1 {
-
-    grid-row:
-        3;
-}
-
-
-.tier-d .stamp-2,
-.tier-d .unlock-2 {
-
-    grid-row:
-        4;
-}
-
-
-.tier-d .stamp-3,
-.tier-d .unlock-3 {
-
-    grid-row:
-        5;
-}
-
-
-.tier-d .stamp-4,
-.tier-d .unlock-4 {
-
-    grid-row:
-        6;
-}
-
-
-.tier-d .stamp-5,
-.tier-d .unlock-5 {
-
-    grid-row:
-        7;
-}
-
-
-.tier-d .stamp-6,
-.tier-d .unlock-6 {
-
-    grid-row:
-        8;
-}
-
-
-.tier-d .stamp-7,
-.tier-d .unlock-7 {
-
-    grid-row:
-        9;
-}
-
-
-/* --------------------------------------------------
-   Tier C
-   -------------------------------------------------- */
-
-.tier-c .stamp-8,
-.tier-c .unlock-8 {
-
-    grid-row:
-        2;
-}
-
-
-.tier-c .stamp-9,
-.tier-c .unlock-9 {
-
-    grid-row:
-        3;
-}
-
-
-.tier-c .stamp-10,
-.tier-c .unlock-10 {
-
-    grid-row:
-        4;
-}
-
-
-.tier-c .stamp-11,
-.tier-c .unlock-11 {
-
-    grid-row:
-        5;
-}
-
-
-.tier-c .stamp-12,
-.tier-c .unlock-12 {
-
-    grid-row:
-        6;
-}
-
-
-.tier-c .stamp-13,
-.tier-c .unlock-13 {
-
-    grid-row:
-        7;
-}
-
-
-.tier-c .stamp-14,
-.tier-c .unlock-14 {
-
-    grid-row:
-        8;
-}
-
-
-.tier-c .stamp-15,
-.tier-c .unlock-15 {
-
-    grid-row:
-        9;
-}
-
-
-.tier-c .stamp-16,
-.tier-c .unlock-16 {
-
-    grid-row:
-        10;
-}
-
-
-.tier-c .stamp-17,
-.tier-c .unlock-17 {
-
-    grid-row:
-        11;
-}
-
-
-.tier-c .stamp-18,
-.tier-c .unlock-18 {
-
-    grid-row:
-        12;
-}
-
-
-.tier-c .stamp-19,
-.tier-c .unlock-19 {
-
-    grid-row:
-        13;
-}
-
-
-.tier-c .stamp-20,
-.tier-c .unlock-20 {
-
-    grid-row:
-        14;
-}
-
-
-/* --------------------------------------------------
-   Tier B
-   -------------------------------------------------- */
-
-.tier-b .stamp-21,
-.tier-b .unlock-21 {
-
-    grid-row:
-        2;
-}
-
-
-.tier-b .stamp-22,
-.tier-b .unlock-22 {
-
-    grid-row:
-        3;
-}
-
-
-.tier-b .stamp-23,
-.tier-b .unlock-23 {
-
-    grid-row:
-        4;
-}
-
-
-.tier-b .stamp-24,
-.tier-b .unlock-24 {
-
-    grid-row:
-        5;
-}
-
-
-.tier-b .stamp-25,
-.tier-b .unlock-25 {
-
-    grid-row:
-        6;
-}
-
-
-.tier-b .stamp-26,
-.tier-b .unlock-26 {
-
-    grid-row:
-        7;
-}
-
-
-.tier-b .stamp-27,
-.tier-b .unlock-27 {
-
-    grid-row:
-        8;
-}
-
-
-.tier-b .stamp-28,
-.tier-b .unlock-28 {
-
-    grid-row:
-        9;
-}
-
-
-.tier-b .stamp-29,
-.tier-b .unlock-29 {
-
-    grid-row:
-        10;
-}
-
-
-.tier-b .stamp-30,
-.tier-b .unlock-30 {
-
-    grid-row:
-        11;
-}
-
-
-.tier-b .stamp-31,
-.tier-b .unlock-31 {
-
-    grid-row:
-        12;
-}
-
-
-.tier-b .stamp-32,
-.tier-b .unlock-32 {
-
-    grid-row:
-        13;
-}
-
-
-.tier-b .stamp-33,
-.tier-b .unlock-33 {
-
-    grid-row:
-        14;
-}
-
-
-.tier-b .stamp-34,
-.tier-b .unlock-34 {
-
-    grid-row:
-        15;
-}
-
-
-.tier-b .stamp-35,
-.tier-b .unlock-35 {
-
-    grid-row:
-        16;
-}
-
-
-.tier-b .stamp-36,
-.tier-b .unlock-36 {
-
-    grid-row:
-        17;
-}
-
-
-/* These existing overlaps are intentionally preserved. */
-
-.tier-b .stamp-37,
-.tier-b .unlock-37,
-.tier-b .stamp-38,
-.tier-b .unlock-38,
-.tier-b .stamp-39,
-.tier-b .unlock-39,
-.tier-b .stamp-40,
-.tier-b .unlock-40,
-.tier-b .stamp-41,
-.tier-b .unlock-41,
-.tier-b .stamp-42,
-.tier-b .unlock-42,
-.tier-b .stamp-43,
-.tier-b .unlock-43,
-.tier-b .stamp-44,
-.tier-b .unlock-44,
-.tier-b .stamp-45,
-.tier-b .unlock-45,
-.tier-b .stamp-46,
-.tier-b .unlock-46,
-.tier-b .stamp-47,
-.tier-b .unlock-47,
-.tier-b .stamp-48,
-.tier-b .unlock-48,
-.tier-b .stamp-49,
-.tier-b .unlock-49,
-.tier-b .stamp-50,
-.tier-b .unlock-50,
-.tier-b .stamp-51,
-.tier-b .unlock-51,
-.tier-b .stamp-52,
-.tier-b .unlock-52 {
-
-    grid-row:
-        16;
-}
-
-
-/* --------------------------------------------------
-   Tier S
-   -------------------------------------------------- */
-
-.tier-s .stamp-53,
-.tier-s .unlock-53 {
-
-    grid-row:
-        2;
-
-    flex-direction:
-        column;
-}
-
-
-.tier-s .stamp-54,
-.tier-s .unlock-54 {
-
-    grid-row:
-        3;
-}
-
-
-.tier-s .stamp-55,
-.tier-s .unlock-55 {
-
-    grid-row:
-        4;
-}
-
-
-.tier-s .stamp-56,
-.tier-s .unlock-56 {
-
-    grid-row:
-        5;
-}
-
-
-.tier-s .stamp-57,
-.tier-s .unlock-57 {
-
-    grid-row:
-        6;
-}
-
-
-.tier-s .stamp-58,
-.tier-s .unlock-58 {
-
-    grid-row:
-        7;
-}
-
-
-.tier-s .stamp-59,
-.tier-s .unlock-59 {
-
-    grid-row:
-        8;
-}
-
-
-.tier-s .stamp-60,
-.tier-s .unlock-60 {
-
-    grid-row:
-        9;
-}
-
-
-.tier-s .stamp-61,
-.tier-s .unlock-61 {
-
-    grid-row:
-        10;
-}
-
-
-.tier-s .stamp-62,
-.tier-s .unlock-62 {
-
-    grid-row:
-        11;
-}
-
-
-.tier-s .stamp-63,
-.tier-s .unlock-63 {
-
-    grid-row:
-        12;
-}
-
-
-.tier-s .stamp-64,
-.tier-s .unlock-64 {
-
-    grid-row:
-        13;
-}
-
-
-.tier-s .stamp-65,
-.tier-s .unlock-65 {
-
-    grid-row:
-        14;
-}
-
-
-.tier-s .stamp-66,
-.tier-s .unlock-66 {
-
-    grid-row:
-        15;
-}
-
-
-.tier-s .stamp-68,
-.tier-s .unlock-68 {
-
-    grid-row:
-        16;
-}
-
-
-.tier-s .stamp-72,
-.tier-s .unlock-72 {
-
-    grid-row:
-        17;
-}
-
-
-.tier-s .stamp-76+,
-.tier-s .unlock-76+ {
-
-    grid-row:
-        18;
-}
-
-
-/* ==================================================
-   10. PROGRESSION - LEVELS
-   ================================================== */
-
-.level {
-
-    grid-column:
-        2;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-}
-
-
-/* --------------------------------------------------
-   Tier D
-   -------------------------------------------------- */
-
-.tier-d .level-1 {
-
-    grid-row:
-        2 / span 1;
-}
-
-
-.tier-d .level-2 {
-
-    grid-row:
-        3 / span 2;
-}
-
-
-.tier-d .level-3 {
-
-    grid-row:
-        5 / span 2;
-}
-
-
-.tier-d .level-4 {
-
-    grid-row:
-        7 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Tier C
-   -------------------------------------------------- */
-
-.tier-c .level-5 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        2 / span 3;
-}
-
-
-.tier-c .level-6 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        5 / span 3;
-}
-
-
-.tier-c .level-7 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        8 / span 3;
-}
-
-
-.tier-c .level-8 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        11 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Tier B
-   -------------------------------------------------- */
-
-.tier-b .level-9 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-b .level-10 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-b .level-11 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-b .level-12 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        14 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Tier A
-   -------------------------------------------------- */
-
-.tier-a .level-13 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-a .level-14 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-a .level-15 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-a .level-16 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        14 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Tier S
-   -------------------------------------------------- */
-
-.tier-s .level-17 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-s .level-18 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-s .level-19 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-s .level-20 {
-
-    grid-column:
-        2;
-
-    grid-row:
-        14 / span 5;
-}
-
-
-/* ==================================================
-   11. PROGRESSION - HEALING
-   ================================================== */
-
-.healing {
-
-    grid-column:
-        3;
-
-    grid-row:
-        2 / span 8;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
     justify-content:
         center;
 
@@ -1512,472 +865,11 @@ body {
 }
 
 
-.tier-c .healing {
-
-    grid-row:
-        2 / span 13;
-}
-
-
-.tier-b-healing-1 {
-
-    grid-row:
-        2 / span 8;
-}
-
-
-.tier-b-healing-2 {
-
-    grid-row:
-        10 / span 8;
-}
-
-
-.tier-a-healing-1 {
-
-    grid-row:
-        2 / span 8;
-}
-
-
-.tier-a-healing-2 {
-
-    grid-row:
-        10 / span 8;
-}
-
-
-.tier-s .healing {
-
-    grid-row:
-        2 / span 17;
-}
-
-
-.healing-item {
-
-    width:
-        100%;
-}
-
-
 /* ==================================================
-   12. PROGRESSION - ARMOR
-   ================================================== */
-
-.armor-starting {
-
-    grid-column:
-        4;
-
-    grid-row:
-        2;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-    font-weight:
-        bold;
-}
-
-
-.armor {
-
-    grid-column:
-        4;
-
-    grid-row:
-        3 / span 8;
-
-    justify-content:
-        center;
-
-    align-items:
-        center;
-
-    flex-direction:
-        column;
-
-    text-align:
-        center;
-}
-
-
-.armor-category {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-}
-
-
-.tier-c .armor {
-
-    grid-column:
-        4;
-
-    grid-row:
-        2 / span 13;
-}
-
-
-.tier-b .armor {
-
-    grid-column:
-        4;
-
-    grid-row:
-        2 / span 16;
-}
-
-
-.tier-a .armor {
-
-    grid-column:
-        4;
-
-    grid-row:
-        2 / span 16;
-}
-
-
-.tier-s .armor {
-
-    grid-column:
-        4;
-
-    grid-row:
-        2 / span 17;
-}
-
-
-/* ==================================================
-   13. PROGRESSION - MOUNTS
-   ================================================== */
-
-.mount {
-
-    grid-column:
-        5;
-
-    grid-row:
-        7 / span 3;
-
-    justify-content:
-        center;
-
-    align-items:
-        center;
-
-    flex-direction:
-        column;
-
-    text-align:
-        center;
-}
-
-
-.tier-c .mount {
-
-    grid-column:
-        5;
-
-    grid-row:
-        2 / span 13;
-}
-
-
-.tier-b .mount {
-
-    grid-column:
-        5;
-
-    grid-row:
-        2 / span 16;
-}
-
-
-.tier-a .mount-1 {
-
-    grid-column:
-        5;
-
-    grid-row:
-        2 / span 12;
-}
-
-
-.tier-a .mount-2 {
-
-    grid-column:
-        5;
-
-    grid-row:
-        14 / span 4;
-}
-
-
-.tier-s .mount-1 {
-
-    grid-column:
-        5;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-s .mount-2 {
-
-    grid-column:
-        5;
-
-    grid-row:
-        6 / span 13;
-}
-
-
-.mount-category {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-}
-
-
-.mount-none {
-
-    grid-column:
-        5;
-
-    grid-row:
-        2 / span 5;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-}
-
-
-/* ==================================================
-   14. PROGRESSION - WEAVE
-   ================================================== */
-
-.weave {
-
-    grid-column:
-        6;
-
-    grid-row:
-        2 / span 8;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-}
-
-
-.weave-value strong {
-
-    font-size:
-        1em;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    text-align:
-        center;
-}
-
-
-/* --------------------------------------------------
-   Weave - Tier C
-   -------------------------------------------------- */
-
-.tier-c .tier-c-weave-1 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-c .tier-c-weave-2 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-c .tier-c-weave-3 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        10 / span 5;
-}
-
-
-/* --------------------------------------------------
-   Weave - Tier B
-   -------------------------------------------------- */
-
-.tier-b .tier-b-weave-1 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-b .tier-b-weave-2 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-b .tier-b-weave-3 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-b .tier-b-weave-4 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        14 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Weave - Tier A
-   -------------------------------------------------- */
-
-.tier-a .tier-a-weave-1 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-a .tier-a-weave-2 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-a .tier-a-weave-3 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-a .tier-a-weave-4 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        14 / span 4;
-}
-
-
-/* --------------------------------------------------
-   Weave - Tier S
-   -------------------------------------------------- */
-
-.tier-s .tier-s-weave-1 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        2 / span 4;
-}
-
-
-.tier-s .tier-s-weave-2 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        6 / span 4;
-}
-
-
-.tier-s .tier-s-weave-3 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        10 / span 4;
-}
-
-
-.tier-s .tier-s-weave-4 {
-
-    grid-column:
-        6;
-
-    grid-row:
-        14 / span 5;
-}
-
-
-/* ==================================================
-   15. PROGRESSION - UNLOCKS
+   10. PROGRESSION - UNLOCKS
    ================================================== */
 
 .unlock {
-
-    grid-column:
-        7;
 
     display:
         flex;
@@ -2067,6 +959,153 @@ body {
 
     border-top:
         2px solid red;
+}
+
+
+/* ==================================================
+   11. PROGRESSION - LEVELS
+   ================================================== */
+
+.level {
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+}
+
+
+/* ==================================================
+   12. PROGRESSION - HEALING
+   ================================================== */
+
+.healing {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.healing-item {
+
+    width:
+        100%;
+}
+
+
+/* ==================================================
+   13. PROGRESSION - ARMOR
+   ================================================== */
+
+.armor-starting {
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    font-weight:
+        bold;
+}
+
+
+.armor {
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
+}
+
+
+.armor-category {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+/* ==================================================
+   14. PROGRESSION - MOUNTS
+   ================================================== */
+
+.mount {
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
+}
+
+
+.mount-category {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+/* ==================================================
+   15. PROGRESSION - WEAVE
+   ================================================== */
+
+.weave {
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.weave-value strong {
+
+    font-size:
+        1em;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
 }
 
 
@@ -2323,6 +1362,6 @@ body {
             90px
             60px
             minmax(360px, 1fr);
-    }    
+    }
 
 }

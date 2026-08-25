@@ -45,6 +45,9 @@ function configureVersionPages(versionId, versionConfig) {
     const playerRules =
         versionCard.querySelector(".page-player-rules");
 
+    const characterCreation =
+        versionCard.querySelector(".page-character-creation");
+
     const progression =
         versionCard.querySelector(".page-progression");
 
@@ -60,6 +63,18 @@ function configureVersionPages(versionId, versionConfig) {
 
         playerRules.style.display =
             versionConfig.playerRules ? "" : "none";
+
+    }
+
+
+    // ------------------------------
+    // Character Creation
+    // ------------------------------
+
+    if (characterCreation) {
+
+        characterCreation.style.display =
+            versionConfig.characterCreation ? "" : "none";
 
     }
 

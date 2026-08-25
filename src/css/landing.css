@@ -329,6 +329,43 @@ body {
 
 
 .tertiary-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    background: rgba(35, 55, 75, 0.95);
+
+    color: #b9d7f0;
+
+    border: 1px solid #6f9fc4;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.tertiary-button:hover {
+
+    background: #6f9fc4;
+
+    color: #101820;
+
+    transform: translateY(-2px);
+
+}
+
+
+.quaternary-button {
     display: inline-block;
 
     padding: 10px 18px;
@@ -352,7 +389,7 @@ body {
 }
 
 
-.tertiary-button:hover {
+.quaternary-button:hover {
     background: #888888;
 
     color: #ffffff;

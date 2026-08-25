@@ -628,6 +628,10 @@ app.get('/2014/player-rules', (req, res) => {
     );
 
 
+    // ==================================================
+    // PAGINA STATUS
+    // ==================================================
+
     // PAGINA NOG NIET KLAAR
     return toonPagina(
         req,
@@ -647,6 +651,45 @@ app.get('/2014/player-rules', (req, res) => {
 
 
 // ----------------------------------------------
+// 2014 CHARACTER CREATION
+// ----------------------------------------------
+
+app.get('/2014/character-creation', (req, res) => {
+
+    res.set(
+        'Cache-Control',
+        'no-store'
+    );
+
+
+    console.log(
+        "2014 character creation bezocht"
+    );
+
+
+    // ------------------------------------------
+    // PAGINA STATUS
+    // ------------------------------------------
+
+    // PAGINA NOG NIET KLAAR
+    return toonPagina(
+        req,
+        res,
+        '/src/pages/access/not-ready.html'
+    );
+
+
+    // PAGINA KLAAR
+    // return toonPagina(
+    //     req,
+    //     res,
+    //     '/src/pages/2014/character-creation.html'
+    // );
+
+});
+
+
+// ----------------------------------------------
 // 2014 PROGRESSION
 // ----------------------------------------------
 
@@ -659,6 +702,19 @@ app.get('/2014/progression', (req, res) => {
     );
 
 
+    // ==================================================
+    // PAGINA STATUS
+    // ==================================================
+
+    // PAGINA NOG NIET KLAAR
+    // return toonPagina(
+    //     req,
+    //     res,
+    //     '/src/pages/access/not-ready.html'
+    // );
+
+
+    // PAGINA KLAAR
     return toonPagina(
         req,
         res,
@@ -708,17 +764,21 @@ app.get(
 
 
         // ------------------------------------------
-        // PAGINA NOG NIET KLAAR
+        // PAGINA STATUS
         // ------------------------------------------
-        /*
+
+        // PAGINA NOG NIET KLAAR
         return toonPagina(
             req,
             res,
             '/src/pages/access/not-ready.html'
         );
-        */
 
-        
+
+        // PAGINA KLAAR
+        // De GM-toegangscontrole hieronder blijft actief.
+
+
         // ------------------------------------------
         // TOEGANGSCONTROLE
         // ------------------------------------------
@@ -767,7 +827,6 @@ app.get(
             res,
             '/src/pages/2014/gm-rules.html'
         );
-        
 
     }
 );
@@ -790,11 +849,63 @@ app.get('/2024/player-rules', (req, res) => {
     );
 
 
+    // ==================================================
+    // PAGINA STATUS
+    // ==================================================
+
+    // PAGINA NOG NIET KLAAR
     return toonPagina(
         req,
         res,
-        '/src/pages/2024/player-rules.html'
+        '/src/pages/access/not-ready.html'
     );
+
+
+    // PAGINA KLAAR
+    // return toonPagina(
+    //     req,
+    //     res,
+    //     '/src/pages/2024/player-rules.html'
+    // );
+
+});
+
+
+// ----------------------------------------------
+// 2024 CHARACTER CREATION
+// ----------------------------------------------
+
+app.get('/2024/character-creation', (req, res) => {
+
+    res.set(
+        'Cache-Control',
+        'no-store'
+    );
+
+
+    console.log(
+        "2024 character creation bezocht"
+    );
+
+
+    // ------------------------------------------
+    // PAGINA STATUS
+    // ------------------------------------------
+
+    // PAGINA NOG NIET KLAAR
+    return toonPagina(
+        req,
+        res,
+        '/src/pages/access/not-ready.html'
+    );
+
+
+    // PAGINA KLAAR
+    // return toonPagina(
+    //     req,
+    //     res,
+    //     '/src/pages/2024/character-creation.html'
+    // );
 
 });
 
@@ -812,20 +923,24 @@ app.get('/2024/progression', (req, res) => {
     );
 
 
+    // ==================================================
+    // PAGINA STATUS
+    // ==================================================
+
     // PAGINA NOG NIET KLAAR
-    return toonPagina(
-        req,
-        res,
-        '/src/pages/access/not-ready.html'
-    );
-
-
-    // PAGINA KLAAR
     // return toonPagina(
     //     req,
     //     res,
-    //     '/src/pages/2024/progression.html'
+    //     '/src/pages/access/not-ready.html'
     // );
+
+
+    // PAGINA KLAAR
+    return toonPagina(
+        req,
+        res,
+        '/src/pages/2024/progression.html'
+    );
 
 });
 
@@ -870,17 +985,22 @@ app.get(
 
 
         // ------------------------------------------
-        // PAGINA NOG NIET KLAAR
+        // PAGINA STATUS
         // ------------------------------------------
 
-        return toonPagina(
-            req,
-            res,
-            '/src/pages/access/not-ready.html'
-        );
+        // PAGINA NOG NIET KLAAR
+        // return toonPagina(
+        //     req,
+        //     res,
+        //     '/src/pages/access/not-ready.html'
+        // );
 
 
-        /*
+        // PAGINA KLAAR
+        // De GM-toegangscontrole hieronder blijft actief.
+        // pagina nog niet klaar commenten.
+
+
         // ------------------------------------------
         // TOEGANGSCONTROLE
         // ------------------------------------------
@@ -929,94 +1049,9 @@ app.get(
             res,
             '/src/pages/2024/gm-rules.html'
         );
-        */        
 
     }
 );
-
-
-// ==================================================
-// GASTTOEGANG
-// ==================================================
-
-// Direct naar /guest gaan geeft geen gasttoegang.
-// De bezoeker moet eerst via / de keuze krijgen.
-
-app.get('/guest', (req, res) => {
-
-    console.log(
-        "Directe GET naar /guest"
-    );
-
-    res.redirect('/');
-
-});
-
-
-// ----------------------------------------------
-// POST /guest
-// ----------------------------------------------
-
-app.post('/guest', (req, res) => {
-
-    res.set(
-        'Cache-Control',
-        'no-store'
-    );
-
-
-    console.log(
-        "Gast probeert toegang te krijgen via POST"
-    );
-
-
-    // Alleen iemand die zojuist op de
-    // keuzepagina zat mag gast kiezen.
-
-    if (!req.session.canGuest) {
-
-        console.log(
-            "Geen toestemming voor gasttoegang"
-        );
-
-        return res.redirect('/');
-
-    }
-
-
-    console.log(
-        "Gast kiest voor toegang zonder login"
-    );
-
-
-    req.session.guest = true;
-
-    delete req.session.canGuest;
-
-
-    req.session.save((err) => {
-
-        if (err) {
-
-            console.error(
-                "Gast-sessie opslaan mislukt:",
-                err
-            );
-
-            return res
-                .status(500)
-                .send(
-                    "Sessie opslaan mislukt."
-                );
-
-        }
-
-
-        res.redirect('/');
-
-    });
-
-});
 
 
 // ==================================================

@@ -1,7 +1,7 @@
 {
     "Template, hier komt de naam": {
-        "type": "",
-        "rarity": "",
+        "type": "Wonder",
+        "rarity": "Divine",
         "attunement": {
             "required": false,
             "who": ""
@@ -5361,7 +5361,7 @@
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
-    "Infernal Tack (evil aligned)": {
+    "Infernal Tack": {
         "type": "Wondrous Item",
         "rarity": "Legendary",
         "attunement": {

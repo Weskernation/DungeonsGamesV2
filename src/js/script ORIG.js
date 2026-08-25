@@ -1,143 +1,4 @@
-// ==================================================
-// LOOT TABLE LADEN
-// ==================================================
-
-async function loadLootTable() {
-
-    const container =
-        document.getElementById("loot-table-container");
-
-    if (!container) {
-        return;
-    }
-
-
-    // ----------------------------------------------
-    // JUISTE LOOT TABLE BEPALEN
-    // ----------------------------------------------
-
-    let lootTablePath = null;
-    let lootTableCssPath = null;
-
-
-    if (
-        window.location.pathname.startsWith(
-            "/2014/"
-        )
-    ) {
-
-        lootTablePath =
-            "/pages/2014/loot-table.html";
-
-        lootTableCssPath =
-            "/css/loot-table.css";
-
-    }
-
-
-    else if (
-        window.location.pathname.startsWith(
-            "/2024/"
-        )
-    ) {
-
-        lootTablePath =
-            "/pages/2024/loot-table.html";
-
-        lootTableCssPath =
-            "/css/loot-table.css";
-
-    }
-
-
-    if (!lootTablePath) {
-
-        console.error(
-            "Geen loot table gevonden voor deze pagina."
-        );
-
-        return;
-
-    }
-
-
-    // ----------------------------------------------
-    // LOOT TABLE CSS LADEN
-    // ----------------------------------------------
-
-    if (
-        lootTableCssPath &&
-        !document.querySelector(
-            `link[href="${lootTableCssPath}"]`
-        )
-    ) {
-
-        const stylesheet =
-            document.createElement("link");
-
-        stylesheet.rel =
-            "stylesheet";
-
-        stylesheet.href =
-            lootTableCssPath;
-
-        document.head.appendChild(
-            stylesheet
-        );
-
-    }
-
-
-    // ----------------------------------------------
-    // LOOT TABLE HTML LADEN
-    // ----------------------------------------------
-
-    try {
-
-        const response =
-            await fetch(lootTablePath);
-
-
-        if (!response.ok) {
-
-            console.error(
-                "Loot table kon niet worden geladen:",
-                lootTablePath,
-                response.status
-            );
-
-            return;
-
-        }
-
-
-        const html =
-            await response.text();
-
-
-        container.innerHTML =
-            html;
-
-
-        console.log(
-            "Loot table geladen:",
-            lootTablePath
-        );
-
-
-    } catch (error) {
-
-        console.error(
-            "Fout bij laden van loot table:",
-            error
-        );
-
-    }
-
-}
-
-
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
 
 
     // ==================================================
@@ -189,18 +50,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-            if (SITE_CONFIG.pages.dnd2014.characterCreation) {
-
-                navigationHTML += `
-                    <a href="/2014/character-creation">
-                        Character Creation 5e (2014)
-                    </a>
-                `;
-
-            }
-
-
-
             if (SITE_CONFIG.pages.dnd2014.progression) {
 
                 navigationHTML += `
@@ -247,17 +96,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 navigationHTML += `
                     <a href="/2024/player-rules">
                         Player Rules 5.5e (2024)
-                    </a>
-                `;
-
-            }
-
-
-            if (SITE_CONFIG.pages.dnd2024.characterCreation) {
-
-                navigationHTML += `
-                    <a href="/2024/character-creation">
-                        Character Creation 5.5e (2024)
                     </a>
                 `;
 
@@ -570,107 +408,35 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     // ==================================================
-    // LOOT TABLE
+    // LOOT TIER INFO
     // ==================================================
 
-    await loadLootTable();
+    document.querySelectorAll(".loot-tier-info")
+        .forEach(panel => {
 
-    document.dispatchEvent(
-        new Event("lootTableLoaded")
-    );
-
-
-    // ==================================================
-    // TOOLTIP INITIALISEREN
-    // ==================================================
-
-    initializeLootTable();
-
-
-    // ==================================================
-    // LOOT GRID - AANTAL KOLOMMEN
-    // ==================================================
-
-    function updateLootGrid() {
-
-        document.querySelectorAll(".loot-grid").forEach(grid => {
-
-            const firstRoll =
-                grid.querySelector(".loot-roll");
-
-
-            if (!firstRoll) {
-                return;
-            }
-
-
-            let itemCount = 0;
-
-            let element =
-                firstRoll.nextElementSibling;
-
-
-            while (
-                element &&
-                !element.classList.contains("loot-roll")
-            ) {
-
-                if (
-                    element.classList.contains("loot-item")
-                ) {
-
-                    itemCount++;
-
-                }
-
-
-                element =
-                    element.nextElementSibling;
-
-            }
-
-
-            if (itemCount > 0) {
-
-                // ------------------------------------------
-                // PORTRAIT
-                // ------------------------------------------
-
-                if (
-                    window.innerWidth <= 768 &&
-                    window.innerWidth <= window.innerHeight
-                ) {
-
-                    grid.style.gridTemplateColumns =
-                        "repeat(2, minmax(0, 1fr))";
-
-                }
-
-
-                // ------------------------------------------
-                // DESKTOP + LANDSCAPE
-                // ------------------------------------------
-
-                else {
-
-                    grid.style.gridTemplateColumns =
-                        `70px repeat(${itemCount}, minmax(0, 1fr))`;
-
-                }
-
+            if (panel.textContent.trim() === "") {
+                panel.style.visibility = "hidden";
             }
 
         });
 
-    }
 
+    // ==================================================
+    // LOOT ITEMS
+    // ==================================================
 
-    updateLootGrid();
+    document.querySelectorAll(".loot-item")
+        .forEach(item => {
 
-    window.addEventListener(
-        "resize",
-        updateLootGrid
-    );
+            if (item.dataset.attunement === "true") {
+                item.classList.add("attunement");
+            }
+
+            if (item.dataset.excluded === "true") {
+                item.classList.add("excluded");
+            }
+
+        });
 
 
     // ==================================================
@@ -721,11 +487,9 @@ function scrollToSection(id) {
 
     element.scrollIntoView({
 
-        behavior:
-            "smooth",
+        behavior: "smooth",
 
-        block:
-            "start"
+        block: "start"
 
     });
 

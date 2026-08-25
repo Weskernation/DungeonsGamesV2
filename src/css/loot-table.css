@@ -4,17 +4,22 @@
 
 
 /* ==================================================
-   LOOT TABLE - TITEL
+   1. LOOT TABLE - TITEL
    ================================================== */
 
 #loot-table .loot-title {
 
-    width: 100%;
+    width:
+        100%;
 
-    padding: 15px 0;
-    margin-top: 20px;
+    padding:
+        15px 0;
 
-    border: 2px solid black;
+    margin-top:
+        20px;
+
+    border:
+        2px solid black;
 
     background-color:
         rgba(0, 0, 0, 0.75);
@@ -40,7 +45,7 @@
 
 
 /* ==================================================
-   LOOT TIER - ALGEMENE LAYOUT
+   2. LOOT TIER - ALGEMENE LAYOUT
    ================================================== */
 
 .loot-tier {
@@ -83,7 +88,7 @@
 
 
 /* ==================================================
-   LOOT GRID
+   3. LOOT GRID
    ================================================== */
 
 .loot-grid {
@@ -96,10 +101,6 @@
 
     display:
         grid;
-
-    grid-template-columns:
-        80px
-        repeat(8, minmax(0, 1fr));
 }
 
 
@@ -126,7 +127,7 @@
 
 
 /* ==================================================
-   ROLL-NUMMERS
+   4. ROLL-NUMMERS
    ================================================== */
 
 .loot-roll {
@@ -140,7 +141,7 @@
 
 
 /* ==================================================
-   LOOT ITEMS
+   5. LOOT ITEMS
    ================================================== */
 
 .loot-item {
@@ -157,7 +158,7 @@
 
 
 /* ==================================================
-   LOOT INFO HEADER
+   6. LOOT INFO HEADER
    ================================================== */
 
 .loot-info-header {
@@ -192,6 +193,15 @@
 
     text-align:
         center;
+
+    min-width:
+        0;
+
+    overflow-wrap:
+        normal;
+
+    word-break:
+        normal;
 }
 
 
@@ -229,7 +239,7 @@
 
 
 /* ==================================================
-   LOOT INFO PANEL
+   7. LOOT INFO PANEL
    ================================================== */
 
 .loot-info-panel {
@@ -308,7 +318,7 @@
 
 
 /* ==================================================
-   LOOT INFO FOOTER
+   8. LOOT INFO FOOTER
    ================================================== */
 
 .loot-info-footer {
@@ -375,7 +385,7 @@
 
 
 /* ==================================================
-   LOOT DESCRIPTION
+   9. LOOT DESCRIPTION
    ================================================== */
 
 .loot-description {
@@ -385,9 +395,6 @@
 
     border:
         1px solid black;
-
-    background-color:
-        rgba(226, 239, 218, 0.9);
 
     font-size:
         1.5em;
@@ -408,85 +415,94 @@
 
 
 /* ==================================================
-   TIER-KLEUREN
+   10. TIER-KLEUREN
    ================================================== */
+
+/*
+   De daadwerkelijke kleuren worden bepaald
+   door style.css op basis van data-version.
+
+   Deze selectors gebruiken alleen de
+   bijbehorende loot-kleurvariabelen.
+*/
+
 
 .tier-d .loot-tier-info {
 
     background-color:
-        rgba(158, 191, 135, 0.5);
+        var(--tier-d-loot-color);
 }
 
 
 .tier-c .loot-tier-info {
 
     background-color:
-        rgba(149, 186, 255, 0.5);
+        var(--tier-c-loot-color);
 }
 
 
 .tier-b .loot-tier-info {
 
     background-color:
-        rgba(249, 218, 128, 0.5);
+        var(--tier-b-loot-color);
 }
 
 
 .tier-a .loot-tier-info {
 
     background-color:
-        rgba(205, 140, 140, 0.5);
+        var(--tier-a-loot-color);
 }
 
 
 .tier-s .loot-tier-info {
 
     background-color:
-        rgba(171, 171, 171, 0.5);
+        var(--tier-s-loot-color);
 }
 
 
 /* ==================================================
-   ATTUNEMENT - TIER KLEUREN
+   11. ATTUNEMENT - TIER KLEUREN
    ================================================== */
 
 .tier-d .attunement {
 
     background-color:
-        rgba(158, 191, 135, 0.5);
+        var(--tier-d-loot-color);
 }
 
 
 .tier-c .attunement {
 
     background-color:
-        rgba(149, 186, 255, 0.5);
+        var(--tier-c-loot-color);
 }
 
 
 .tier-b .attunement {
 
     background-color:
-        rgba(249, 218, 128, 0.5);
+        var(--tier-b-loot-color);
 }
 
 
 .tier-a .attunement {
 
     background-color:
-        rgba(205, 140, 140, 0.5);
+        var(--tier-a-loot-color);
 }
 
 
 .tier-s .attunement {
 
     background-color:
-        rgba(171, 171, 171, 0.5);
+        var(--tier-s-loot-color);
 }
 
 
 /* ==================================================
-   UITGESLOTEN ITEMS
+   12. UITGESLOTEN ITEMS
    ================================================== */
 
 .excluded::after {
@@ -514,44 +530,7 @@
 
 
 /* ==================================================
-   MOBIEL - ALGEMEEN
-   ================================================== */
-
-/*
-   Landscape blijft bewust dicht bij de desktop-layout.
-   Alleen de beschikbare ruimte wordt iets efficiënter gebruikt.
-*/
-
-@media (max-height: 500px) and (orientation: landscape) {
-
-    .loot-info-panel {
-
-        width:
-            13%;
-
-        min-width:
-            210px;
-    }
-
-
-    .loot-layout {
-
-        gap:
-            10px;
-    }
-
-
-    .loot-grid .cell {
-
-        padding:
-            6px;
-    }
-
-}
-
-
-/* ==================================================
-   MOBIEL - PORTRAIT
+   13. MOBIEL - PORTRAIT
    ================================================== */
 
 @media (max-width: 768px) and (orientation: portrait) {
@@ -571,9 +550,6 @@
 
         width:
             100%;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
     }
 
 
@@ -627,6 +603,19 @@
     }
 
 
+    .loot-info-header > div {
+
+        min-width:
+            0;
+
+        width:
+            100%;
+
+        box-sizing:
+            border-box;
+    }
+
+
     .loot-info-header div:last-child {
 
         border-right:
@@ -642,6 +631,90 @@
 
         grid-template-columns:
             1fr;
+    }
+
+}
+
+
+/* ==================================================
+   14. MOBIEL - LANDSCAPE
+   ================================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+    /* ------------------------------------------
+       Layout
+       ------------------------------------------ */
+
+    .loot-layout {
+
+        flex-direction:
+            column;
+    }
+
+
+    /* ------------------------------------------
+       Loot grid
+       ------------------------------------------ */
+
+    .loot-grid {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+
+        overflow-x:
+            auto;
+
+        overflow-y:
+            hidden;
+    }
+
+
+    /* ------------------------------------------
+       Info panel
+       ------------------------------------------ */
+
+    .loot-info-panel {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+    }
+
+
+    /* ------------------------------------------
+       Header
+       ------------------------------------------ */
+
+    .loot-info-header {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .loot-info-header > div {
+
+        min-width:
+            0;
+
+        width:
+            100%;
+
+        box-sizing:
+            border-box;
+    }
+
+
+    .loot-info-header div:last-child {
+
+        border-right:
+            1px solid black;
     }
 
 }
