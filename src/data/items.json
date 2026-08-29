@@ -275,7 +275,7 @@
         "rarity": "Rare",
         "attunement": {
             "required": true,
-            "who": "artificer"
+            "who": "by an Artificer"
         },
 
         "description": [
