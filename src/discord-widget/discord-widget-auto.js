@@ -14,7 +14,30 @@ document.body.appendChild(onlineWidget);
 
 
 // Socket.IO
-const socket = io();
+const socket = io({
+    transports: ['websocket']
+});
+
+socket.on('connect', () => {
+    console.log(
+        'Socket.IO verbonden:',
+        socket.id
+    );
+});
+
+socket.on('disconnect', (reason) => {
+    console.log(
+        'Socket.IO verbinding verbroken:',
+        reason
+    );
+});
+
+socket.on('connect_error', (error) => {
+    console.error(
+        'Socket.IO connect_error:',
+        error.message
+    );
+});
 
 const userData = document.body.dataset.user;
 
