@@ -1,0 +1,527 @@
+/* ==================================================
+   DUNGEONS & GAMES - SETTINGS
+   ================================================== */
+
+
+/* ==================================================
+   1. SETTINGS PAGINA
+   ================================================== */
+
+.settings-page {
+
+    width:
+        min(1000px, 92%);
+
+    margin:
+        40px auto;
+
+    color:
+        white;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(15, 15, 15, 0.82),
+            rgba(15, 15, 15, 0.92)
+        ),
+        url("/images/frequent-freewheelers_banner.webp");
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #f2f2f2;
+}
+
+
+/* ==================================================
+   2. PAGINA TITEL
+   ================================================== */
+
+.settings-page > h1 {
+
+    margin:
+        0 0 30px 0;
+
+    padding:
+        18px;
+
+    border:
+        2px solid black;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(0, 0, 0, 0.80);
+
+    color:
+        #ffd700;
+
+    text-align:
+        center;
+
+    font-size:
+        2em;
+
+    letter-spacing:
+        2px;
+}
+
+
+/* ==================================================
+   3. SETTINGS SECTIE
+   ================================================== */
+
+.settings-section {
+
+    margin-bottom:
+        25px;
+
+    padding:
+        20px;
+
+    border:
+        2px solid black;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(20, 20, 20, 0.90);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==================================================
+   4. SECTIE TITEL
+   ================================================== */
+
+.settings-section > h2 {
+
+    margin:
+        0 0 15px 0;
+
+    padding-bottom:
+        10px;
+
+    border-bottom:
+        1px solid rgba(255, 215, 0, 0.35);
+
+    color:
+        #ffd700;
+
+    font-size:
+        1.35em;
+}
+
+
+/* ==================================================
+   5. INSTELLING
+   ================================================== */
+
+.settings-option {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    padding:
+        14px 4px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.settings-option:last-child {
+
+    border-bottom:
+        none;
+}
+
+
+/* ==================================================
+   6. INSTELLING TEKST
+   ================================================== */
+
+.settings-option-info {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+.settings-option-info h3 {
+
+    margin:
+        0 0 4px 0;
+
+    color:
+        white;
+
+    font-size:
+        1em;
+}
+
+
+.settings-option-info p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size:
+        0.85em;
+
+    line-height:
+        1.4;
+}
+
+
+/* ==================================================
+   7. STATUS
+   ================================================== */
+
+.settings-status {
+
+    margin:
+        12px 0 0 4px;
+
+    min-height:
+        1.2em;
+
+    color:
+        #ffd700;
+
+    font-size:
+        0.9em;
+}
+
+
+/* ==================================================
+   8. TOGGLE SWITCH
+   ================================================== */
+
+.settings-switch {
+
+    position:
+        relative;
+
+    display:
+        inline-block;
+
+    width:
+        58px;
+
+    height:
+        30px;
+
+    flex-shrink:
+        0;
+
+    cursor:
+        pointer;
+}
+
+
+.settings-switch input {
+
+    width:
+        0;
+
+    height:
+        0;
+
+    opacity:
+        0;
+}
+
+
+.settings-slider {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border:
+        2px solid rgba(255, 215, 0, 0.45);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    transition:
+        0.2s ease;
+}
+
+
+.settings-slider::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        22px;
+
+    height:
+        22px;
+
+    left:
+        2px;
+
+    top:
+        2px;
+
+    border-radius:
+        50%;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.4);
+
+    transition:
+        0.2s ease;
+}
+
+
+.settings-switch input:checked + .settings-slider {
+
+    background:
+        rgba(255, 215, 0, 0.30);
+
+    border-color:
+        #ffd700;
+}
+
+
+.settings-switch input:checked + .settings-slider::before {
+
+    transform:
+        translateX(28px);
+
+    background:
+        #ffd700;
+}
+
+
+/* ==================================================
+   9. SUBSECTIE
+   ================================================== */
+
+.settings-subsection {
+
+    margin-top:
+        20px;
+
+    padding-top:
+        15px;
+
+    border-top:
+        1px solid rgba(255, 215, 0, 0.25);
+}
+
+
+.settings-subsection > h3 {
+
+    margin:
+        0 0 5px 4px;
+
+    color:
+        #ffd700;
+
+    font-size:
+        0.95em;
+
+    font-weight:
+        bold;
+}
+
+
+/* ==================================================
+   10. MOBIEL
+   ================================================== */
+
+@media (max-width: 700px) {
+
+    .settings-page {
+
+        width:
+            calc(100% - 20px);
+
+        margin:
+            20px auto;
+    }
+
+
+    .settings-page > h1 {
+
+        font-size:
+            1.5em;
+
+        padding:
+            14px;
+    }
+
+
+    .settings-section {
+
+        padding:
+            15px;
+    }
+
+
+    .settings-option {
+
+        gap:
+            12px;
+
+        padding:
+            12px 2px;
+    }
+
+
+    .settings-option-info p {
+
+        font-size:
+            0.8em;
+    }
+
+
+    .settings-switch {
+
+        width:
+            54px;
+
+        height:
+            28px;
+    }
+
+
+    .settings-slider::before {
+
+        width:
+            20px;
+
+        height:
+            20px;
+    }
+
+
+    .settings-switch input:checked + .settings-slider::before {
+
+        transform:
+            translateX(26px);
+    }
+
+}
+
+
+/* ==================================================
+   SETTINGS RESET - GEVAARLIJKE ACTIE
+   ================================================== */
+
+.settings-danger {
+    border: 1px solid rgba(180, 40, 40, 0.45);
+    background: rgba(120, 20, 20, 0.08);
+}
+
+
+.settings-danger h2 {
+    color: #c94a4a;
+}
+
+
+.settings-danger .settings-option-info h3 {
+    color: #b83c3c;
+}
+
+
+.settings-danger .settings-option-info p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==================================================
+   RESET KNOP
+   ================================================== */
+
+.settings-danger-button {
+    padding: 10px 18px;
+
+    border: 1px solid #a83232;
+    border-radius: 6px;
+
+    background: #8f2929;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+.settings-danger-button:hover {
+    background: #b53535;
+    border-color: #c94444;
+}
+
+
+.settings-danger-button:active {
+    transform: translateY(1px);
+}
+
+
+.settings-danger-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ==================================================
+   RESET STATUS
+   ================================================== */
+
+.settings-danger .settings-status {
+    color: #c94a4a;
+}

@@ -64,3 +64,246 @@ git commit -m "Beschrijving"
 git push origin main
 
 
+Plan Online Teller & Settings”
+
+
+
+Plan van aanpak
+Fase 1 — Online teller via config.js
+
+Doel: de teller volledig aan/uit kunnen zetten zonder de authenticatie te beïnvloeden.
+
+Stap 1 — Backup
+
+Eerst maken we backups van de bestanden die we gaan wijzigen:
+
+config.js
+discord-widget-auto.js
+
+script.js en de serverbestanden blijven in deze fase ongemoeid, tenzij tijdens het testen blijkt dat dat noodzakelijk is.
+
+Stap 2 — Configuratie toevoegen
+
+In config.js komt bijvoorbeeld:
+
+const ENABLE_ONLINE_COUNTER = true;
+
+Dit wordt de standaardinstelling.
+
+Stap 3 — discord-widget-auto.js aanpassen
+
+We splitsen logisch:
+
+Online-functionaliteit
+
+online teller
+online lijst
+onlineUsers
+registerUser
+registerGuest
+Socket.IO-verbinding
+
+Authenticatie
+
+Inloggen
+Uitloggen
+
+Bij:
+
+ENABLE_ONLINE_COUNTER = false;
+
+verdwijnt de online-functionaliteit volledig.
+
+Maar:
+
+Inloggen       → blijft werken
+Uitloggen      → blijft werken
+Stap 4 — Testen
+
+We testen minimaal:
+
+Teller AAN
+
+config.js → true
+
+Verwacht:
+
+teller zichtbaar
+online aantal werkt
+online lijst werkt
+ingelogde gebruiker wordt geregistreerd
+gast wordt geregistreerd
+
+Teller UIT
+
+config.js → false
+
+Verwacht:
+
+teller niet zichtbaar
+online lijst niet zichtbaar
+geen Socket.IO voor de teller
+geen registerUser
+geen registerGuest
+inloggen werkt
+uitloggen werkt
+
+Pas wanneer dit allemaal klopt, gaan we door.
+
+Fase 2 — Website Settings
+
+Dan maken we van die configuratie een beheersbare instelling op de website.
+
+Stap 5 — Settings-admins bepalen
+
+We maken een server-side lijst van Discord user ID's die Settings mogen beheren.
+
+Bijvoorbeeld conceptueel:
+
+SETTINGS_ADMINS = [
+    "jouw-discord-id"
+];
+
+Jouw Discord ID wordt de eerste beheerder.
+
+Later kunnen we eenvoudig extra IDs toevoegen.
+
+Deze lijst komt niet in publiek toegankelijke frontend-code als beveiligingsmechanisme.
+
+Stap 6 — Server-side autorisatie
+
+De server controleert bij iedere Settings-aanvraag:
+
+Is de gebruiker ingelogd?
+        ↓
+Wat is zijn Discord user.id?
+        ↓
+Staat die ID bij SETTINGS_ADMINS?
+        ↓
+JA → toestaan
+NEE → weigeren
+
+Dus niet alleen:
+
+"De knop is verborgen."
+
+Maar ook:
+
+"De server weigert de wijziging."
+
+Dat is de belangrijke beveiligingslaag.
+
+Stap 7 — Settings-opslag
+
+Hier gebruiken we waarschijnlijk je bestaande Upstash Redis.
+
+Bijvoorbeeld conceptueel:
+
+site:settings
+    onlineCounter: false
+
+Daarmee wordt de actuele instelling opgeslagen buiten Vercel.
+
+Stap 8 — Settings-interface
+
+We maken een Settings-pagina of paneel dat alleen voor Settings-admins zichtbaar is.
+
+Bijvoorbeeld:
+
+⚙ Website Settings
+
+Online teller
+
+Toon het aantal online bezoekers.
+
+                         [ ●──── ] AAN
+
+Of:
+
+                         [ ────● ] UIT
+
+De schuif geeft altijd de werkelijke opgeslagen waarde weer.
+
+Stap 9 — Config + Redis combineren
+
+We gebruiken config.js als standaardwaarde.
+
+Bijvoorbeeld:
+
+config.js
+ENABLE_ONLINE_COUNTER = true
+
+en:
+
+Redis
+geen waarde
+
+→ AAN
+
+Wanneer jij via Settings UIT kiest:
+
+config.js
+true
+
+Redis
+false
+
+→ UIT
+
+Redis heeft dan voorrang op de standaardwaarde.
+
+Stap 10 — Reset naar standaard
+
+Ik zou meteen rekening houden met een resetmogelijkheid.
+
+Bijvoorbeeld:
+
+Online teller       [ UIT ]
+
+Standaard: AAN
+
+[ Herstel standaard ]
+
+Dan verwijderen we de Redis-override.
+
+Resultaat:
+
+Redis
+geen waarde
+
+config.js
+true
+
+→ AAN
+
+Dat maakt het systeem veel makkelijker te beheren.
+
+Uiteindelijk
+
+Dan krijgen we deze architectuur:
+
+                       DISCORD LOGIN
+                             │
+                             ▼
+                       Discord user.id
+                             │
+               ┌─────────────┴─────────────┐
+               │                           │
+          normale gebruiker          Settings-admin
+               │                           │
+               │                           ▼
+               │                     ⚙ Settings
+               │                           │
+               │                           ▼
+               │                    Server controle
+               │                           │
+               │                           ▼
+               │                       Redis
+               │                           │
+               └─────────────┬─────────────┘
+                             │
+                             ▼
+                       Website config
+                             │
+                             ▼
+                    Online teller ON/OFF

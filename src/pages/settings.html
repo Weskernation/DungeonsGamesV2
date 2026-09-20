@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings | Dungeons & Games</title>
+
+
+    <!-- ==================================================
+         ALGEMENE WEBSITE STYLING
+         ================================================== -->
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- ==================================================
+         GLOBALE NAVIGATIE
+         ================================================== -->
+
+    <link rel="stylesheet" href="/css/navigation.css">
+
+
+    <!-- ==================================================
+         PAGINA-SPECIFIEKE STYLING
+         ================================================== -->
+
+    <link rel="stylesheet" href="/css/settings.css">
+
+
+    <!-- ==================================================
+         DISCORD / ONLINE WIDGET
+         ================================================== -->
+
+    <link rel="stylesheet" href="/discord-widget/discord-widget.css">
+
+</head>
+
+
+<body data-user="">
+
+    <div id="main-navigation"></div>
+
+
+    <main class="settings-page">
+
+        <h1>Website Settings</h1>
+
+
+        <!-- ==================================================
+             ONLINE
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>Online</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Online teller</h3>
+
+                    <p>
+                        Toon het aantal online bezoekers en
+                        de online lijst op de website.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="online-counter-toggle"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <p
+                id="online-counter-status"
+                class="settings-status"
+            ></p>
+
+        </section>
+
+
+        <!-- ==================================================
+             TOEGANG
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>Toegang</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>GM Rules toegankelijk voor iedereen</h3>
+
+                    <p>
+                        Maak de GM Rules-pagina's toegankelijk voor iedereen,
+                        zonder dat inloggen of een GM-rol nodig is.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="access-gm-rules-public"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             D&D VERSIES
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>D&D versies</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>D&D 2014</h3>
+
+                    <p>
+                        D&D 2014 content beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="version-dnd2014"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>D&D 2024</h3>
+
+                    <p>
+                        D&D 2024 content beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="version-dnd2024"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>D&D 2034</h3>
+
+                    <p>
+                        D&D 2034 content beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="version-dnd2034"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             D&D 2014 PAGINA'S
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>D&D 2014 pagina's</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Player Rules</h3>
+
+                    <p>
+                        De Player Rules-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2014-player-rules"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Character Creation</h3>
+
+                    <p>
+                        De Character Creation-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2014-character-creation"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Progression</h3>
+
+                    <p>
+                        De Progression-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2014-progression"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>GM Rules</h3>
+
+                    <p>
+                        De GM Rules-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2014-gm-rules"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             D&D 2024 PAGINA'S
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>D&D 2024 pagina's</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Player Rules</h3>
+
+                    <p>
+                        De Player Rules-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2024-player-rules"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Character Creation</h3>
+
+                    <p>
+                        De Character Creation-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2024-character-creation"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Progression</h3>
+
+                    <p>
+                        De Progression-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2024-progression"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>GM Rules</h3>
+
+                    <p>
+                        De GM Rules-pagina beschikbaar maken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="page-dnd2024-gm-rules"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TOOLTIPS
+             ================================================== -->
+
+        <section class="settings-section">
+
+            <h2>Tooltips</h2>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Tooltips</h3>
+
+                    <p>
+                        Tooltips op de website inschakelen.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="tooltip-enabled"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Voor gasten</h3>
+
+                    <p>
+                        Tooltips ook beschikbaar maken voor gasten.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="tooltip-guest-allowed"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Parchment tooltips</h3>
+
+                    <p>
+                        De parchment-stijl voor tooltips gebruiken.
+                    </p>
+
+                </div>
+
+
+                <label class="settings-switch">
+
+                    <input
+                        type="checkbox"
+                        id="tooltip-parchment"
+                    >
+
+                    <span class="settings-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="settings-subsection">
+
+                <h3>D&D versies</h3>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <h3>D&D 2014</h3>
+
+                    <p>
+                        De tooltips voor 2014 weergeven.
+                    </p>                
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="tooltip-dnd2014"
+                        >
+
+                        <span class="settings-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <h3>D&D 2024</h3>
+
+                    <p>
+                        De tooltips voor 2024 weergeven.
+                    </p>
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="tooltip-dnd2024"
+                        >
+
+                        <span class="settings-slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div class="settings-option-info">
+
+                        <h3>D&D 2034</h3>
+
+                    <p>
+                        De tooltips voor 2034 weergeven.
+                    </p>
+
+                    </div>
+
+
+                    <label class="settings-switch">
+
+                        <input
+                            type="checkbox"
+                            id="tooltip-dnd2034"
+                        >
+
+                        <span class="settings-slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+        <!-- ==================================================
+            SETTINGS RESET
+            ================================================== -->
+
+        <section class="settings-section settings-danger">
+
+            <h2>Instellingen resetten</h2>
+
+            <div class="settings-option">
+
+                <div class="settings-option-info">
+
+                    <h3>Terug naar config.js</h3>
+
+                    <p>
+                        Verwijder alle tijdelijke instellingen
+                        en gebruik opnieuw de waarden uit config.js.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="settings-reset-button"
+                    class="settings-danger-button"
+                >
+                    Instellingen resetten
+                </button>
+
+            </div>
+
+
+            <p
+                id="settings-reset-status"
+                class="settings-status"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         ALGEMENE WEBSITE SCRIPTS
+         ================================================== -->
+
+    <script src="/js/config.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/landing.js"></script>
+
+
+    <!-- ==================================================
+         DISCORD / ONLINE WIDGET
+         ================================================== -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/discord-widget/discord-widget-auto.js"></script>
+
+</body>
+
+</html>

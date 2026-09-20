@@ -1,11 +1,11 @@
 const ENABLE_ITEM_TOOLTIPS =
-    SITE_CONFIG.tooltips.enabled;
+    siteSettings.tooltips.enabled;
 
 const GUEST_TOOLTIPS_ALLOWED =
-    SITE_CONFIG.tooltips.guestAllowed;
+    siteSettings.tooltips.guestAllowed;
 
 const ENABLE_PARCHMENT_TOOLTIPS =
-    SITE_CONFIG.tooltips.parchment;
+    siteSettings.tooltips.parchment;
 
 
 // ==========================================
@@ -16,7 +16,7 @@ const pageVersion =
     document.body.dataset.version;
 
 const VERSION_TOOLTIPS_ALLOWED =
-    SITE_CONFIG.tooltips[pageVersion] === true;
+    siteSettings.tooltips[pageVersion] === true;
 
 const MOBILE_WIDTH = 900;
 const MOBILE_LANDSCAPE_HEIGHT = 500;

@@ -14,7 +14,7 @@ const version2024 = document.getElementById("version-2024");
 if (version2014) {
 
     version2014.style.display =
-        SITE_CONFIG.versions.dnd2014 ? "" : "none";
+        siteSettings.versions.dnd2014 ? "" : "none";
 
 }
 
@@ -22,7 +22,7 @@ if (version2014) {
 if (version2024) {
 
     version2024.style.display =
-        SITE_CONFIG.versions.dnd2024 ? "" : "none";
+        siteSettings.versions.dnd2024 ? "" : "none";
 
 }
 
@@ -111,11 +111,11 @@ function configureVersionPages(versionId, versionConfig) {
 
 configureVersionPages(
     "version-2014",
-    SITE_CONFIG.pages.dnd2014
+    siteSettings.pages.dnd2014
 );
 
 
 configureVersionPages(
     "version-2024",
-    SITE_CONFIG.pages.dnd2024
+    siteSettings.pages.dnd2024
 );

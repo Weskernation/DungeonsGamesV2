@@ -1,4 +1,16 @@
 // ==================================================
+// EFFECTIEVE WEBSITE-INSTELLINGEN
+// ==================================================
+
+const siteSettings =
+    document.body.dataset.siteSettings
+        ? JSON.parse(
+            document.body.dataset.siteSettings
+        )
+        : null;
+
+
+// ==================================================
 // LOOT TABLE LADEN
 // ==================================================
 
@@ -163,7 +175,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 2014
         // ----------------------------------------------
 
-        if (SITE_CONFIG.versions.dnd2014) {
+        if (siteSettings.versions.dnd2014) {
 
             navigationHTML += `
 
@@ -178,7 +190,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
 
-            if (SITE_CONFIG.pages.dnd2014.playerRules) {
+            if (siteSettings.pages.dnd2014.playerRules) {
 
                 navigationHTML += `
                     <a href="/2014/player-rules">
@@ -189,7 +201,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-            if (SITE_CONFIG.pages.dnd2014.characterCreation) {
+            if (siteSettings.pages.dnd2014.characterCreation) {
 
                 navigationHTML += `
                     <a href="/2014/character-creation">
@@ -200,8 +212,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-
-            if (SITE_CONFIG.pages.dnd2014.progression) {
+            if (siteSettings.pages.dnd2014.progression) {
 
                 navigationHTML += `
                     <a href="/2014/progression">
@@ -227,7 +238,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 2024
         // ----------------------------------------------
 
-        if (SITE_CONFIG.versions.dnd2024) {
+        if (siteSettings.versions.dnd2024) {
 
             navigationHTML += `
 
@@ -242,7 +253,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
 
-            if (SITE_CONFIG.pages.dnd2024.playerRules) {
+            if (siteSettings.pages.dnd2024.playerRules) {
 
                 navigationHTML += `
                     <a href="/2024/player-rules">
@@ -253,7 +264,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-            if (SITE_CONFIG.pages.dnd2024.characterCreation) {
+            if (siteSettings.pages.dnd2024.characterCreation) {
 
                 navigationHTML += `
                     <a href="/2024/character-creation">
@@ -264,7 +275,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-            if (SITE_CONFIG.pages.dnd2024.progression) {
+            if (siteSettings.pages.dnd2024.progression) {
 
                 navigationHTML += `
                     <a href="/2024/progression">
@@ -291,8 +302,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         // ----------------------------------------------
 
         if (
-            SITE_CONFIG.pages.dnd2014.gmRules ||
-            SITE_CONFIG.pages.dnd2024.gmRules
+            siteSettings.pages.dnd2014.gmRules ||
+            siteSettings.pages.dnd2024.gmRules
         ) {
 
             navigationHTML += `
@@ -308,7 +319,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
 
-            if (SITE_CONFIG.pages.dnd2014.gmRules) {
+            if (siteSettings.pages.dnd2014.gmRules) {
 
                 navigationHTML += `
                     <a href="/2014/gm-rules">
@@ -319,7 +330,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
 
-            if (SITE_CONFIG.pages.dnd2024.gmRules) {
+            if (siteSettings.pages.dnd2024.gmRules) {
 
                 navigationHTML += `
                     <a href="/2024/gm-rules">
@@ -353,11 +364,75 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
         // ==================================================
+        // SETTINGS
+        // ==================================================
+        //
+        // Alleen zichtbaar voor Settings-admins.
+        // De server bepaalt of de gebruiker toegang heeft.
+        // ==================================================
+
+        fetch('/api/settings')
+            .then(response => {
+
+                if (!response.ok) {
+                    return null;
+                }
+
+                return response.json();
+
+            })
+            .then(settings => {
+
+                if (!settings) {
+                    return;
+                }
+
+
+                const navigationLinks =
+                    navigation.querySelector(
+                        '.navigation-links'
+                    );
+
+
+                if (!navigationLinks) {
+                    return;
+                }
+
+
+                const settingsLink =
+                    document.createElement('a');
+
+                settingsLink.href =
+                    '/settings';
+
+                settingsLink.textContent =
+                    '⚙ Settings';
+
+                settingsLink.className =
+                    'navigation-settings';
+
+
+                navigationLinks.appendChild(
+                    settingsLink
+                );
+
+            })
+            .catch(() => {
+
+                // Geen toegang of serverfout:
+                // Settings blijft gewoon verborgen.
+
+            });
+
+
+        // ==================================================
         // NAVIGATIE DROPDOWNS
         // ==================================================
 
         const dropdowns =
-            navigation.querySelectorAll(".navigation-dropdown");
+            navigation.querySelectorAll(
+                ".navigation-dropdown"
+            );
 
 
         function closeAllDropdowns(except = null) {
@@ -366,7 +441,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 if (dropdown !== except) {
 
-                    dropdown.classList.remove("open");
+                    dropdown.classList.remove(
+                        "open"
+                    );
 
                 }
 
@@ -392,63 +469,82 @@ document.addEventListener("DOMContentLoaded", async () => {
             // KLIK / TAP
             // ----------------------------------------------
 
-            button.addEventListener("click", event => {
+            button.addEventListener(
+                "click",
+                event => {
 
-                event.stopPropagation();
-
-
-                const wasOpen =
-                    dropdown.classList.contains("open");
+                    event.stopPropagation();
 
 
-                // Eerst alle andere dropdowns sluiten
-                closeAllDropdowns();
+                    const wasOpen =
+                        dropdown.classList.contains(
+                            "open"
+                        );
 
 
-                // Huidige alleen openen als deze nog dicht was
-                if (!wasOpen) {
+                    // Eerst alle andere dropdowns sluiten
+                    closeAllDropdowns();
 
-                    dropdown.classList.add("open");
+
+                    // Huidige alleen openen als deze nog dicht was
+                    if (!wasOpen) {
+
+                        dropdown.classList.add(
+                            "open"
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
 
             // ----------------------------------------------
             // DESKTOP HOVER
             // ----------------------------------------------
 
-            dropdown.addEventListener("mouseenter", () => {
+            dropdown.addEventListener(
+                "mouseenter",
+                () => {
 
-                if (
-                    window.matchMedia(
-                        "(hover: hover) and (pointer: fine)"
-                    ).matches
-                ) {
+                    if (
+                        window.matchMedia(
+                            "(hover: hover) and (pointer: fine)"
+                        ).matches
+                    ) {
 
-                    closeAllDropdowns(dropdown);
+                        closeAllDropdowns(
+                            dropdown
+                        );
 
-                    dropdown.classList.add("open");
+                        dropdown.classList.add(
+                            "open"
+                        );
 
-                }
-
-            });
-
-
-            dropdown.addEventListener("mouseleave", () => {
-
-                if (
-                    window.matchMedia(
-                        "(hover: hover) and (pointer: fine)"
-                    ).matches
-                ) {
-
-                    dropdown.classList.remove("open");
+                    }
 
                 }
+            );
 
-            });
+
+            dropdown.addEventListener(
+                "mouseleave",
+                () => {
+
+                    if (
+                        window.matchMedia(
+                            "(hover: hover) and (pointer: fine)"
+                        ).matches
+                    ) {
+
+                        dropdown.classList.remove(
+                            "open"
+                        );
+
+                    }
+
+                }
+            );
 
         });
 
@@ -457,15 +553,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         // DROPDOWN SLUITEN BIJ KLIK BUITEN NAVIGATIE
         // ==================================================
 
-        document.addEventListener("click", event => {
+        document.addEventListener(
+            "click",
+            event => {
 
-            if (!navigation.contains(event.target)) {
+                if (!navigation.contains(event.target)) {
 
-                closeAllDropdowns();
+                    closeAllDropdowns();
+
+                }
 
             }
-
-        });
+        );
 
     }
 
@@ -552,19 +651,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelectorAll(".credits-container")
         .forEach(container => {
 
-            const creditType = container.dataset.credits;
+            const creditType =
+                container.dataset.credits;
+
 
             if (!creditType) {
                 return;
             }
 
-            const creditContent = credits[creditType];
+
+            const creditContent =
+                credits[creditType];
+
 
             if (!creditContent) {
                 return;
             }
 
-            container.innerHTML = creditContent;
+
+            container.innerHTML =
+                creditContent;
 
         });
 
@@ -584,7 +690,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // TOOLTIP INITIALISEREN
     // ==================================================
 
-    initializeLootTable();
+
 
 
     // ==================================================
@@ -593,74 +699,75 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function updateLootGrid() {
 
-        document.querySelectorAll(".loot-grid").forEach(grid => {
+        document.querySelectorAll(".loot-grid")
+            .forEach(grid => {
 
-            const firstRoll =
-                grid.querySelector(".loot-roll");
-
-
-            if (!firstRoll) {
-                return;
-            }
+                const firstRoll =
+                    grid.querySelector(".loot-roll");
 
 
-            let itemCount = 0;
+                if (!firstRoll) {
+                    return;
+                }
 
-            let element =
-                firstRoll.nextElementSibling;
+
+                let itemCount = 0;
+
+                let element =
+                    firstRoll.nextElementSibling;
 
 
-            while (
-                element &&
-                !element.classList.contains("loot-roll")
-            ) {
-
-                if (
-                    element.classList.contains("loot-item")
+                while (
+                    element &&
+                    !element.classList.contains("loot-roll")
                 ) {
 
-                    itemCount++;
+                    if (
+                        element.classList.contains("loot-item")
+                    ) {
+
+                        itemCount++;
+
+                    }
+
+
+                    element =
+                        element.nextElementSibling;
 
                 }
 
 
-                element =
-                    element.nextElementSibling;
+                if (itemCount > 0) {
 
-            }
+                    // ------------------------------------------
+                    // PORTRAIT
+                    // ------------------------------------------
 
+                    if (
+                        window.innerWidth <= 768 &&
+                        window.innerWidth <= window.innerHeight
+                    ) {
 
-            if (itemCount > 0) {
+                        grid.style.gridTemplateColumns =
+                            "repeat(2, minmax(0, 1fr))";
 
-                // ------------------------------------------
-                // PORTRAIT
-                // ------------------------------------------
-
-                if (
-                    window.innerWidth <= 768 &&
-                    window.innerWidth <= window.innerHeight
-                ) {
-
-                    grid.style.gridTemplateColumns =
-                        "repeat(2, minmax(0, 1fr))";
-
-                }
+                    }
 
 
-                // ------------------------------------------
-                // DESKTOP + LANDSCAPE
-                // ------------------------------------------
+                    // ------------------------------------------
+                    // DESKTOP + LANDSCAPE
+                    // ------------------------------------------
 
-                else {
+                    else {
 
-                    grid.style.gridTemplateColumns =
-                        `70px repeat(${itemCount}, minmax(0, 1fr))`;
+                        grid.style.gridTemplateColumns =
+                            `70px repeat(${itemCount}, minmax(0, 1fr))`;
+
+                    }
 
                 }
 
-            }
-
-        });
+            });
 
     }
 
@@ -680,26 +787,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelectorAll(".floating-menu button")
         .forEach(button => {
 
-            const image = button.dataset.image;
+            const image =
+                button.dataset.image;
+
 
             if (!image) {
                 return;
             }
 
 
-            const img = new Image();
+            const img =
+                new Image();
+
 
             img.onload = () => {
 
                 button.style.backgroundImage =
                     `url('${image}')`;
 
-                button.classList.add("has-image");
+                button.classList.add(
+                    "has-image"
+                );
 
             };
 
 
-            img.src = image;
+            img.src =
+                image;
 
         });
 
@@ -712,7 +826,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function scrollToSection(id) {
 
-    const element = document.getElementById(id);
+    const element =
+        document.getElementById(id);
+
 
     if (!element) {
         return;
