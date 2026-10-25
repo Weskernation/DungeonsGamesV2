@@ -22,7 +22,7 @@
         2px solid black;
 
     background-color:
-        rgba(0, 0, 0, 0.75);
+        rgba(0, 0, 0, 1);
 
     color:
         white;
@@ -154,6 +154,40 @@
 
     line-height:
         1.1;
+}
+
+
+/* ==================================================
+   ATTUNEMENT - DONKERDERE TIERKLEUREN
+   ================================================== */
+
+/* ==================================================
+   ATTUNEMENT - DONKERE TIERKLEUR
+   ================================================== */
+
+.tier-d .loot-item[data-attunement="true"] {
+    background-color: var(--tier-d-loot-color);
+    font-style: italic;
+}
+
+.tier-c .loot-item[data-attunement="true"] {
+    background-color: var(--tier-c-loot-color);
+    font-style: italic;
+}
+
+.tier-b .loot-item[data-attunement="true"] {
+    background-color: var(--tier-b-loot-color);
+    font-style: italic;
+}
+
+.tier-a .loot-item[data-attunement="true"] {
+    background-color: var(--tier-a-loot-color);
+    font-style: italic;
+}
+
+.tier-s .loot-item[data-attunement="true"] {
+    background-color: var(--tier-s-loot-color);
+    font-style: italic;
 }
 
 

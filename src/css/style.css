@@ -476,7 +476,7 @@ body {
         15px;
 
     background-color:
-        rgba(247, 247, 247, 0.95);
+        rgba(247, 247, 247, 0.99);
 
     align-self:
         flex-start;
@@ -707,35 +707,35 @@ body {
 body[data-version="dnd2014"] .tier-d {
 
     background-color:
-        rgba(226, 239, 218, 0.95);
+        rgba(226, 239, 218, 0.99);
 }
 
 
 body[data-version="dnd2014"] .tier-c {
 
     background-color:
-        rgba(201, 218, 248, 0.95);
+        rgba(201, 218, 248, 0.99);
 }
 
 
 body[data-version="dnd2014"] .tier-b {
 
     background-color:
-        rgba(255, 242, 204, 0.95);
+        rgba(255, 242, 204, 0.99);
 }
 
 
 body[data-version="dnd2014"] .tier-a {
 
     background-color:
-        rgba(244, 204, 204, 0.95);
+        rgba(244, 204, 204, 0.99);
 }
 
 
 body[data-version="dnd2014"] .tier-s {
 
     background-color:
-        rgba(217, 217, 217, 0.95);
+        rgba(217, 217, 217, 0.99);
 }
 
 
@@ -746,35 +746,35 @@ body[data-version="dnd2014"] .tier-s {
 body[data-version="dnd2024"] .tier-d {
 
     background-color:
-        rgba(222, 211, 184, 0.95);
+        rgba(222, 211, 184, 0.99);
 }
 
 
 body[data-version="dnd2024"] .tier-c {
 
     background-color:
-        rgba(183, 214, 207, 0.95);
+        rgba(183, 214, 207, 0.99);
 }
 
 
 body[data-version="dnd2024"] .tier-b {
 
     background-color:
-        rgba(210, 196, 226, 0.95);
+        rgba(210, 196, 226, 0.99);
 }
 
 
 body[data-version="dnd2024"] .tier-a {
 
     background-color:
-        rgba(231, 190, 166, 0.95);
+        rgba(231, 190, 166, 0.99);
 }
 
 
 body[data-version="dnd2024"] .tier-s {
 
     background-color:
-        rgba(232, 207, 145, 0.95);
+        rgba(232, 207, 145, 0.99);
 }
 
 
