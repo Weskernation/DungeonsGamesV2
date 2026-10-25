@@ -539,27 +539,18 @@
    12. UITGESLOTEN ITEMS
    ================================================== */
 
+.loot-item[data-excluded="true"]::after,
 .excluded::after {
-
-    content:
-        "\26D2";
-
-    margin-left:
-        6px;
+    content: "\26D2";
+    margin-left: 6px;
+    color: red;
+    font-weight: 100;
 }
 
-
-.excluded::after,
 .excluded-symbol {
-
-    margin:
-        2px;
-
-    color:
-        red;
-
-    font-weight:
-        100;
+    margin: 2px;
+    color: red;
+    font-weight: 100;
 }
 
 
