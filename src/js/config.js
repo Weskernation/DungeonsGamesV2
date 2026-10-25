@@ -41,7 +41,7 @@ const SITE_CONFIG = {
 
         dnd2014: {
 
-            playerRules: false,
+            playerRules: true,
             characterCreation: false,
             progression: true,
             gmRules: false

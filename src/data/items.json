@@ -6252,7 +6252,7 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Moonblade": {
-        "type": "Weapon (sword)",
+        "type": "Weapon (longsword)",
         "rarity": "Legendary",
         "attunement": {
             "required": true,
@@ -6260,7 +6260,13 @@
         },
 
         "description": [
-            "Pick 4 of the following options",
+            "A moonblade has one rune on its blade for each master it has served. The first rune always grants a +1 bonus to attack and damage",
+            "This blade has 5 runes"
+        ],
+
+        "effects": [
+            "+1 bonus to attack and damage",
+            "<ins>Pick 4 of the following options</ins>",
             "Increase the bonus to attack and damage rolls by 1, to a maximum of +3. Reroll if the moonblade already has a +3 bonus.",
             "The moonblade gains the finesse property.",
             "The moonblade gains the thrown property (range 20/60 feet).",
@@ -6270,11 +6276,6 @@
             "You can use a bonus action to cause the moonblade to flash brightly. Each creature that can see you and is within 30 feet of you must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until you take a short rest while attuned to the weapon.",
             "The moonblade functions as a ring of spell storing.",
             "You can use an action to call forth an elfshadow, provided that you don't already have one serving you. The elfshadow appears in an unoccupied space within 120 feet of you. It uses the statistics for a shadow, except it is neutral, immune to effects that turn undead, and doesn't create new shadows. You control this creature, deciding how it acts and moves. It remains until it drops to 0 hit points or you dismiss it as an action."
-                        
-        ],
-
-        "effects": [
-            "+1 bonus to attack and damage"
         ],
 
         "abilities": [],
@@ -6284,219 +6285,185 @@
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Mystery Key": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "A question mark is worked into the head of this key. The key has a 5 percent chance of unlocking any lock into which it's inserted. Once it unlocks something, the key disappears."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Nature's Mantle": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Druid or Ranger"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "While wearing the cloak, you can use it as a spellcasting focus for your druid and ranger spells."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Hide",
+                "action": "Bonus action",
+                "effect": "While you are in an area that is lightly obscured, you can Hide as a bonus action even if you are being directly observed.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Necklace of Adaptation": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "You can breathe normally in any environment, and you have advantage on saving throws made against harmful gases and vapors."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Nightfall Pearl": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Night",
+                "action": "10 minutes",
+                "effect": "Area within 10 miles of it at the moment of activation becomes night even if it is daytime.",
+                "recharge": "after 24 hours"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Nimbus Coronet": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "While wearing this circlet, you take no damage from falling."
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Teleport",
+                "action": "Bonus action",
+                "effect": "Teleport to an unoccupied space you can see within 15 feet",
                 "recharge": ""
+            },
+            {
+                "name": "Cloudlike Form",
+                "action": "Action",
+                "effect": "Assume a cloudlike form for 1 minute, you have a flying speed of 60 feet and resistance to bludgeoning, piercing, and slashing damage.",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Nine Lives Stealer": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (sword)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+2 bonus to attack and damage rolls",
+            "The sword has 5 charges, the charge is used when the creature fails the saving throw"
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "Slain instantly",
                 "action": "",
-                "effect": "",
+                "effect": "When you score a critical hit on a creature with fewer than 100 hit points, It makes a DC 15 constitution save or is slain instantly",
                 "recharge": ""
             }
         ],
 
         "variants": [
-            ""
+            "Nine Lives Stealer Double-Bladed Scimitar",
+            "Nine Lives Stealer Greatsword",
+            "Nine Lives Stealer Longsword)",
+            "Nine Lives Stealer Rapier",
+            "Nine Lives Stealer Scimitar",
+            "Nine Lives Stealer Shortsword"            
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Oathbow": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (longbow)",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn."
         ],
 
         "effects": [
-            ""
+            "When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.",
+            "While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
@@ -6508,118 +6475,102 @@
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Apply Oil",
+                "action": "1 minute",
+                "effect": "For 1 hour the item has a +3 bonus to attack and damage rolls",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Ollamh Harp": {
-        "type": "",
-        "rarity": "",
+        "type": "Instrument",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a Bard"
         },
 
         "description": [
-            ""
+            "It contains the following spells: <strong>fly, invisibility, levitate, protection from evil and good, confusion, control weather, and fire storm.</strong>"
         ],
 
         "effects": [
-            ""
+            "Impose disadvantage on the saving throw to make a creature charmed by you, only if the spell has a somatic or a material component."
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "Cast a spell from the Instrument",
                 "action": "",
-                "effect": "",
-                "recharge": ""
+                "effect": "Cast each spell once, it can't be used to cast that spell again",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Orb of Direction": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "While holding this orb, you can use an action to determine which way is north. This property functions only on the Material Plane."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Orb of Shielding": {
-        "type": "",
+        "type": "Wondrous Item, Spellcasting Focus",
         "rarity": "",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Reduce damage",
+                "action": "Reaction",
+                "effect": "reduce the damage by 1d4",
                 "recharge": ""
             }
         ],
 
         "variants": [
-            ""
+            "Orb of Shielding (Fernian Basalt) Fire",
+            "Orb of Shielding (Irian Quartz) Radiant",
+            "Orb of Shielding (Kythrian Skarn) Acid and Poison",
+            "Orb of Shielding (Lamannian Flint) Lightning and Thunder",
+            "Orb of Shielding (Mabaran Obsidian) Necrotic",
+            "Orb of Shielding (Risian Shale) Cold",
+            "Orb of Shielding (Shavarran Chert) Force",
+            "Orb of Shielding (Xorian Marble) Psychic"
         ],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
@@ -6633,428 +6584,341 @@
         },
 
         "description": [
-            ""
+            "The orb has 3 charges"
         ],
 
         "effects": [
-            ""
+            "+2 bonus to any Constitution saving throw you make to maintain your concentration on a spell.",
+            "You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
         ],
 
         "abilities": [
             {
-                "name": "",
+                "name": "Ignore spell's material component",
                 "action": "",
-                "effect": "",
-                "recharge": ""
+                "effect": "Expend up to 3 charges to ignore the spell's material components with a gold piece cost, up to 300 gp per charge expended.",
+                "recharge": "At Dawn"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Orb of the Veil": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Your Wisdom score increases by 2, as does your maximum for that score.",
+            "You gain darkvision out to a range of 60 feet. If you already have darkvision, the orb increases its range by 60 feet.",
+            "You have advantage on Wisdom checks to find hidden doors and paths.",
+            "All nonmagical flames within 30 feet of you automatically extinguish, and fire damage dealt by you is halved."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Orb of Time": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Determine Time",
+                "action": "Action",
+                "effect": "Determine whether it is morning, afternoon, evening, or nighttime outside.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Orcsplitter": {
-        "type": "",
-        "rarity": "",
+        "type": "Weapon (greataxe)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a dwarf, fighter, or paladin of good alignment"
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+2 bonus to attack and damage rolls",
+            "When you roll a 20 on an attack roll with this weapon against an orc, that orc must succeed on a DC 17 Constitution saving throw or drop to 0 hit points.",
+            "You can't be surprised by orcs while you're not incapacitated. You are also aware when orcs are within 120 feet of you and aren't behind total cover, although you don't know their location.",
+            "You and any of your friends within 30 feet of you can't be frightened while you're not incapacitated."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Pariah's Shield": {
-        "type": "",
-        "rarity": "",
+        "type": "Shield",
+        "rarity": "Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "+1 bonus to AC for every two allies within 5 feet of you (up to a maximum of +3)"
         ],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Take the damage",
+                "action": "Reaction When a creature you can see within 5 feet of you takes damage",
+                "effect": "You take that damage, instead of the creature. When you do so, the damage type changes to force.",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Pearl of Power": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
-            "who": ""
+            "required": true,
+            "who": "by a spellcaster"
         },
 
         "description": [
-            ""
+            "Regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
+                "name": "Regain a spell slot",
+                "action": "Action",
                 "effect": "",
-                "recharge": ""
+                "recharge": "Next Dusk"
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Peregrine Mask": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Very Rare",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Flying speed of 60 feet",
+            "Advantage on initiative rolls"
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Perfume of Bewitching": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
+                "name": "Apply perfume",
+                "action": "Action",
+                "effect": "For 1 hour you have advantage on all Charisma checks directed at humanoids of CR 1 and lower",
                 "recharge": ""
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Periapt of Proof Against Poison": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Rare",
         "attunement": {
             "required": false,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Immune to the poisoned condition and have immunity to poison damage."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Periapt of Wound Closure": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Uncommon",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
         "effects": [
-            ""
+            "Stabilize whenever you are dying at the start of your turn",
+            "Whenever you roll a Hit Die to regain hit points, double the number of hit points it restores."
         ],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Pipe of Remembrance": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "After 10 minutes, the smoke forms moving shapes that reenact the bearer's most impressive and heroic achievements for 5 minutes"
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Pipe of Smoke Monsters": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Common",
         "attunement": {
             "required": false,
             "who": ""
         },
 
         "description": [
-            ""
+            "While smoking this pipe, you can use an action to exhale a puff of smoke that takes the form of a single creature."
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
-        "abilities": [
-            {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
-            }
-        ],
+        "abilities": [],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Plate Armor of Etherealness": {
-        "type": "",
-        "rarity": "",
+        "type": "Armor (Plate)",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
-        "description": [
-            ""
-        ],
+        "description": [],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Etherealness spell",
+                "action": "Action",
+                "effect": "Gain the effect of the etherealness spell, which lasts for 10 minutes or until you remove the armor",
+                "recharge": "Next Dawn."
             }
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },
     "Platinum Scarf": {
-        "type": "",
-        "rarity": "",
+        "type": "Wondrous Item",
+        "rarity": "Legendary",
         "attunement": {
-            "required": false,
+            "required": true,
             "who": ""
         },
 
         "description": [
-            ""
+            "The scarf has 3 scales (charges)"
         ],
 
-        "effects": [
-            ""
-        ],
+        "effects": [],
 
         "abilities": [
             {
-                "name": "",
-                "action": "",
-                "effect": "",
-                "recharge": ""
+                "name": "Breath of Life",
+                "action": "1 charge + Action",
+                "effect": "You or a creature you touch regains 10d4 hit points.",
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Platinum Shield",
+                "action": "1 charge + Action",
+                "effect": "For 1 hour the scales becomes a +1 shield, and give immunity to radiant damage.",
+                "recharge": "Next Dawn."
+            },
+            {
+                "name": "Radiant Hammer",
+                "action": "1 charge + Action",
+                "effect": "For 1 hour the scale becomes a light hammer which deals 2d4 radiant damage or 4d4 radiant damage to chromatic dragons.",
+                "recharge": "Next Dawn."
             }
+            
         ],
 
-        "variants": [
-            ""
-        ],
+        "variants": [],
 
         "notes": "Compact summary only. Refer to the official source for the complete item description."
     },

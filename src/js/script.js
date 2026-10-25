@@ -690,7 +690,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // TOOLTIP INITIALISEREN
     // ==================================================
 
-
+    initializeLootTable();
 
 
     // ==================================================
